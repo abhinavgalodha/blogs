@@ -43,3 +43,13 @@
 
 ## Increase Cache memory in Chrome.
 
+1. Open the Google Chrome Executable properties. Type Google Chrome in  the Search Programs in the Start menu.
+
+![Image](Images/Chrome1.png)
+
+2. Right click on the properties of the Google Chrome Executable and open the Shortcut tab.
+
+![Image](Images/Chrome2.png)
+
+3. Add the parameter --disk-cache-size=52428800
+The entered size is in MB. So, above is equivalent to 50 MB.
