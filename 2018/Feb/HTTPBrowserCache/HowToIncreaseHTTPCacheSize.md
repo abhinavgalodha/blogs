@@ -39,3 +39,7 @@
 ![Image](Images/Firefox2.png)
 
 7. Restart required or not?
+
+
+## Increase Cache memory in Chrome.
+
