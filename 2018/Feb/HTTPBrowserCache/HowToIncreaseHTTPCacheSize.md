@@ -2,6 +2,8 @@
 
 ## Increase Cache size in Internet Explorer (IE)
 
-1.Launch the internet explorer.
-2.Go to Tools -> Internet options.
+1. Launch the internet explorer.
+2. Go to Tools -> Internet options.
+
+  ![Image](Images/IE1.png)
 
