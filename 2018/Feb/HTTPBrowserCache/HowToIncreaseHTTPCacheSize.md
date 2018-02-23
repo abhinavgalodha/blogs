@@ -1,9 +1,24 @@
+# How to Change HTTP Browser Cache Size
+
+HTTP Caching is available in most of the browsers and helps make a website more responsive and reduce network bandwidth.  In this article, we will understand how to increase or decrease the Cache size in Modern browsers like Google Chrome, Mozilla Firefox, IE.
+
 ## Why to increase HTTP Cache Size
 
-1. Offline access.
-2. Load the content in a faster way.
+There are plethora of benefits of using the Browsers HTTP Caching. *Caching would be useless if it did not significantly improve performance.* Following list few of the caching benefits.
 
-# How to Increase Http Cache Size in Browsers
+### 1. Increased Performance
+
+The performance of web sites can be significantly improved by reusing previously fetched resources. Web caches reduce latency and enable the content to be loaded quickly. This reduces the page load time and hence make the website more responsive.
+
+### 2. Reduce Network Cost
+
+The goal of HTTP caching is to eliminate the need to send requests in many cases, thereby reducing the network traffic by reducing the number of round-trips. Also, in certain condition, it can eliminate the need to send full responses and saves network bandwidth.
+
+### 3. Offline Access
+
+In Certain instances, the users may experience disruption in the network or No network access. In these scenario's,website may cache the content, thereby allowing the content to be served locally with limited internet connectivity. This works well for sites with static data which doesn't change frequently like Websites containing documentation.
+
+## How to Increase Http Cache Size in Browsers
 
 Different browsers provide various ways to increase the HTTP Cache size. This document is a step by step guide to increase the Browser Cache in various Browsers (Chrome, Firefox, IE).
 
