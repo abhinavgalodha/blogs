@@ -17,7 +17,7 @@ The goal of HTTP caching is to eliminate the need to send requests in many cases
 ### 3. Offline Access
 
 In Certain instances, the users may experience disruption in the network or No network access. In these scenario's,website may cache the content, thereby allowing the content to be served locally with limited internet connectivity. This works well for sites with static data which doesn't change frequently like Websites containing documentation.  
-I personally make use of local Cached version for the documentation of websites like MSDN, Firefox, Google Developers or blogs while am offline and commuting in the train.
+I personally make use of local Cached version for the documentation of websites like MSDN, Firefox, Google Developers or blogs while am offline and commuting in the train. The connection is shaky and i can save some Phone data.
 
 ## How to Increase Http Cache Size in Browsers
 
