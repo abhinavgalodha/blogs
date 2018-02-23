@@ -1,4 +1,4 @@
-# Why to increase HTTP Cache Size
+## Why to increase HTTP Cache Size
 
 1. Offline access.
 2. Load the content in a faster way.
@@ -41,8 +41,6 @@ The entered size is in MB. So, 52428800 bytes is equivalent to 50 MB.
 
 ![Image](Images/Firefox2.png)
 
-7. Restart required or not?
-
 ## Increase Cache size in Internet Explorer (IE)
 
 1. Launch the internet explorer.
@@ -63,5 +61,4 @@ The entered size is in MB. So, 52428800 bytes is equivalent to 50 MB.
 
 6. Click Ok and then again Ok/Apply and settings would be saved.
 
-7. Close IE and open again ?
-
+7. Close IE and open again.
