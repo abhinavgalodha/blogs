@@ -8,37 +8,37 @@ Most of the code I write, involves connectivity from one machine to another remo
 
 [TBD]Diagram
 
-# Verify the Connectivity from Client to Server
+# Various ways to verify the Connectivity from Client to Server
 
 ## Ping
 
-The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine. Use ping along with the destination machine or Host name as shown below.
+The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine. Use **ping** command, passing the destination machine machine IP or Host name as shown below.
+
+### Successfull Response 
 
 ![ping](Images/ping.png)
-![Image](Images/ping.png)
 
+If Ping Succeeds, we will get a reply from destination machine. This ensures that the connectivity exists between source and destination machines.
 
-At the N/w level Ping rely on ICMP, which is layer 3, they do not rely on a destination/source port to function.
+### Failure Response 
+If ping results in a **"Request timed out."** message, then there is a connectivity issue from Source to destination. 
 
-### What if ping doesn't work.
+![ping](Images/pingFailure.png)
 
-• If we get a reply back with an error, it can mean any of the following:
-		○ You typed the host name incorrectly
-		○ Host name cannot be resolved to an IP address
-		○ The server machine cannot be reached on the network
-	• Try solving this problem before proceeding to the next step
+*At the N/w level Ping rely on ICMP, which is layer 3, hence it doesn't check if a port is open or not.*
+So, it is possible that ping works but still the call to API on destination machine doesn't work.
 
-If this ping test passes, it means that your client machine can see the server machine. This does NOT mean you can connect to the server machine.
-
-[TBD] Ping Image
-
-This sounds a lot like a mismatched port forwarding configuration. Since ping/nslookup/tracert all rely on ICMP, which is layer 3, they do not rely on a destination/source port to function.
 
 Telnet and HTTP, however, reside in the application layer, and so they require those ports to function.
 
 ### Telnet
-Using Telnet to test connectivity 
-Once the ping test passes, you can use Telnet to test if your client machine can connect to the server machine. Use the following steps to perform this test
+Wikipedia defines Telnet as following..
+>"Telnet is a protocol used on the Internet or local area networks to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection.". 
+
+Telnet gets its name from Terminal Network. With Telnet, we can establish a host session to a server .
+However, the communication is carried in plain text and hence not encrypted. Therefore, in Windows, by default the TelNet Command line interface is disabled. Telnet can be enabled in windows by Adding/Removing windows component using Control Panel.
+
+if your client machine can connect to the server machine. Use the following steps to perform this test
 	• Type the following in the Console (DOS) Window
 
 telnet serverOne 1433
