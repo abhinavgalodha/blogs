@@ -1,19 +1,26 @@
 # Test Network Connectivity
 
-Most of the code I write, involves connectivity to remote services via HTTP API's. It's utmost important to understand how to ensure that you have connectivity to remote machine and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine and ensure that the port is accesible. You might find these helpful in case you need to verify the connectivity to remote machines.
+Most of the code I write, involves connectivity from one machine to another remote machine via HTTP API's. It's utmost important to understand if the connectivity succeeds and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine & Port. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 1. The first step in this process is to verify the **Network** connectivity with the remote machine.
 
-2. Verify the Connectivity to the Destination port.
+2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible.
 
 [TBD]Diagram
 
-## Verify the Connectivity from Client to Server
+# Verify the Connectivity from Client to Server
 
-### Ping
+## Ping
 
-The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine.
+The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine. Use ping along with the destination machine or Host name as shown below.
 
+![ping](Images/ping.png)
+![Image](Images/ping.png)
+
+
+At the N/w level Ping rely on ICMP, which is layer 3, they do not rely on a destination/source port to function.
+
+### What if ping doesn't work.
 
 • If we get a reply back with an error, it can mean any of the following:
 		○ You typed the host name incorrectly
