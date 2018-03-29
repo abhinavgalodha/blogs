@@ -1,10 +1,10 @@
-# Test Network Connectivity 
+# Test Network Connectivity
 
-Most of the code I write, involves connectivity to remote services via HTTP API's. Following steps are a prerequiste before I start to write the actual implementation details. You might find these helpful in case you need to verify the connectivity to remote machines. 
+Most of the code I write, involves connectivity to remote services via HTTP API's. It's utmost important to understand how to ensure that you have connectivity to remote machine and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine and ensure that the port is accesible. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 1. The first step in this process is to verify the **Network** connectivity with the remote machine.
 
-2. Verify the Connectivity to the Destination port. 
+2. Verify the Connectivity to the Destination port.
 
 [TBD]Diagram
 
@@ -12,9 +12,10 @@ Most of the code I write, involves connectivity to remote services via HTTP API'
 
 ### Ping
 
-Using the **Ping** command, we can verify the network level connectivity between client and Remote Machines.
+The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine.
 
-• If you get a reply back with an error, it can mean any of the following:
+
+• If we get a reply back with an error, it can mean any of the following:
 		○ You typed the host name incorrectly
 		○ Host name cannot be resolved to an IP address
 		○ The server machine cannot be reached on the network
@@ -34,6 +35,8 @@ Once the ping test passes, you can use Telnet to test if your client machine can
 	• Type the following in the Console (DOS) Window
 
 telnet serverOne 1433
+
+The default port for telnet is usually the port number 23.
 
 IMPORTANT: On Windows Vista and Windows 7, Microsoft does not install the Telnet client by default. You will have to install this manually from Add Remove Windows Component. 
 	• You should either see a blank screen or something garbled representing some binary data. This means you can connect to the server.
