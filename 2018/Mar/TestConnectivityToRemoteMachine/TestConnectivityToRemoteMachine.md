@@ -1,6 +1,6 @@
 # Various ways to verify the Connectivity from Client to Server
 
-Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While writing Http Clients communicating with another API's. It's utmost important to understand if the connectivity exists and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine & Port. You might find these helpful in case you need to verify the connectivity to remote machines. These technique are mostly supported on Windows Operating System.
+Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communcate with Another API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open. In this article, i will explore few technique to test the network connectivity with another machine & Port number. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 ### What are various Steps to verify Connectivity
 
@@ -35,8 +35,8 @@ If ping results in a **"Request timed out."** message, then there is a connectiv
 *At the N/w level Ping rely on ICMP, which is layer 3, hence it doesn't check if a port is open or not.*
 So, it is possible that ping works but still the call to API on destination machine doesn't work.
 
+## Verify the Connectivity from Client to Server Using Telnet
 
-### Verify the Connectivity from Client to Server Using Telnet
 Wikipedia defines Telnet as 
 >"Telnet is a protocol used on the Internet or local area networks to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection.". At N/w level, Telnet works in the Application layer and needs the ports connectivity.
 
@@ -76,6 +76,8 @@ My most preffered option, It is powerful as It allows to explore all the potenti
 
 If you're running Windows 8/Windows Server 2012 or newer, you can use the Test-NetConnectioncommand.
 
+The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. Depending on the input parameters, the output can include the DNS lookup results, a list of IP interfaces, IPsec rules, route/source address selection results, and/or confirmation of connection establishment.
+
 ```
 Test-NetConnection -Port 53 -ComputerName LON-DC1
 ```
@@ -97,6 +99,13 @@ PingReplyDetails (RTT) : 164 ms
 ```
 
 ### Option 2
+
+Initializes a new instance of the TcpClient class and connects to the specified port on the specified host.
+
+This constructor creates a new TcpClient and makes a synchronous connection attempt to the provided host name and port number. The underlying service provider will assign the most appropriate local IP address and port number. TcpClient will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS host name, and connect in one convenient step.
+
+If IPv6 is enabled and the TcpClient(String, Int32) method is called to connect to a host that resolves to both IPv6 and IPv4 addresses, the connection to the IPv6 address will be attempted first before the IPv4 address. This may have the effect of delaying the time to establish the connection if the host is not listening on the IPv6 address.
+
 ```
 New-Object Net.Sockets.TcpClient "10.45.23.109", 443 
 ```
@@ -114,7 +123,7 @@ else {
 
 
 ## Summary
-In this article, we explored 3 techniques to verify the connectivity to destination machine and the port number. We looked at the Ping, Telnet and powershell commands to verify the connectivity.
+In this article, we explored 3 techniques to verify the connectivity to destination machine and the port number. We looked at the Ping, Telnet and powershell commands to verify the connectivity. These technique are mostly supported on Windows Operating System.
 
 
 
