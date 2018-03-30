@@ -1,6 +1,6 @@
 # Test Network Connectivity
 
-Most of the code I write, involves connectivity from one machine to another remote machine via HTTP API's. It's utmost important to understand if the connectivity succeeds and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine & Port. You might find these helpful in case you need to verify the connectivity to remote machines. These techniques will work on the windows operating system.
+Most of the code I write, involves connectivity from one machine to another remote machine via HTTP Rest API's. It's utmost important to understand if the connectivity succeeds and the port for the communication is open. In this article, i will explore few technique to test the network connectivity with another machine & Port. You might find these helpful in case you need to verify the connectivity to remote machines. These techniques will work on the windows operating system.
 
 1. The first step in this process is to verify the **Network** connectivity with the remote machine.
 
@@ -10,7 +10,7 @@ Most of the code I write, involves connectivity from one machine to another remo
 
 # Various ways to verify the Connectivity from Client to Server
 
-## Ping
+## Check Connectivity between machines using Ping
 
 The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine.
 
@@ -34,11 +34,9 @@ If ping results in a **"Request timed out."** message, then there is a connectiv
 So, it is possible that ping works but still the call to API on destination machine doesn't work.
 
 
-Telnet and HTTP, however, reside in the application layer, and so they require those ports to function.
-
-### Telnet
+### Check Connectivity between machines using Telnet
 Wikipedia defines Telnet as 
->"Telnet is a protocol used on the Internet or local area networks to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection.". 
+>"Telnet is a protocol used on the Internet or local area networks to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection.". At N/w level, Telnet works in the Application layer and needs the ports connectivity.
 
 Telnet gets its name from Terminal Network. With Telnet, we can establish a host session to a server. The advantage of using Telnet is that we can verify the connectivity to a port as well.
 
@@ -66,7 +64,7 @@ If the connection succeds, We will see a blank screen. Notice the Title of the c
 
 ### Telnet Failure
 
-![telnet failure](Images/telnetfailure.png)
+![telnet failure](Images/telnetFailure.png)
 If the destination Machine or the port is inaccesible, we will get the error *"Could not open connection to the host, on port 80: Connection failed"*
 
 ## Using Powershell
