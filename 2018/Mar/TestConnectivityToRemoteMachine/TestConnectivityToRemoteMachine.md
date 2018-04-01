@@ -1,6 +1,6 @@
  # Various ways to verify the Connectivity from Client to Server
 
-Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communcate with Another API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. You might find these helpful in case you need to verify the connectivity to remote machines.
+Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 ***
 
