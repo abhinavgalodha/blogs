@@ -1,6 +1,6 @@
  # Various ways to verify the Connectivity from Client to Server (including Port Number)
 
-Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
+In an era of interconnected devices, Most of the code we write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 
 ***
@@ -91,24 +91,15 @@ The Test-NetConnection cmdlet displays diagnostic information for a connection. 
 
 **Usage**
 ```
-Test-NetConnection -Port 53 -ComputerName LON-DC1
+Test-NetConnection -Port 53 -ComputerName "www.galodha.com"
 ```
 
-**Output**
+**Success**
 
-```
-PS C:\> Test-NetConnection -ComputerName "www.contoso.com" -InformationLevel "Detailed"
-PingReplyDetails (RTT) : 164 ms
-ComputerName           : www.contoso.com
-RemoteAddress          : 65.55.39.10
-NameResolutionResults  : 65.55.39.10
-64.4.6.100
-InterfaceAlias         : Ethernet
-SourceAddress          : 10.137.193.122
-NetRoute (NextHop)     : 10.137.192.1
-PingSucceeded          : True
-PingReplyDetails (RTT) : 164 ms
-```
+![Powershell connected](Images/PowershellTestNetConnected.png)
+
+**Failure**
+![Powershell Failure](Images/PowershellTestNetConnectionFailure.png)
 
 ### Option 2 - System.Net.Sockets.TcpClient
 
