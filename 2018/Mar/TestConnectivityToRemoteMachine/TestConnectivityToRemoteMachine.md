@@ -120,6 +120,7 @@ A value of `PingSucceeded : False` or the `Timedout` error message implies that 
 Another option using PowerShell is making use of the .Net Class `TcpClient`. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a *synchronous* connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS hostname, and connect in one convenient step.
 
 **How to use Powershell TcpClient**
+Create a new Object using the TcpClient class as shown belo
 
 ```
 New-Object Net.Sockets.TcpClient "10.45.23.109", 443 
@@ -127,9 +128,13 @@ New-Object Net.Sockets.TcpClient "10.45.23.109", 443
 
 #### Success
 
+If the `Connected` Property is `True`, then connectivity succeeds.
+
 ![Powershell TCP Success](Images/PowershellTcpClientNetConnected.png)
 
 #### Failure
+
+If the `Connected` Property is `False` or you get an error message, then it indicates a network Connectivity issue.
 
 ![Powershell TCP Failure](Images/PowershellTcpClientConnectionFailure.png)
 
