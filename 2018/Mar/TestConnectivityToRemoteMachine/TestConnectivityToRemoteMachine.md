@@ -1,4 +1,4 @@
- # Various ways to verify the Connectivity from Client to Server
+ # Various ways to verify the Connectivity from Client to Server (including Port Number)
 
 Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
 
@@ -87,7 +87,7 @@ My most preffered option, It is powerful as It allows to explore all the potenti
 
 If you're running Windows 8/Windows Server 2012 or newer, you can use the Test-NetConnectioncommand.
 
-The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. Depending on the input parameters, the output can include the DNS lookup results, a list of IP interfaces, IPsec rules, route/source address selection results, and/or confirmation of connection establishment. For our purpose, we are going to use the cmdlet with destination name and the port number
+The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. For our purpose, we are going to use the cmdlet with destination name and the port number
 
 **Usage**
 ```
