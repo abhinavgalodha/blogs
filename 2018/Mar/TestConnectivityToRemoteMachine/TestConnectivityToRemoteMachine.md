@@ -1,13 +1,15 @@
- # Various ways to verify the Connectivity from Client to Server (including Port Number)
+ # Various techniques to verify the Connectivity from Client to Server (including Port Number) using built-in tools in the Operating System.
 
-In an era of interconnected devices, Most of the code we write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
+In an era of interconnected devices, Most of the code we write involves connectivity from one machine to another remote machine. E.g., While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost essential to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. 
+
+In this article, I will explore few techniques to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 
 ***
 
 ### What are various Steps to verify Connectivity to destination machine & port?
 
-1. The first step in this process is to verify the **Network** connectivity with the remote machine. It means that we are able to send packets to the remote machine or not.
+1. The first step in this process is to verify the **Network** connectivity with the remote machine. It means that we can send packets to the remote machine or not.
 
 2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible. This ensures that the firewall is not blocking the port.
 
@@ -15,14 +17,14 @@ In an era of interconnected devices, Most of the code we write, involves connect
 
 ## Check Connectivity between machines using Ping
 
-The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine.
-*At the N/w level Ping rely on ICMP, which is at layer 3, hence it doesn't check if a port is open or not.*
-So, it is possible that ping works but still the call to API on destination machine at the specific port doesn't work.
+The good old friend, "Ping." Using the **Ping** command, we can verify the network level connectivity between the client and Remote Machine.
+*At the N/w level Ping rely on ICMP, which is at layer 3. Hence it doesn't check if a port is open or not.*
+So, it is possible that ping works, but still, the call to API on destination machine at the specific port doesn't work.
 
-### How to use ping
+### How to use ping?
 
-1. Open command prompt.
-2. Enter ping command, passing the destination machine machine IP or Host name as shown below
+1. Open the command prompt.
+2. Enter ping command, passing the destination machine IP or Hostname as shown below
 
 ```
 ping 34.45.5.6
@@ -30,15 +32,24 @@ ping 34.45.5.6
 
 ### Successfull Response
 
-If Ping Succeeds, we will get a reply from destination machine. This ensures that the connectivity exists between source and destination machines. Following image displays the result of a successful ping response.
+If Ping Succeeds, we will get a reply from destination machine. This reply ensures that the connectivity exists between the source and destination machines. Following image displays the result of a successful ping response.
 
 ![ping](Images/ping.png)
 
 ### Failure Response
 
-If a ping results in a **"Request timed out."**  or **"Destination Host Unreachable"** message, then there is a connectivity issue from Source to destination.
+If ping results in a **" Request timed out."**  or **"Destination Host Unreachable"** message, then there is a connectivity issue from Source to the destination. 
+
+Some of the Possible reasons are listed below
+* The Source/Destination Machine is not connected to the network.
+* The destination machine is not turned on.
+* Other causes could include an issue with Router or a problem with other networking components.
+
+#### Request Timed Out
 
 ![ping](Images/pingFailure.png)
+
+#### Destination Host Unreachable
 
 ![ping](Images/pingFailure1.png)
 
@@ -51,47 +62,47 @@ Wikipedia defines Telnet as
 
 Telnet gets its name from Terminal Network. With Telnet, we can establish a host session to a server. The advantage of using Telnet is that we can verify the connectivity to a port as well.
 
-### Why Telnet is not preffered?
+### Why Telnet is not preferred?
 
 Telnet uses plain text for communication and hence not encrypted. Therefore, in Windows, by default the TelNet Client is disabled. Telnet can be enabled in windows by Adding/Removing windows component using Control Panel.
 
 
-### How to use Telnet
+### How to use Telnet?
 
 1. Enter command prompt.
-2. Use telnet command passing in the Destination Server Name/Address and the port number. e.g. telnet destination 80. 
+2. Use telnet command passing in the Destination Server Name/Address and the port number. e.g., telnet destination 80. 
 
 **Note:** The default port for telnet is 23. So, if we omit the port number in telnet command, the  Telnet will try to connect to the destination using port 23.
 
 ### Telnet succeeds
 
-After entering the telnet command, we will see the text *"Connecting to HostName..."* as shown in below image.
+After entering the telnet command, we will see the text `Connecting to HostName...` as shown in below image.
 
 ![telnet connecting](Images/telnetConnecting.png)
 
-If the connection succeds, We will see a blank screen. Notice the Title of the console window. It should read Telnet <DestinationName>
+If the connection succeeds, We will see a blank screen. Notice the Title of the console window. It should read `Telnet <DestinationName>`
 
 ![telnet connected](Images/telnetConnected.png)
 
 ### Telnet Failure
 
 ![telnet failure](Images/telnetFailure.png)
-If the destination Machine or the port is inaccesible, we will get the error *"Could not open connection to the host, on port 80: Connection failed"*
+If the destination Machine or the port is inaccessible, we will get the error *"Could not open connection to the host, on port 80: Connection failed"*
 
 ***
 
 ## Check Connectivity between machines using Powershell
-My most preffered option, It is powerful as It allows to explore all the potential of .net framework as we can call any method of the .net framework using powershell.
+My preferred option, It is powerful as It allows to explore all the potential of a .net framework as we can call any method of the .net framework using PowerShell.
 
 ### Option 1 - Test-NetConnectioncommand
 
 If you're running Windows 8/Windows Server 2012 or newer, you can use the Test-NetConnectioncommand.
 
-The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. For our purpose, we are going to use the cmdlet with destination name and the port number
+The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. For our purpose, we are going to use the cmdlet with destination name and the port number.
 
-**Usage**
+**How to use Powershell Test-NetConnection**
 ```
-Test-NetConnection -Port 53 -ComputerName "www.galodha.com"
+Test-NetConnection -Port 81 -ComputerName "www.galodha.com"
 ```
 
 **Success**
@@ -103,9 +114,9 @@ Test-NetConnection -Port 53 -ComputerName "www.galodha.com"
 
 ### Option 2 - System.Net.Sockets.TcpClient
 
-Another option using powershell is making use of the .Net Class `TcpClient`. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a synchronous connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS host name, and connect in one convenient step.
+Another option using PowerShell is making use of the .Net Class `TcpClient`. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a *synchronous* connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS hostname, and connect in one convenient step.
 
-**Usage**
+**How to use Powershell TcpClient**
 
 ```
 New-Object Net.Sockets.TcpClient "10.45.23.109", 443 
@@ -114,7 +125,7 @@ New-Object Net.Sockets.TcpClient "10.45.23.109", 443
 ***
 
 ## Summary
-In this article, we explored 3 techniques to verify the connectivity to destination machine and the port number. We looked at the Ping, Telnet and powershell commands to verify the connectivity. These technique are mostly supported on Windows Operating System.
+In this article, we explored three techniques to verify the connectivity to the destination machine and the port number. We looked at the Ping, Telnet and PowerShell commands to verify the connectivity. These techniques are mostly supported on Windows Operating System.
 
-• Most of the time a firewall is blocking the traffic. This firewall can either be on your local machine or on the server. Check both ends for a firewall. If the actual server is on a different network, for example across the Internet, there could be other firewalls in the middle.
-	• The server process is NOT running. Ensure the server is running
+• Most of the time a firewall is blocking the traffic. This firewall can either be on your local machine or the server. Check both ends for a firewall. If the actual server is on a different network, for example across the Internet, there could be other firewalls in the middle.
+    • The server process is NOT running. Ensure the server is running
