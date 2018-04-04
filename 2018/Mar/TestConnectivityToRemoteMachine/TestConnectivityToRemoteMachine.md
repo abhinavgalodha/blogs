@@ -127,8 +127,12 @@ New-Object Net.Sockets.TcpClient "10.45.23.109", 443
 
 #### Success
 
+![Powershell TCP Success](Images/PowershellTcpClientNetConnected.png)
 
 #### Failure
+
+![Powershell TCP Failure](Images/PowershellTcpClientConnectionFailure.png)
+
 
 ***
 
