@@ -100,17 +100,21 @@ If you're running Windows 8/Windows Server 2012 or newer, you can use the Test-
 
 The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. For our purpose, we are going to use the cmdlet with destination name and the port number.
 
-**How to use Powershell Test-NetConnection**
+
+###How to use Powershell Test-NetConnection
+
 ```
 Test-NetConnection -Port 81 -ComputerName "www.galodha.com"
 ```
 
 #### Success
+
 If we get the message `TcpTestSucceeded : True`, then it means that the connection to the destination machine and port is successful.
 
 ![Powershell connected](Images/PowershellTestNetConnected.png)
 
 ####Failure 
+
 A value of `PingSucceeded : False` or the `Timedout` error message implies that there is an issue with N/W connectivity.
 
 ![Powershell Failure](Images/PowershellTestNetConnectionFailure.png)
@@ -119,7 +123,8 @@ A value of `PingSucceeded : False` or the `Timedout` error message implies that 
 
 Another option using PowerShell is making use of the .Net Class `TcpClient`. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a *synchronous* connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS hostname, and connect in one convenient step.
 
-**How to use Powershell TcpClient**
+### How to use Powershell TcpClient
+
 Create a new Object using the TcpClient class as shown belo
 
 ```
