@@ -2,13 +2,14 @@
 
 Most of the code I write, involves connectivity from one machine to another remote machine. For e.g. While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost important to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. In this article, I will explore few technique to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. You might find these helpful in case you need to verify the connectivity to remote machines.
 
+
 ***
 
-### What are various Steps to verify Connectivity?
+### What are various Steps to verify Connectivity to destination machine & port?
 
-1. The first step in this process is to verify the **Network** connectivity with the remote machine. It means that we are able to send packets to the remote machine.
+1. The first step in this process is to verify the **Network** connectivity with the remote machine. It means that we are able to send packets to the remote machine or not.
 
-2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible. This ensures that the firewall is not blocking the port. 
+2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible. This ensures that the firewall is not blocking the port.
 
 [TBD]Diagram
 
@@ -16,7 +17,7 @@ Most of the code I write, involves connectivity from one machine to another remo
 
 The old good friend, "Ping". Using the **Ping** command, we can verify the network level connectivity between client and Remote Machine.
 *At the N/w level Ping rely on ICMP, which is at layer 3, hence it doesn't check if a port is open or not.*
-So, it is possible that ping works but still the call to API on destination machine doesn't work.
+So, it is possible that ping works but still the call to API on destination machine at the specific port doesn't work.
 
 ### How to use ping
 
@@ -35,9 +36,11 @@ If Ping Succeeds, we will get a reply from destination machine. This ensures tha
 
 ### Failure Response
 
-If ping results in a **"Request timed out."** message, then there is a connectivity issue from Source to destination.
+If a ping results in a **"Request timed out."**  or **"Destination Host Unreachable"** message, then there is a connectivity issue from Source to destination.
 
 ![ping](Images/pingFailure.png)
+
+![ping](Images/pingFailure1.png)
 
 ***
 
@@ -109,7 +112,7 @@ PingReplyDetails (RTT) : 164 ms
 
 ### Option 2 - System.Net.Sockets.TcpClient
 
-Another option using powershell is making use of the built in `TcpClient` class. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a synchronous connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS host name, and connect in one convenient step.
+Another option using powershell is making use of the .Net Class `TcpClient`. This class has a constructor which takes in the Destination Server Name and the Port number.This constructor creates a new TcpClient and makes a synchronous connection attempt to the provided host name and port number. `TcpClient` will block until it either connects or fails. This constructor allows you to initialize, resolve the DNS host name, and connect in one convenient step.
 
 **Usage**
 
