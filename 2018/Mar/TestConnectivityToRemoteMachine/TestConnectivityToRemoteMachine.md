@@ -1,8 +1,8 @@
- # Various techniques to verify the Connectivity from Client to Server (including Port Number) using built-in tools in the Operating System.
+ # Various techniques to verify the Connectivity from Client to Server (including Port Number)
 
 In an era of interconnected devices, Most of the code we write involves connectivity from one machine to another remote machine. E.g., While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost essential to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. 
 
-In this article, I will explore few techniques to test the network connectivity with another machine & Port number. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
+In this article, I will explore few techniques to test the network connectivity with another machine & Port number using the built-in tools in the operating System. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 
 ***
@@ -105,11 +105,14 @@ The Test-NetConnection cmdlet displays diagnostic information for a connection. 
 Test-NetConnection -Port 81 -ComputerName "www.galodha.com"
 ```
 
-**Success**
+#### Success
+If we get the message `TcpTestSucceeded : True`, then it means that the connection to the destination machine and port is successful.
 
 ![Powershell connected](Images/PowershellTestNetConnected.png)
 
-**Failure**
+####Failure 
+A value of `PingSucceeded : False` or the `Timedout` error message implies that there is an issue with N/W connectivity.
+
 ![Powershell Failure](Images/PowershellTestNetConnectionFailure.png)
 
 ### Option 2 - System.Net.Sockets.TcpClient
@@ -121,6 +124,11 @@ Another option using PowerShell is making use of the .Net Class `TcpClient`. Thi
 ```
 New-Object Net.Sockets.TcpClient "10.45.23.109", 443 
 ```
+
+#### Success
+
+
+#### Failure
 
 ***
 
