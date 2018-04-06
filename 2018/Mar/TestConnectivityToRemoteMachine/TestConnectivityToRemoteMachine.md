@@ -1,8 +1,8 @@
  # Various techniques to verify the Connectivity from Client to Server (including Port Number)
 
-In an era of interconnected devices, Most of the code we write involves connectivity from one machine to another remote machine. E.g., While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost essential to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible. 
+In an era of interconnected devices, Most of the code we write involves connectivity from one machine to another remote machine. E.g., While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost essential to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible.
 
-In this article, I will explore few techniques to test the network connectivity with another machine & Port number using the built-in tools in the operating System. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
+In this article, I will explore few techniques to test the network connectivity with another machine & Port number using the built-in tools in the operating System. No additional downloads or installation is required. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
 
 
 ***
@@ -19,12 +19,12 @@ In this article, I will explore few techniques to test the network connectivity 
 
 The good old friend, "Ping." Using the **Ping** command, we can verify the network level connectivity between the client and Remote Machine.
 *At the N/w level Ping rely on ICMP, which is at layer 3. Hence it doesn't check if a port is open or not.*
-So, it is possible that ping works, but still, the call to API on destination machine at the specific port doesn't work.
+So, it is possible that ping works, but still, the call to the API on destination machine at the specific port doesn't work.
 
 ### How to use ping?
 
 1. Open the command prompt.
-2. Enter ping command, passing the destination machine IP or Hostname as shown below
+2. Enter ping command, passing the destination machine IP or Hostname as shown below.
 
 ```
 ping 34.45.5.6
@@ -41,6 +41,7 @@ If Ping Succeeds, we will get a reply from destination machine. This reply ensur
 If ping results in a **" Request timed out."**  or **"Destination Host Unreachable"** message, then there is a connectivity issue from Source to the destination. 
 
 Some of the Possible reasons are listed below
+
 * The Source/Destination Machine is not connected to the network.
 * The destination machine is not turned on.
 * Other causes could include an issue with Router or a problem with other networking components.
@@ -92,7 +93,7 @@ If the destination Machine or the port is inaccessible, we will get the error *"
 ***
 
 ## Check Connectivity between machines using Powershell
-My preferred option, It is powerful as It allows to explore all the potential of a .net framework as we can call any method of the .net framework using PowerShell.
+My preferred option, Powershell, It is powerful as It allows to explore all the potential of a .net framework as we can call .net framework methods using powershell.
 
 ### Option 1 - Test-NetConnectioncommand
 
@@ -101,7 +102,9 @@ If you're running Windows 8/Windows Server 2012 or newer, you can use the Test-
 The Test-NetConnection cmdlet displays diagnostic information for a connection. It supports ping test, TCP test, route tracing, and route selection diagnostics. For our purpose, we are going to use the cmdlet with destination name and the port number.
 
 
-###How to use Powershell Test-NetConnection
+### How to use Powershell Test-NetConnection
+
+Provide the HostName/IP and the port number to verify the connectivity.
 
 ```
 Test-NetConnection -Port 81 -ComputerName "www.galodha.com"
@@ -113,7 +116,7 @@ If we get the message `TcpTestSucceeded : True`, then it means that the connecti
 
 ![Powershell connected](Images/PowershellTestNetConnected.png)
 
-####Failure 
+#### Failure 
 
 A value of `PingSucceeded : False` or the `Timedout` error message implies that there is an issue with N/W connectivity.
 
@@ -125,7 +128,7 @@ Another option using PowerShell is making use of the .Net Class `TcpClient`. Thi
 
 ### How to use Powershell TcpClient
 
-Create a new Object using the TcpClient class as shown belo
+Create a new Object using the TcpClient class as shown below passing in the HostName/IP and the Port Number.
 
 ```
 New-Object Net.Sockets.TcpClient "10.45.23.109", 443 
