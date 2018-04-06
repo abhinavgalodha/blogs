@@ -15,7 +15,8 @@ In this article, I will explore few techniques to test the network connectivity 
 
 2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible. This ensures that the firewall is not blocking the port.
 
-<img src="Images/clientServer.svg">
+![Client Server Connectivity](Images/ClientServer.jpg)
+
 
 ## Check Connectivity between machines using Ping
 
