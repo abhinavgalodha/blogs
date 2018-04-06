@@ -1,5 +1,7 @@
  # Various techniques to verify the Connectivity from Client to Server (including Port Number)
 
+![Meme](Images/ConnectMeme.gif)
+
 In an era of interconnected devices, Most of the code we write involves connectivity from one machine to another remote machine. E.g., While working on a Frontend application, it needs to communicate with Another Remote API. It's utmost essential to understand if the connectivity exists between the two machines and the port for the destination machine is open and accessible.
 
 In this article, I will explore few techniques to test the network connectivity with another machine & Port number using the built-in tools in the operating System. No additional downloads or installation is required. Once we establish the connectivity between two machines, we can proceed ahead with our implementation details. However, if Network connectivity is not established, we may need to further troubleshoot the issue. You might find these helpful in case you need to verify the connectivity to remote machines.
@@ -13,7 +15,7 @@ In this article, I will explore few techniques to test the network connectivity 
 
 2. Next, Verify the Connectivity to the Destination port to check if the port is blocked or inaccessible. This ensures that the firewall is not blocking the port.
 
-[TBD]Diagram
+![clientServer](Images/clientServer.svg)
 
 ## Check Connectivity between machines using Ping
 
@@ -40,7 +42,7 @@ If Ping Succeeds, we will get a reply from destination machine. This reply ensur
 
 If ping results in a **" Request timed out."**  or **"Destination Host Unreachable"** message, then there is a connectivity issue from Source to the destination. 
 
-Some of the Possible reasons are listed below
+Some of the Possible reasons for failure are listed below
 
 * The Source/Destination Machine is not connected to the network.
 * The destination machine is not turned on.
@@ -89,6 +91,10 @@ If the connection succeeds, We will see a blank screen. Notice the Title of the 
 
 ![telnet failure](Images/telnetFailure.png)
 If the destination Machine or the port is inaccessible, we will get the error *"Could not open connection to the host, on port 80: Connection failed"*
+
+
+### What if Ping works successfully and Telnet fails?
+It might be the case that the port is blocked. Firewall can block the traffic. This firewall can either be on your local machine or the server. Check both ends for a firewall. If the actual server is on a different network, for example across the Internet, there could be other firewalls in the middle too.
 
 ***
 
@@ -152,5 +158,4 @@ If the `Connected` Property is `False` or you get an error message, then it indi
 ## Summary
 In this article, we explored three techniques to verify the connectivity to the destination machine and the port number. We looked at the Ping, Telnet and PowerShell commands to verify the connectivity. These techniques are mostly supported on Windows Operating System.
 
-• Most of the time a firewall is blocking the traffic. This firewall can either be on your local machine or the server. Check both ends for a firewall. If the actual server is on a different network, for example across the Internet, there could be other firewalls in the middle.
-    • The server process is NOT running. Ensure the server is running
+  
