@@ -76,7 +76,7 @@ Telnet uses plain text for communication and hence not encrypted. Therefore, in 
 1. Enter command prompt.
 2. Use telnet command passing in the Destination Server Name/Address and the port number. e.g., telnet destination 80. 
 
-**Note:** The default port for telnet is 23. So, if we omit the port number in telnet command, the  Telnet will try to connect to the destination using port 23.
+>**Note:** The default port for telnet is 23. So, if we omit the port number in telnet command, the  Telnet will try to connect to the destination using port 23.
 
 ### Telnet succeeds
 
