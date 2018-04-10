@@ -158,6 +158,12 @@ Visual Studio
 Visual Studio Code
 Notepad++
 
+## Office Products
+Excel
+Word
+Powerpoint
+MS-Access
+Visio
 
 
 
