@@ -20,27 +20,41 @@ Or
 #Blaze your way with c#
 
 Are you a C#, C++ developer and Javascript never made sense for you while writing the Client Side Applications?
-You are in for a good Surprise, Microsoft Asp.net team has announced the Experimental Version of Blazor as first Public preview on 6th Feb. Blazor let's you use all your C# knowlegde to Apply in Client Side development. Blazor replaces Javascript Code with C#. Does that sound a dream.. Continue reading..
+You are in for a good Surprise, Microsoft Asp.net team has announced the Experimental Version of Blazor as first Public preview on 6th Feb. Blazor let's you use all your C# knowlegde to Apply in Client Side development. Blazor replaces Javascript Code with C#. Essentially, it means that rather then writing the Client side code in Angular, React, Vue you can use C# and Razor. Does that sound a dream ??Continue reading...
 
 ## History Of Blazor 
 
-Last Year, Steve Sanderson (The Creator Knockout.js) started working on an side project Blazor. After his NDC Demo at OSLO and the feedback for Blazor. The team created a Experimental version of Blazor.
+Last Year, Steve Sanderson (The Creator Knockout.js) started working on an side project Blazor. After his NDC Demo at OSLO and the positive feedback for Blazor. The ASP.Net team created a Experimental version of Blazor.
+
+### What's in the Name Blazor
 
 ### Blazor = Browser + Razor
 
-Blzor gets it name from the Razor which most ASP.net MVC developers would be Familiar with. Razor is a markup syntax for HTML and C#. Moreover, it runs on the Browser and Hence combine the power of Browser and Razor.
+Blazor gets it name from the Razor which most ASP.Net MVC developers would be Familiar with. Razor is a markup syntax for HTML and C#. Moreover, it runs on the Browser and Hence combine the power of Browser and Razor.
 
 ## What is Blazor?
 
-Blazor is a Single page web application (SPA) framework built on .NET that runs in the browser via WebAssembly.
+>Blazor is a Single page web application (SPA) framework built on .NET that runs in the browser via WebAssembly.
 
-It’s a framework for browser-based (client-side) applications written in .NET, running under WebAssembly. It gives you all the benefits of a rich, modern single-page application (SPA) platform while letting you use .NET end-to-end, including sharing code across server and client. Blazor is based on existing web technologies like HTML and CSS, but you use C# and Razor syntax instead of JavaScript to build composable web UI. 
+It’s a framework for client-side applications written in .NET, running under WebAssembly. It offers all the benefits of the rich, modern single-page application (SPA) platform. Additionaly, it allows to use .Net throughout the code base. It means that we can write the code for the Client, Server in the same technology (.Net). Additionaly, Same classes can be shared by both client and server code. Blazor is based on existing web technologies like HTML and CSS, but you use C# and Razor syntax instead of JavaScript to build composable web UI.
 
 
-## What's in the name "Blazor"?
-Blazor makes heavy use of Razor, a markup syntax for HTML and C#. Browser + Razor = Blazor
+## What is Web Assembly?
 
-## What is Web Assembly.
+**Web Assembly is a Web Standard to promote native performance on the web.**  It defines a low level format **allowing the developers to write the code in High level Languages (C, C++) and compile the code into WebAssembly.** The Web Assembly can then be executed by the Browser at nearly the native speed. Web Assembly is supported by all modern Browsers (Firefox, Chrome, Edge, Safari). It is a low-level assembly-like language with a compact binary format that runs with near-native performance.
+
+WebAssembly is designed to complement and run alongside JavaScript. Web Assembly Modules can be invoked from Javascript and vice versa.  Use cases of Web assembly includes 3D games, Virtual and Augmented Reality, computer vision, image/video editing, and a number of other domains that demand native performance.
+
+## The importance of Web Assembly.
+
+Running .NET in the browser is made possible by WebAssembly.  This is the foundational piece needed to build a .NET runtime that can run in the browser. **No plugins or transpilation needed.** You run normal .NET assemblies in the browser using a WebAssembly based .NET runtime.
+
+
+## How Blazor works using Web Assembly?
+
+The client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. There is discussion to cache the dll once for each application in the future so that the download cost is low. As of now, Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
+
+
 
 
 ## Blazor - Does c# replaces Javascript?
@@ -61,16 +75,6 @@ Web development has improved in many ways over the years but building modern web
 • Modern innovative languages: .NET languages like C# and F# make programming a joy and keep getting better with innovative new language features.
 • Industry leading tools: The Visual Studio product family provides a great .NET development experience on Windows, Linux, and macOS.
 • Fast and scalable: .NET has a long history of performance, reliability, and security for web development on the server. Using .NET as a full-stack solution makes it easier to build fast, reliable and secure applications.
-
-## The importance of Web Assembly.
-
-Running .NET in the browser is made possible by WebAssembly, a new web standard for a “portable, size- and load-time-efficient format suitable for compilation to the web.” WebAssembly enables fundamentally new ways to write web apps. Code compiled to WebAssembly can run in any browser at native speeds. This is the foundational piece needed to build a .NET runtime that can run in the browser. No plugins or transpilation needed. You run normal .NET assemblies in the browser using a WebAssembly based .NET runtime.
-
-Last August, our friends on Microsoft’s Xamarin team announced their plans to bring a .NET runtime (Mono) to the web using WebAssembly and have been making steady progress. The Blazor project builds on their work to create a rich client-side single page application framework written in .NET.
-
-## How Blazor works using Web Assembly.
-
-Your client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. There is discussion to cache the dll once for each application in the future so that the download cost is low. As of now, Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
 
 
 
