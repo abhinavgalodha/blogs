@@ -20,9 +20,10 @@ Or
 #Blaze your way with c#
 
 Are you a C#, C++ developer and Javascript never made sense for you while writing the Client Side Applications?
-You are in for a good Surprise, Microsoft Asp.net team has announced the Experimental Version of Blazor as first Public preview on 6th Feb. Blazor let's you use all your C# knowlegde to Apply in Client Side development. You will replace your Javascript Code with C#. Does that sound a dream.. Continue reading..
+You are in for a good Surprise, Microsoft Asp.net team has announced the Experimental Version of Blazor as first Public preview on 6th Feb. Blazor let's you use all your C# knowlegde to Apply in Client Side development. Blazor replaces Javascript Code with C#. Does that sound a dream.. Continue reading..
 
-## History Of Blazor
+## History Of Blazor 
+
 Last Year, Steve Sanderson (The Creator Knockout.js) started working on an side project Blazor. After his NDC Demo at OSLO and the feedback for Blazor. The team created a Experimental version of Blazor.
 
 ### Blazor = Browser + Razor
@@ -31,42 +32,55 @@ Blzor gets it name from the Razor which most ASP.net MVC developers would be Fam
 
 ## What is Blazor?
 
-Blazor is a single page web application framework built on .NET that runs in the browser via WebAssembly.
+Blazor is a Single page web application (SPA) framework built on .NET that runs in the browser via WebAssembly.
 
 It’s a framework for browser-based (client-side) applications written in .NET, running under WebAssembly. It gives you all the benefits of a rich, modern single-page application (SPA) platform while letting you use .NET end-to-end, including sharing code across server and client. Blazor is based on existing web technologies like HTML and CSS, but you use C# and Razor syntax instead of JavaScript to build composable web UI. 
-Q: Where does the name "Blazor" come from?
-Blazor makes heavy use of Razor, a markup syntax for HTML and C#. Browser + Razor = Blazor! When pronounced, it is also the name of a swanky jacket worn by hipsters that have excellent taste in fashion, style, and programming languages.
+
+
+## What's in the name "Blazor"?
+Blazor makes heavy use of Razor, a markup syntax for HTML and C#. Browser + Razor = Blazor
 
 ## What is Web Assembly.
 
 
 ## Blazor - Does c# replaces Javascript?
-Blazor is just the replacement (to be more precise "value addition") to the javascript. It is a client side only solution (but may be with some easy binding to ASP.Net in the future). Still its completely based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls.
 
-How it Helps
+Blazor allows to replace the javascript with c#. Strictly, Blazor is not meant to be a replacement of javascript but a Complementar language to Javasript. It is a client side solution based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls.
+
+## Why blazor is helpful to a C# Developer?
+
+Blazor allows the .Net Developer to Utilize  existing skills for the ClientSide development. It enables the developers to Write fast Single Page Applications build on a reusable Component based Model.
+
 Blazor promises to greatly simplify the task of building fast and beautiful single-page applications that run in any browser. It does this by enabling developers to write .NET-based web apps that run client-side in web browsers using open web standards.
 
-If you already use .NET, this completes the picture: you’ll be able to use your skills for browser-based development in addition to existing scenarios for server and cloud-based services, native mobile/desktop apps, and games. If you don’t yet use .NET, our hope is that the productivity and simplicity benefits of Blazor will be compelling enough that you will try it.
+## Is it suitable to use .NET for browser apps?
 
-Why use .NET for browser apps?
 Web development has improved in many ways over the years but building modern web applications still poses challenges. Using .NET in the browser offers many advantages that can help make web development easier and more productive:
+
 • Stable and consistent: .NET offers standard APIs, tools, and build infrastructure across all .NET platforms that are stable, feature rich, and easy to use.
 • Modern innovative languages: .NET languages like C# and F# make programming a joy and keep getting better with innovative new language features.
 • Industry leading tools: The Visual Studio product family provides a great .NET development experience on Windows, Linux, and macOS.
 • Fast and scalable: .NET has a long history of performance, reliability, and security for web development on the server. Using .NET as a full-stack solution makes it easier to build fast, reliable and secure applications.
 
-WebAssembly changes the Web
+## The importance of Web Assembly.
+
 Running .NET in the browser is made possible by WebAssembly, a new web standard for a “portable, size- and load-time-efficient format suitable for compilation to the web.” WebAssembly enables fundamentally new ways to write web apps. Code compiled to WebAssembly can run in any browser at native speeds. This is the foundational piece needed to build a .NET runtime that can run in the browser. No plugins or transpilation needed. You run normal .NET assemblies in the browser using a WebAssembly based .NET runtime.
+
 Last August, our friends on Microsoft’s Xamarin team announced their plans to bring a .NET runtime (Mono) to the web using WebAssembly and have been making steady progress. The Blazor project builds on their work to create a rich client-side single page application framework written in .NET.
-How can you run .NET in a web browser?
-Running .NET in the browser is made possible by a relatively new standardized web technology called WebAssembly. WebAssembly is a "portable, size- and load-time-efficient format suitable for compilation to the web." Code compiled to WebAssembly can run in any browser at native speeds. To run .NET binaries in a web browser we use a .NET runtime (specifically Mono) that has been compiled to WebAssembly.
-Does Blazor compile my entire .NET based app to WebAssembly?
+
+## How Blazor works using Web Assembly.
+
+Your client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. 
+
+
 No, a Blazor app consists of normal compiled .NET assemblies that get downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. That said, support for full static ahead of time (AoT) compilation of the app to WebAssembly may be something we add further down the road.
 
-Q: Wouldn't the app download size be huge if it also includes a .NET runtime?
+## Q: Wouldn't the app download size be huge if it also includes a .NET runtime?
+
 Not necessarily. .NET runtimes come in all shapes in sizes. Early Blazor prototypes used a compact .NET runtime (including assembly execution, garbage collection, threading) that compiled to a mere 60KB of WebAssembly. Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
 
-Q: What features will Blazor support?
+## \Q: What features will Blazor support?
+
 Blazor will support all of the features of a modern single page app framework:
 	• A component model for building composable UI
 	• Routing
@@ -81,24 +95,38 @@ Blazor will support all of the features of a modern single page app framework:
 	• Ability to run on older (non-WebAssembly) browsers via asm.js
 	• Publishing and app size trimming
 
-Q: Can I use Blazor with ASP.NET Core on the server?
+## Q: Can I use Blazor with ASP.NET Core on the server?
+
 Yes! Blazor optionally integrates with ASP.NET Core to provide a seamless and consistent full-stack web development solution.
 
-Q: Is Blazor a .NET port of an existing JavaScript framework?
+## Q: Is Blazor a .NET port of an existing JavaScript framework?
+
 Blazor is inspired by existing modern single page app frameworks, like React, Angular, and Vue, but is also a new framework in its own right.
-Q: Why is Blazor an "experimental" project?
+
+## Q: Why is Blazor an "experimental" project?
+
 Blazor is an experimental project because there are still lots of questions to answer about its viability and appeal. The purposes of this initial experimental phase is to work through the any outstanding technical issues, to gauge interest and to listen to feedback. While we are optimistic about Blazor's future, at this time Blazor is not a committed product and should be considered pre-alpha.
-Q: Is this Silverlight all over again?
+
+
+## Q: Is this Silverlight all over again?
+
 No, Blazor is a .NET web framework based on HTML and CSS that runs in the browser using open web standards. It requires no plugin and works on mobile devices and older browsers.
 
-Q: Does Blazor use XAML?
+#3 Q: Does Blazor use XAML?
+
 No, Blazor is a web framework based on HTML, CSS, and other standard web technologies.
-Q: Is WebAssembly supported in all browsers?
+
+## Q: Is WebAssembly supported in all browsers?
+
 Yes, WebAssembly has achieved cross-browser consensus and all modern browsers now support WebAssembly
 For IE 11, it has a transpiler.
-Q: Does Blazor work on mobile browsers?
+
+
+##Q: Does Blazor work on mobile browsers? 
 Yes, modern mobile browsers also support WebAssembly.
-Q: What about older browsers that don't support WebAssembly? For example, does Blazor work in IE?
+
+##Q: What about older browsers that don't support WebAssembly? 
+For example, does Blazor work in IE?
 For older browsers that don't support WebAssembly Blazor will fallback to using an asm.js based .NET runtime. Using asm.js is slower and has a larger download size, but is still quite functional.
 Q: Can I use .NET Standard libraries with Blazor?
 Yes, the .NET runtime used for Blazor supports .NET Standard 2.0. APIs that aren't supported in the browser throw NotSupportedExceptions.
