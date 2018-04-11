@@ -70,14 +70,10 @@ Last August, our friends on Microsoft’s Xamarin team announced their plans t
 
 ## How Blazor works using Web Assembly.
 
-Your client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. 
+Your client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. There is discussion to cache the dll once for each application in the future so that the download cost is low. As of now, Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
 
 
-No, a Blazor app consists of normal compiled .NET assemblies that get downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. That said, support for full static ahead of time (AoT) compilation of the app to WebAssembly may be something we add further down the road.
 
-## Q: Wouldn't the app download size be huge if it also includes a .NET runtime?
-
-Not necessarily. .NET runtimes come in all shapes in sizes. Early Blazor prototypes used a compact .NET runtime (including assembly execution, garbage collection, threading) that compiled to a mere 60KB of WebAssembly. Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
 
 ## \Q: What features will Blazor support?
 
