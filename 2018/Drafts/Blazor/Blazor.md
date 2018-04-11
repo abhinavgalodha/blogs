@@ -52,20 +52,10 @@ Running .NET in the browser is made possible by WebAssembly.  This is the found
 
 ## How Blazor works using Web Assembly?
 
-The client application is compiled as .Net assemblies and gets downloaded and run in a web browser using a WebAssembly based .NET runtime. Only the .NET runtime itself is compiled to WebAssembly. There is discussion to cache the dll once for each application in the future so that the download cost is low. As of now, Blazor now runs on Mono, which is currently significantly larger, but opportunities for size optimization abound, including merging and trimming the runtime and application binaries. Other potential download size mitigations include caching and using a CDN.
+The client application (Client Web Project) is compiled as .Net assembly. When the Application is requested by browser, the Browser downloads the required dll as defined in the client Project and runs in a web browser using a WebAssembly based .NET runtime. **Only the .NET runtime itself is compiled to WebAssembly.**  There is discussion to use HTTP Caching to cache the dll once for each application in the future so that the download cost is low. 
 
+As of now, Blazor now runs on Mono, which is currently significantly larger, but there are opportunities for size optimization, including merging and trimming the runtime and application binaries.
 
-
-
-## Blazor - Does c# replaces Javascript?
-
-Blazor allows to replace the javascript with c#. Strictly, Blazor is not meant to be a replacement of javascript but a Complementar language to Javasript. It is a client side solution based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls.
-
-## Why blazor is helpful to a C# Developer?
-
-Blazor allows the .Net Developer to Utilize  existing skills for the ClientSide development. It enables the developers to Write fast Single Page Applications build on a reusable Component based Model.
-
-Blazor promises to greatly simplify the task of building fast and beautiful single-page applications that run in any browser. It does this by enabling developers to write .NET-based web apps that run client-side in web browsers using open web standards.
 
 ## Is it suitable to use .NET for browser apps?
 
@@ -76,7 +66,14 @@ Web development has improved in many ways over the years but building modern web
 • Industry leading tools: The Visual Studio product family provides a great .NET development experience on Windows, Linux, and macOS.
 • Fast and scalable: .NET has a long history of performance, reliability, and security for web development on the server. Using .NET as a full-stack solution makes it easier to build fast, reliable and secure applications.
 
+## Blazor - Does c# replaces Javascript?
 
+Blazor allows to replace the javascript with c#. Strictly, Blazor is not meant to be a replacement of javascript but a Complementar language to Javasript. It is a client side solution based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls.
+
+
+## Why blazor is helpful to a C# Developer?
+
+Blazor allows the .Net Developer to Utilize  existing skills for the ClientSide development. It enables the developers to Write fast Single Page Applications build on a reusable Component based Model based on open web standards.
 
 
 ## \Q: What features will Blazor support?
