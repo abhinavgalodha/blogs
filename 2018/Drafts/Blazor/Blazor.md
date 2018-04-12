@@ -1,16 +1,17 @@
-# Death Of Javascript; Writing Client-side code from Angular, React, Vue to C# blazor
+### Death Of Javascript; Writing Client-side code from Angular, React, Vue to C# blazor
 
 or 
 
-# Replacing Angular, React, Vue, Javascript with C# for Building Client-Side Application
+### Replacing Angular, React, Vue, Javascript with C# for Building Client-Side Application
 
 or
 
-# Death of Javascript; Long live C#
+### Death of Javascript; Long live C#
 
 Or
 
 # How to replace Javascript with C# for Client side coding…
+
 Or
 
 # Write C# .Net code for Client-Side Application development
@@ -21,17 +22,19 @@ Or
 
 #Blaze your way with c#
 
+# Forget Javascript, use C# intead of Javascript for Client Side application Development - Blazor
+
+
 Are you a C#, C++ developer and you couldn't figure out the  Javascript craziness while writing the Client Side Applications?
 
 ![](Images/JS1.gif)
-![](Images/JS2.gif)
+
 
 Surprise.. Surprise.., Microsoft Asp.net team has announced the Experimental Version of Blazor as the first Public preview on 6th Feb.
 
-![](Images/BlazorAwesome.gif)
-
-
 Blazor lets you use all your C# knowledge to Apply in Client Side development. Blazor replaces Javascript Code with C#. Essentially, it means that rather than writing the Client side code in Angular, React, Vue using Javascript, Typescript you can use C# and Razor. Does that sound like a dream ?? Continue reading...
+
+![](Images/BlazorAwesome.gif)
 
 ## History Of Blazor 
 
@@ -67,6 +70,10 @@ The client application (Client Web Project) is compiled as .Net assembly. When t
 
 As of now, Blazor runs on Mono, which has the larger size, but there are opportunities for size optimization, including merging and trimming the runtime and application binaries and the future releases would be targetting this optimization.
 
+Shown below is a screenshot of the Blazor Application in the Developer toolbar. You can see that the .Net dll are being downloaded by the Browser.
+
+![](Images\BlazorLoadingNetDll.png)
+
 ## Does C# replaces Javascript?
 
 Blazor allows replacing the javascript with C#. Strictly, Blazor is not meant to be a replacement for javascript but a Complementary language to Javascript. It is a client-side solution based on HTML and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access/modify HTML controls. Also, JS and C# code can interact with Each other. There is a facility to interop, meaning we can call the Javascript code from C# code and vice-versa.
@@ -76,7 +83,7 @@ Blazor allows replacing the javascript with C#. Strictly, Blazor is not meant to
 
 Blazor allows the .Net Developer to Utilize existing skills for the Client-Side development. It enables the developers to Write fast Single Page Applications build on a Component-based Model based on open web standards. .Net Developers can use languages like C#, F# and use the familiar standard APIs, tools, and build infrastructure across all .NET platforms.
 
-## Sharing Code
+## Sharing Code in Client and Server Side
 
 How many times does it happen that we write Models/Class in the Web API and then create the same Classes in the Javascript/Typescript on the Client Side Project? This is pretty normal for most of the applications.  Blazor helps to share the code by allowing the same Models/Class to be reused in the Client Side as well as Server side. E.g. We can create a Shared Dll defining the class and then reuse the Class in Client Side and Server side by adding References to the shared dll.
 
