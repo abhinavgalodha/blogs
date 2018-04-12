@@ -95,23 +95,17 @@ Blazor will support all of the features of a modern single page app framework:
 Blazor is an **experimental** project because there are still lots of questions to answer about its viability and appeal. The purposes of this initial experimental phase is to work through the any outstanding technical issues, to gauge interest and to listen to feedback. It's not a committed Product.
 
 
+## Browser Support?
+
+All the modern browsers support the WebAssembly. Following images shows the browser support for WebAssembly. It's even work in certain Mobile browsers. For IE 11, it has a transpiler. For older browsers that don't support WebAssembly Blazor will fallback to using an asm.js based .NET runtime. Using asm.js is slower and has a larger download size, but is still quite functional.
+
+![Browser Support for Web Assembly](Images/CanIUseBrowserSupport.png)
 
 
 ## Any relation to Silverlight/XAML?
 
 If you are familiar with Silverlight, it might seem simmilar. But hold on, It doesn't bear resemblance with Silverlight. Blazor doesn't require any plugin support in the browser. It doesn't use XAML and is based on HTML and CSS that runs in the browser using open web standards. Addtionally, it works on mobile devices and older browsers.
 
-
-## Is WebAssembly supported in all browsers?
-
-Yes, WebAssembly has achieved cross-browser consensus and all modern browsers now support WebAssembly
-For IE 11, it has a transpiler.
-
-
-## What about older browsers that don't support WebAssembly?
-
-For example, does Blazor work in IE?
-For older browsers that don't support WebAssembly Blazor will fallback to using an asm.js based .NET runtime. Using asm.js is slower and has a larger download size, but is still quite functional.
 
 ## What about Garbage Collection
 
