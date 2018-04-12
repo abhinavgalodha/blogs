@@ -17,6 +17,8 @@ Or
 
 Or 
 
+# C# Renaissance, writing frontend code using C#
+
 #Blaze your way with c#
 
 Are you a C#, C++ developer and Javascript never made sense for you while writing the Client Side Applications?
@@ -45,96 +47,83 @@ It’s a framework for client-side applications written in .NET, running under W
 
 WebAssembly is designed to complement and run alongside JavaScript. Web Assembly Modules can be invoked from Javascript and vice versa.  Use cases of Web assembly includes 3D games, Virtual and Augmented Reality, computer vision, image/video editing, and a number of other domains that demand native performance.
 
-## The importance of Web Assembly.
+## The Importance of Web Assembly.
 
 Running .NET in the browser is made possible by WebAssembly.  This is the foundational piece needed to build a .NET runtime that can run in the browser. **No plugins or transpilation needed.** You run normal .NET assemblies in the browser using a WebAssembly based .NET runtime.
 
 
 ## How Blazor works using Web Assembly?
 
-The client application (Client Web Project) is compiled as .Net assembly. When the Application is requested by browser, the Browser downloads the required dll as defined in the client Project and runs in a web browser using a WebAssembly based .NET runtime. **Only the .NET runtime itself is compiled to WebAssembly.**  There is discussion to use HTTP Caching to cache the dll once for each application in the future so that the download cost is low. 
+The client application (Client Web Project) is compiled as .Net assembly. When the Application is requested by browser, the Browser downloads the required dll as defined in the client Project and runs in a web browser using a WebAssembly based .NET runtime. **Only the .NET runtime itself is compiled to WebAssembly.**  In future, the Dll would be cached using HTTP Caching to reduce the download cost. 
 
-As of now, Blazor now runs on Mono, which is currently significantly larger, but there are opportunities for size optimization, including merging and trimming the runtime and application binaries.
+As of now, Blazor runs on Mono, which has  larger size, but there are opportunities for size optimization, including merging and trimming the runtime and application binaries and the future releases would be targetting this optimizations.
 
+## Does C# replaces Javascript?
 
-## Is it suitable to use .NET for browser apps?
-
-Web development has improved in many ways over the years but building modern web applications still poses challenges. Using .NET in the browser offers many advantages that can help make web development easier and more productive:
-
-• Stable and consistent: .NET offers standard APIs, tools, and build infrastructure across all .NET platforms that are stable, feature rich, and easy to use.
-• Modern innovative languages: .NET languages like C# and F# make programming a joy and keep getting better with innovative new language features.
-• Industry leading tools: The Visual Studio product family provides a great .NET development experience on Windows, Linux, and macOS.
-• Fast and scalable: .NET has a long history of performance, reliability, and security for web development on the server. Using .NET as a full-stack solution makes it easier to build fast, reliable and secure applications.
-
-## Blazor - Does c# replaces Javascript?
-
-Blazor allows to replace the javascript with c#. Strictly, Blazor is not meant to be a replacement of javascript but a Complementar language to Javasript. It is a client side solution based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls.
+Blazor allows to replace the javascript with C#. Strictly, Blazor is not meant to be a replacement of javascript but a Complementary language to Javasript. It is a client side solution based on html, and CSS. C# is replacing the js part using web assembly. So nothing has changed on how you access / modify html controls. Also, JS and C# code can interact with Each other. There is a facility to interop, meaning we can call the Javascript code from C# code and vice-versa.
 
 
 ## Why blazor is helpful to a C# Developer?
 
-Blazor allows the .Net Developer to Utilize  existing skills for the ClientSide development. It enables the developers to Write fast Single Page Applications build on a reusable Component based Model based on open web standards.
+Blazor allows the .Net Developer to Utilize  existing skills for the Client-Side development. It enables the developers to Write fast Single Page Applications build on a Component based Model based on open web standards. .Net Developers can use languages like C# , F# and use the familiar standard APIs, tools, and build infrastructure across all .NET platforms.
 
+### Sharing Code
 
-## \Q: What features will Blazor support?
+How many times does it happen that we write Models/Class in the Web API and then create the same Classes in the Javascript/Typescript in the Client Side Proec? This is pretty normal for most of the applications.  Blazor helps to share the code by allowing the same Models/Class to be reused in the Client Side as well as Server side. For e.g. We can create a Shared Dll defining the class and then reuse the Class in Client Side and Server side by adding References to the shared dll.
 
-Blazor will support all of the features of a modern single page app framework:
-	• A component model for building composable UI
-	• Routing
-	• Layouts
-	• Forms and validation
-	• Dependency injection
-	• JavaScript interop
-	• Live reloading in the browser during development
-	• Server-side rendering
-	• Full .NET debugging both in browsers and in the IDE
-	• Rich IntelliSense and tooling
-	• Ability to run on older (non-WebAssembly) browsers via asm.js
-	• Publishing and app size trimming
-
-## Q: Can I use Blazor with ASP.NET Core on the server?
-
-Yes! Blazor optionally integrates with ASP.NET Core to provide a seamless and consistent full-stack web development solution.
-
-## Q: Is Blazor a .NET port of an existing JavaScript framework?
+## Features
 
 Blazor is inspired by existing modern single page app frameworks, like React, Angular, and Vue, but is also a new framework in its own right.
 
-## Q: Why is Blazor an "experimental" project?
+Blazor will support all of the features of a modern single page app framework:
 
-Blazor is an experimental project because there are still lots of questions to answer about its viability and appeal. The purposes of this initial experimental phase is to work through the any outstanding technical issues, to gauge interest and to listen to feedback. While we are optimistic about Blazor's future, at this time Blazor is not a committed product and should be considered pre-alpha.
+* A component model for building composable UI
+* Routing
+* Layouts
+* Forms and validation
+* Dependency injection
+* JavaScript interop
+* Live reloading in the browser during development
+* Server-side rendering
+* Full .NET debugging both in browsers and in the IDE
+* Rich IntelliSense and tooling
+* Ability to run on older (non-WebAssembly) browsers via asm.js
+* Publishing and app size trimming
+
+## Is it stable, Can we use it in Production?
+
+Blazor is an **experimental** project because there are still lots of questions to answer about its viability and appeal. The purposes of this initial experimental phase is to work through the any outstanding technical issues, to gauge interest and to listen to feedback. It's not a committed Product.
 
 
-## Q: Is this Silverlight all over again?
 
-No, Blazor is a .NET web framework based on HTML and CSS that runs in the browser using open web standards. It requires no plugin and works on mobile devices and older browsers.
 
-#3 Q: Does Blazor use XAML?
+## Any relation to Silverlight/XAML?
 
-No, Blazor is a web framework based on HTML, CSS, and other standard web technologies.
+If you are familiar with Silverlight, it might seem simmilar. But hold on, It doesn't bear resemblance with Silverlight. Blazor doesn't require any plugin support in the browser. It doesn't use XAML and is based on HTML and CSS that runs in the browser using open web standards. Addtionally, it works on mobile devices and older browsers.
 
-## Q: Is WebAssembly supported in all browsers?
+
+## Is WebAssembly supported in all browsers?
 
 Yes, WebAssembly has achieved cross-browser consensus and all modern browsers now support WebAssembly
 For IE 11, it has a transpiler.
 
 
-##Q: Does Blazor work on mobile browsers? 
-Yes, modern mobile browsers also support WebAssembly.
+## What about older browsers that don't support WebAssembly?
 
-##Q: What about older browsers that don't support WebAssembly? 
 For example, does Blazor work in IE?
 For older browsers that don't support WebAssembly Blazor will fallback to using an asm.js based .NET runtime. Using asm.js is slower and has a larger download size, but is still quite functional.
-Q: Can I use .NET Standard libraries with Blazor?
-Yes, the .NET runtime used for Blazor supports .NET Standard 2.0. APIs that aren't supported in the browser throw NotSupportedExceptions.
-Q: Don't you need features like garbage collection and threading added to WebAssembly to make this work?
-No, WebAssembly in its current state is sufficient. The .NET runtime handles its own garbage collection and threading concerns.
 
-Q: Can I use existing JavaScript libraries with Blazor?
+## What about Garbage Collection
+
+Since the Blazor loads the .Net runtime. The .NET runtime handles its own garbage collection and threading concerns.
+
+## Can I use existing JavaScript libraries with Blazor?
+
 Yes, Blazor applications can call into JavaScript through JavaScript interop APIs. You can call JS from C# code and vice versa.
-Q: Can I access the DOM from a Blazor app?
-You can access the DOM through JavaScript interop from .NET code. However, Blazor is a component based framework that minimizes the need to access the DOM directly.
-Q: Why Mono? Why not .NET Core or CoreRT?
-Mono is a Microsoft sponsored open source implementation of the .NET Framework. Mono is used by Xamarin for building native client apps for Android, iOS, and macOS and also by Unity for game development. Microsoft’s Xamarin team announced their plans to add support for WebAssembly to Mono and they have been making steady progress. Because Blazor is a client-side web UI framework targeted at WebAssembly, Mono is a natural fit.
-By comparison, .NET Core is primarily used for server applications and for cross-platform console apps. .NET Core can be used for creating an ASP.NET Core backend for a Blazor app, but not for building the client app itself. CoreRT is a .NET Core runtime optimized for AoT compilation and while it has WebAssembly aspirations the project is still a work in progress and not a shipping product.
 
+You can access the DOM through JavaScript interop from .NET code. However, Blazor is a component based framework that minimizes the need to access the DOM directly.
+
+## Summary
+In this article, we looked at a promising experimental product, Blazor. Blazor provides a .Net based framework for building client side applications replacing Javascript with the C#, while still using HTML and CSS. Try the blazor at and provide feedback to Asp.Net team.
+
+## References
