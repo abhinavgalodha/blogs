@@ -1,9 +1,11 @@
 # Create your first Blazor Apps
 
-Required Steps
+# Pre requiste
+
+*Installing the Visual Studio Preview
+*Blazor Extension 
 
 
-Creating my first Blazor App
 
 Bootstrap of Razor
 Upon building of A Razor Application, the Script tag replaced with another script tag containing the Blazor and other dependent dll
