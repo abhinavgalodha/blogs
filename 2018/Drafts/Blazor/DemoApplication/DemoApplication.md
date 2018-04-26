@@ -1,15 +1,61 @@
-# Create your first Blazor Apps
+# Hands on with Blazor
 
-# Pre requiste
+## Pre-Requiste 
+In this section, i will describe the Framework and the Tooling setup required to create a new blazor application.
 
-*Installing the Visual Studio Preview
-*Blazor Extension 
+### 1. Get the latest .Net Core
+
+Install the .NET Core 2.1 Preview 2 SDK. You will need version 2.1.300-preview2-008533. The version information can be fetched by running `dotnet --version` on the command line.
+
+  ![CheckVersion](Images/CheckDotNetVersion.png)
+
+### 2. Get the latest Visual Studio
+
+Install the latest preview of Visual Studio 2017 (15.7) with the ASP.NET and web development workload. 
+
+
+### 3. Get the Tooling Support for Blazor in visual Studio.
+
+Install the ASP.NET Core Blazor Language Services extension from the Visual Studio Marketplace.
+
+# TODO: Add dialog to show how to add Blazor
+
+![Blazor](Images/BlazorServicesExtension.png)
+
+## Project Creation in Visual Studio
+
+# TODO : Add gif
+![](Images/CreateNewProject.gif)
+
+1. Select File -> New Project -> Web > .Net Core -> ASP.net Core Web Application.
+
+2. Enter the name of the Project and Location where the project will be saved.
+
+3. Select the Blazor Template and Press OK.
+
+4. Run the application. Press Ctrl-F5 to run the app without the debugger. 
+
+>Note: Running with the debugger (F5) isn't supported at this time.
+
+At this time, you can see an application running with 3 sub menus on the left side. Try playing with each Sub menu and access the virtual pages Home, Counter, and Fetch Data. There is **NO** Javascript code.  Only HTML, CSS and C#..
+
+## What are various files Visual Studio Created in the Solution?
+
+The default template creates 2 folders, `Pages` and `Shared` and HTML, CSS, CSHTML (Razor Views), and most importantly **C#** files. Each CSHTML file represents a Blazor component which has the Razor and the C# code.
+
+>Notice, there aren't any JS files in the Solution.,
+
+## What are we creating?
+
+In this article, i will show a demonstration of Pomodoro. Pomodoro is a useful tool for managing distractions and ending the procastination jungle..
+If you need more information regarding Pomodoro, please read here (http://). A simpler way to understand the Pomodoro is to think about the Countdown timer, with Start and Stop.
+
+We will see how to achieve the Pomodoro/Countdown timer in C# and then compare the code with the Javascript implmentation.
 
 
 
-Bootstrap of Razor
+## Bootstrap of Razor
 Upon building of A Razor Application, the Script tag replaced with another script tag containing the Blazor and other dependent dll
-
 
 Following highligted  replaced with the Code for the DLL Loading..
 
@@ -19,10 +65,6 @@ when you build the blazor app this script tag will actually get replaced. it'll 
 so you see this script tag here  so here it got that that's the blazer blazer boot script that got replaced and it's we replaced it with a reference to this blazer that j/s file "<script src="_framework/blazor.js" " this is what's gonna get the web assembly code for the.net runtime up and running.
 
  it also has the main entry point for the application  main="FirstBlazor.dll" entrypoint="FirstBlazor.Program::Main"  so there's the web application - is the DLL that was built from my project and then as all the references that are needed by the application this is all the references that were specified as part of the compilation step trimmed down -
-
-
-
-
 
 
  just the things that that we know are absolutely needed so we actually do on every build aisle stripping will remove assemblies that aren't used and il code from assemblies that aren't actually used at all in fact so if we go back to the app and try to build again make it the output up let's see if we can do a rebuild we should see that so if we watch the the output spew by hopefully. t's like pulling out all this stuff that my app doesn't actually need and that helps reduce the size of the the application payload and I'll reduce load times now this is just saying that reducing the load time
