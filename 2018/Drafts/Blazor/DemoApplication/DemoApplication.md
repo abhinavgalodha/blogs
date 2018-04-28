@@ -53,6 +53,10 @@ If you need more information regarding Pomodoro, please read here (http://). A s
 We will see how to achieve the Pomodoro/Countdown timer in C# and then compare the code with the Javascript implmentation.
 
 
+## Adding the Razor View to the Project
+
+1. Select Pages Folder in the Visual Studio Solution. Right Click and AA
+
 
 ## Bootstrap of Razor
 Upon building of A Razor Application, the Script tag replaced with another script tag containing the Blazor and other dependent dll
