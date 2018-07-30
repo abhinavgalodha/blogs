@@ -5,13 +5,13 @@ In this section, i will describe the Framework and the Tooling setup required to
 
 ### 1. Get the latest .Net Core
 
-Install the .NET Core 2.1 Preview 2 SDK. You will need version 2.1.300-preview2-008533. The version information can be fetched by running `dotnet --version` on the command line.
+Install the .NET Core 2.1 Preview 2 SDK. You will need version 2.1.300-preview2-008533. If you want to check what version you are running you may run `dotnet --version` on the command line.
 
   ![CheckVersion](Images/CheckDotNetVersion.png)
 
 ### 2. Get the latest Visual Studio
 
-Install the latest preview of Visual Studio 2017 (15.7) with the ASP.NET and web development workload. 
+Install the latest preview of Visual Studio 2017 (15.7) with the ASP.NET and web development workload.
 
 
 ### 3. Get the Tooling Support for Blazor in visual Studio.
@@ -24,18 +24,20 @@ Install the ASP.NET Core Blazor Language Services extension from the Visual Stud
 
 ## Project Creation in Visual Studio
 
-# TODO : Add gif
-![](Images/CreateNewProject.gif)
-
 1. Select File -> New Project -> Web > .Net Core -> ASP.net Core Web Application.
 
 2. Enter the name of the Project and Location where the project will be saved.
 
 3. Select the Blazor Template and Press OK.
 
-4. Run the application. Press Ctrl-F5 to run the app without the debugger. 
+4. Run the application. Press Ctrl-F5 to run the app without the debugger.
+
+![](Images/CreateANewProject.gif)
+
 
 >Note: Running with the debugger (F5) isn't supported at this time.
+
+# TODO: Image of application running...
 
 At this time, you can see an application running with 3 sub menus on the left side. Try playing with each Sub menu and access the virtual pages Home, Counter, and Fetch Data. There is **NO** Javascript code.  Only HTML, CSS and C#..
 
@@ -45,20 +47,40 @@ The default template creates 2 folders, `Pages` and `Shared` and HTML, CSS, CSHT
 
 >Notice, there aren't any JS files in the Solution.,
 
-## What are we creating?
+## What Application are we creating?
 
-In this article, i will show a demonstration of Pomodoro. Pomodoro is a useful tool for managing distractions and ending the procastination jungle..
-If you need more information regarding Pomodoro, please read here (http://). A simpler way to understand the Pomodoro is to think about the Countdown timer, with Start and Stop.
+In this article, i will show a demonstration of **Pomodoro**. 
+
+> Pomodoro is a useful tool for managing distractions and coming out of the procastination jungle..
+
+If you need more information regarding Pomodoro, please read [here](https://en.wikipedia.org/wiki/Pomodoro_Technique). A simpler way to understand the Pomodoro is to think about the Countdown timer, with Start and Stop.
 
 We will see how to achieve the Pomodoro/Countdown timer in C# and then compare the code with the Javascript implmentation.
 
-
 ## Adding the Razor View to the Project
 
-1. Select Pages Folder in the Visual Studio Solution. Right Click and AA
+1. Select Pages Folder in the Visual Studio Solution. Right Click and Select Add -> New Item -> Razor View -> Razor View. We will name the View as `Pomodoro.cshtml`
+
+![Add new Blazor Component](Images/AddNewBlazorComponent.gif)
+
+## Adding the logic for the Pomodoro..
+
+Next, we are going to define the timer logic in C# and the presentation would be HTML & CSS.
+
+### C# Code
+
+1. Define a `DateTime` property to represent the time left.
+2. Define a `Timer` property to represent the timer instance. The timer will control the Countdown timer for the application.
+3. Define methods to Start, Stop, and Reset the timer.
+
+# HTML
+
+1. 3 buttons to Start, Stop, and Reset the timer.
+2. An HTML control to represent the time left or countdown timer.
 
 
 ## Bootstrap of Razor
+
 Upon building of A Razor Application, the Script tag replaced with another script tag containing the Blazor and other dependent dll
 
 Following highligted  replaced with the Code for the DLL Loading..

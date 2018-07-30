@@ -1,4 +1,4 @@
-# How to Change HTTP Browser Cache Size
+# How to Change HTTP Browser Cache Size 
 
 HTTP Caching is available in most of the browsers and helps make a website more responsive and reduce network bandwidth.  In this article, we will understand how to increase or decrease the Cache size in Modern browsers like Google Chrome, Mozilla Firefox, IE.
 
