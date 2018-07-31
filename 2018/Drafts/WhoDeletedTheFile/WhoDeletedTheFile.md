@@ -12,8 +12,38 @@ If you couldn't follow with the this reasoning, yoy may be able to relate with f
 ## What Windows OS offers?
 Windows offers the Audit features using various Policies which allows to Audit the access requests, Audit login, Process tracking etc. The policies basically defines a registry setting which defines the behavior of the feature. 
 
-# How to know who deled the file?
+# How to know who deleted the file?
 The following process would help us in identifying who deleted the file.
+1. Turn on the File Auditing Process on the System.
+2. Configure the Audit process on the File/Folder to be monitored.
+3. Verify the Audit Logs to get details of who deleted the file.
+
+Let's dig into these steps further in detail.
+
+### 1. Turn on the File Auditing Process on the System.
+Operating Systems offers the functionality to track various file operations. These features are configurable and can be turned Off/On using Policies. Windows uses the concepts of Policies to manage various settings.
+
+Wikipedia defines the Group Policy as
+
+> Group Policy is a feature of the Microsoft Windows NT family of operating systems that controls the working environment of user accounts and computer accounts. 
+
+
+There is Group Policies and Local Policy. Local policy applies to the local computer only. Group Policy applies to all computers in a domain network. In this instance, we are going to change the Local Policy.
+
+1. Navigate to the System which needs monitoring and open the Local Group Policy Editor by either entering `gpedit.msc` in the Run menu or typing in Group Policy in the Windows Search.
+
+![](Images/1OpenGroupPolicy.png)
+
+The Local Group Policy will appear as shown below.
+![](Images/2LocalGroupPolicyEditor.png)
+
+2. Select the Object Access Section, by navigating to Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -Local Group Policy Object -> Object Access
+
+3. Select the Subcategory for "Audit File System", and then right click or double click on the subcategory. Another windows pops-up, Audit File System Properties. Check the Checkboxes for the Success and Failure conditions under the Condition the following event for checkbox as shown below.
+
+![](Images/3AuditFileSystemConfigure.png)
+
+
 1. Set up Local Group Security Audit Policy for monitoring the File System. This is done using the Group Policy editor or Local Group Policy Editor.
 2. Set up Audit Policy for the folder and define what kind of Auditing is required. Define who and what is required to be Audited.
 3. 
