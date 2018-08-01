@@ -18,6 +18,8 @@ The following process would help us in identifying who deleted the file.
 2. Configure the Audit process on the File/Folder to be monitored.
 3. Verify the Audit Logs to get details of who deleted the file.
 
+**Note:** You will require the Admin permissions on the machine where the File Auditing needs to be setup
+
 Let's dig into these steps further in detail.
 
 ### 1. Turn on the File Auditing Process on the System.
@@ -47,7 +49,7 @@ With the above mentioned steps, we have enabled the File System Auditing on the 
 
 
 ### 2. Configure the Audit process on the File/Folder to be monitored.
-Basically, in this step, we will define *what* kind of File System Access (Read/Write/Delete) which Users & Roles need to be monitored.
+Basically, in this step, we will define *what* kind of File System Access (Read/Write/Delete) needs to be monitored and *what* Users & Roles need to be tracked.
 
 a. Select the folder in the windows explorer which needs to be monitored for the file deletion.
 
@@ -59,9 +61,25 @@ c. A dialog named Advanced Security Settings for <YourFolderName> would open. Go
 Note: You must me an administrator to define the Auditing policy.
 
 ![](Images/5FolderAdvancedAuditProperties.png)
+
+d. Next, add the Audit entry by clicking the Add Button as shown below. This will open up another dialog for adding the Auditing entry.
+
 ![](Images/6AuditingTab.png)
+
+e. Define *who* or which user should be monitored by entering the information in the prinicipal. Since, we are trying to find out who deleted the file, we will add the **Everyone**. 
 ![](Images/7AuditingEntry.png)
 ![](8AddUserEveryone.png)
+
+> **Everyone** is the name of the special group in windows which includes Authenticated & Guest Accounts.
+
+f. Next, Select the Type dropdown, We may select **Success** only for a file deletion operation or select **All** if we want to monitor a Success along with the failure operation. 
+Also, select what permissions needs to be audited. Since, we are looking for delete operation, we need to click on the Show **"Advanced Permission"** link and then select Delete & Delete Subfolders and Files checkbox and click **Ok** button as shown below.
+
 ![](9DefineAuditPermission.png)
+
+g. Once we complete the above step, the Audit Entry should include an entry to Audit an attempt to delete a file by Anyone on the Machine.
+Click Apply and close the Dialog.
+
 ![](10FolderConfigurationDefined.png)
 
+### 3. Verify the Audit Logs to get details of who deleted the file.
