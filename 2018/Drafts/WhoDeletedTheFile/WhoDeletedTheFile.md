@@ -1,5 +1,5 @@
 # Who deleted the file?
-Had you ever a scenario, where a file has been deleted from a machine and you are wondering who deleted the file and had no idea who was the culprit. Good Luck! In this article, i will try to explain a technique available on windows machine to find out who deleted the file.
+Have you ever a scenario, where a file has been deleted from a machine and you are wondering who deleted the file and had no idea who was the culprit. Good Luck! In this article, i will try to explain a technique available on windows machine to find out who deleted the file.
 
 ## Motivation
 The reason for writing this article is that we faced this issue in our production and i thought it might be useful for readers if ever they encounter such an issue. Our problem started when one of our production server went out of the load balancer. We have an Asp.net core 2.x application, which is deployed as a Self contained Application. In a self contained deployment the complete .net core framework is bundled in a folder and it also includes your asp.net core Exe which is initiated by the IIS server. In our scenario, the exe was being deleted which was causing 502.5 process error as the Host Process couldn't be started. Since, this is a production server and has restricted access it wasn't possible that a user is deleting the file. It was random delete operation and happened on some servers while others were working fine. This was the inspiration for identifying how the exe was getting deleted.
@@ -30,21 +30,38 @@ Wikipedia defines the Group Policy as
 
 There is Group Policies and Local Policy. Local policy applies to the local computer only. Group Policy applies to all computers in a domain network. In this instance, we are going to change the Local Policy.
 
-1. Navigate to the System which needs monitoring and open the Local Group Policy Editor by either entering `gpedit.msc` in the Run menu or typing in Group Policy in the Windows Search.
+a. Navigate to the System which needs monitoring and open the Local Group Policy Editor by either entering `gpedit.msc` in the Run menu or typing in Group Policy in the Windows Search.
 
 ![](Images/1OpenGroupPolicy.png)
 
 The Local Group Policy will appear as shown below.
 ![](Images/2LocalGroupPolicyEditor.png)
 
-2. Select the Object Access Section, by navigating to Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -Local Group Policy Object -> Object Access
+b. Select the Object Access Section on the left tree, by navigating to Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -Local Group Policy Object -> Object Access
 
-3. Select the Subcategory for "Audit File System", and then right click or double click on the subcategory. Another windows pops-up, Audit File System Properties. Check the Checkboxes for the Success and Failure conditions under the Condition the following event for checkbox as shown below.
+c. Select the Subcategory for "Audit File System", and then right click or double click on the subcategory. Another windows pops-up, Audit File System Properties. Check the Checkboxes for the Success and Failure conditions under the Condition the following event for checkbox as shown below.
+
+With the above mentioned steps, we have enabled the File System Auditing on the operating System. Next, we will explore how to setup logging for the Folder which needs to be monitored.
 
 ![](Images/3AuditFileSystemConfigure.png)
 
 
-1. Set up Local Group Security Audit Policy for monitoring the File System. This is done using the Group Policy editor or Local Group Policy Editor.
-2. Set up Audit Policy for the folder and define what kind of Auditing is required. Define who and what is required to be Audited.
-3. 
+### 2. Configure the Audit process on the File/Folder to be monitored.
+Basically, in this step, we will define *what* kind of File System Access (Read/Write/Delete) which Users & Roles need to be monitored.
+
+a. Select the folder in the windows explorer which needs to be monitored for the file deletion.
+
+b. Right click on folder, go to properties, Navigate to **Security** Tab and then click on Advanced button as shown below.
+
+![](Images/4FolderProperties.png)
+
+c. A dialog named Advanced Security Settings for <YourFolderName> would open. Go to Auditing Tab, and then click Continue. 
+Note: You must me an administrator to define the Auditing policy.
+
+![](Images/5FolderAdvancedAuditProperties.png)
+![](Images/6AuditingTab.png)
+![](Images/7AuditingEntry.png)
+![](8AddUserEveryone.png)
+![](9DefineAuditPermission.png)
+![](10FolderConfigurationDefined.png)
 
