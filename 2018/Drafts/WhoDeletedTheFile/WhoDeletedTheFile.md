@@ -1,8 +1,8 @@
 # Who deleted the file?
-Have you ever a scenario, where a file has been deleted from a machine and you are wondering who deleted the file and had no idea who was the culprit. Good Luck! In this article, i will try to explain a technique available on windows machine to find out who deleted the file.
+Have you ever experienced a scenario, where a file has been deleted from a machine and you are wondering who deleted the file and had no idea who was the culprit. Good Luck! In this article, i will try to explain a technique available on windows machine to find out who deleted the file.
 
 ## Motivation
-The reason for writing this article is that we faced this issue in our production and i thought it might be useful for readers if ever they encounter such an issue. Our problem started when one of our production server went out of the load balancer. We have an Asp.net core 2.x application, which is deployed as a Self contained Application. In a self contained deployment the complete .net core framework is bundled in a folder and it also includes your asp.net core Exe which is initiated by the IIS server. In our scenario, the exe was being deleted which was causing 502.5 process error as the Host Process couldn't be started. Since, this is a production server and has restricted access it wasn't possible that a user is deleting the file. It was random delete operation and happened on some servers while others were working fine. This was the inspiration for identifying how the exe was getting deleted.
+The reason for writing this article is that we faced this issue in our production environment and i thought it might be useful for readers if ever they encounter such an issue. Our problem started when one of our production server went out of the load balancer. We have an Asp.net core 2.x application, which is deployed as a Self contained Application. In a self contained deployment the complete .net core framework is bundled in a folder and it also includes your asp.net core Exe which is initiated by the IIS server. In our scenario, the exe was being deleted which was causing 502.5 process error as the Host Process couldn't be started. Since, this is a production server and has restricted access it wasn't possible that a user is deleting the file. It was random delete operation and happened on some servers while others were working fine. This was the inspiration for identifying how the exe was getting deleted.
 
 If you couldn't follow with the this reasoning, yoy may be able to relate with following scenario where you might beed to find out who deleted the file?
 
@@ -70,7 +70,7 @@ e. Define *who* or which user should be monitored by entering the information in
 ![](Images/7AuditingEntry.png)
 ![](Images/8AddUserEveryone.png)
 
-> **Everyone** is the name of the special group in windows which includes Authenticated & Guest Accounts.
+> **Everyone** is the name of the special group in windows which includes almost all users.
 
 f. Next, Select the Type dropdown, We may select **Success** only for a file deletion operation or select **All** if we want to monitor a Success along with the failure operation. 
 Also, select what permissions needs to be audited. Since, we are looking for delete operation, we need to click on the Show **"Advanced Permission"** link and then select Delete & Delete Subfolders and Files checkbox and click **Ok** button as shown below.
@@ -83,3 +83,26 @@ Click Apply and close the Dialog.
 ![](Images/10FolderConfigurationDefined.png)
 
 ### 3. Verify the Audit Logs to get details of who deleted the file.
+We have setup the Audit policy on the Operating System and the Folder in the above steps. Now, it's the time for Action. The File Audit policy would monitor and once the file is deleted from the Folder an entry is logged into the Event viewer. Following steps would provide more details on how to find the entry in the Event viewer.
+
+a. Open the event viewer. `eventvwr.msc` is the shortcut command for launching event viewer from the run menu.
+
+![](Images/11EventViewerEntry.png)
+
+![](Images/12EvntVwrFilter.png)
+
+![](Images/13EvntVwrEventDetails.png)
+
+![](Images/13EvntVwrEventDetails.png)
+
+![](Images/14EvntVwrEventDetailsCont.png)
+
+![](Images/15EvntVwrFilter4060.png)
+
+![](Images/16EvntVwrDetails.png)
+
+![](Images/17EvntVwrDetails1.png)
+
+
+
+
