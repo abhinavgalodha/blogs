@@ -87,22 +87,42 @@ We have setup the Audit policy on the Operating System and the Folder in the abo
 
 a. Open the event viewer. `eventvwr.msc` is the shortcut command for launching event viewer from the run menu.
 
+b. All the File Audit entries would be logged to the **Security** Log. So, navigate to the Security log as shown below.
+
 ![](Images/11EventViewerEntry.png)
+
+c. Since, there are lot of events in the Security log and we are only interested in file deletion we will filter the event viewer log by the event ID. Right click on "Security" Log on the left tree and select filter log. A new dialog window would open as shown below. Enter the Event ID 4660 & 4663 to filter. This helps us narrow down the results in the event viewer and we can look for relevant information.
+
+4660 -
+4663 - 
 
 ![](Images/12EvntVwrFilter.png)
 
-![](Images/13EvntVwrEventDetails.png)
+d. We can click on a Row in the event viewer and get the detail in the Preview pane as shown below.
+Below event shows the event 4663, which details who accessed the object. We can see user Abhinav, in the Domain - Central tried to access the file. Additional details like time and access result (success/failure) is also mentioned.
 
 ![](Images/13EvntVwrEventDetails.png)
+
+We can also see the Object name as shown in below screenshot which was accessed. The file at location `D:\FileAudit\Demo\New Text Document.txt` was accessed.
 
 ![](Images/14EvntVwrEventDetailsCont.png)
 
+e. Next, we will move to event 4060 which is the event we are actually interested in and is related to the deletion of the file. As can be seen in below screenshot, the details of the Event describes "An object was deleted." and the Subject details provides who deleted the file. Account name and Account domain provides the relevant information and helps in identifying the culprit. 
+
+
 ![](Images/15EvntVwrFilter4060.png)
+
+
+We can get more details of the event by double clicking the event. In following screenshot, we can see that the windows explorer process was used to delete the File the user name was Abhinav and Domain was central.
 
 ![](Images/16EvntVwrDetails.png)
 
 ![](Images/17EvntVwrDetails1.png)
 
+So, finally we tracked who deleted the file.
+
+## Conclusion
+This article provides a technique to add file Auditing on the machine and identifying the user which deleted the file. This technique can be extended to similar scenario like "Who has made an unsuccessful attempt to delete a file". Also, there are various other file permissions which can be audited. Additionaly, we can attach task to an event ID. As an example, we can add a task to send the email whenever we see the file has been deleted. The event viewer is a handy tool to gather information on the System.
 
 
 
