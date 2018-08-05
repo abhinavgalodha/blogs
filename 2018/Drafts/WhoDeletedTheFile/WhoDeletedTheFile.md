@@ -30,7 +30,7 @@ Wikipedia defines the Group Policy as
 > Group Policy is a feature of the Microsoft Windows NT family of operating systems that controls the working environment of user accounts and computer accounts. 
 
 
-There are Group Policies which applies to all computers in a domain and Local Policies applies to the local computer only. Group Policies are configured by Network admins. In this instance, we are going to change the Local Policy. Please note that windows Policies wouldn't work for Windows Home edition. You need to have a professional or enterprise editions of Windows.
+There are Group Policies which applies to all computers in a domain and Local Policies applies to the local computer only. Group Policies are configured by Network admins. In this instance, we are going to change the Local Policy. Please note that windows Policies wouldn't work for Windows Home edition. You need to have a professional or enterprise edition of Windows.
 
 a. Navigate to the System which needs monitoring and opens the Local Group Policy Editor by either entering `gpedit.msc` in the Run menu or typing in Group Policy in the Windows Search.
 
@@ -67,7 +67,7 @@ d. Next, add the Audit entry by clicking the Add Button as shown below. This wil
 
 ![](Images/6AuditingTab.png)
 
-e. Define *who* or which user should be monitored by entering the information in the principal. Since we are trying to find out who deleted the file, we will add the **Everyone**. 
+e. Define *who* or which user should be monitored by entering the information in the principal. Since we are trying to find out who deleted the file, we will add **Everyone**. 
 ![](Images/7AuditingEntry.png)
 ![](Images/8AddUserEveryone.png)
 
