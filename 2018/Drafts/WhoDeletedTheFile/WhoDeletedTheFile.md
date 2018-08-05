@@ -23,25 +23,26 @@ The following 3 step process would help us in identifying who deleted the file.
 Let's dig into these steps further in detail.
 
 ## 1. Turn on the File Auditing Process on the System.
-Operating Systems offers the functionality to track various file operations. These features are configurable and can be turned Off/On using Policies. Windows uses the concepts of Policies to manage various settings.
+Operating Systems offers the functionality to track various file operations. These features are configurable and can be turned Off/On using Policies. Windows uses the concepts of Policies to manage various settings which influence what can be done on the machine.
 
 Wikipedia defines the Group Policy as
 
 > Group Policy is a feature of the Microsoft Windows NT family of operating systems that controls the working environment of user accounts and computer accounts. 
 
 
-There are Group Policies and Local Policies. The local policy applies to the local computer only. Group Policy applies to all computers in a domain network. Group Policies are configured by Network admins. In this instance, we are going to change the Local Policy. Modifying the Group Policy 
+There are Group Policies which applies to all computers in a domain and Local Policies applies to the local computer only. Group Policy  Group Policies are configured by Network admins. In this instance, we are going to change the Local Policy. Please note that windows Policies wouldn't work for Windows Home edition. You need to have a professional or enterprise editions of Windows.
 
 a. Navigate to the System which needs monitoring and opens the Local Group Policy Editor by either entering `gpedit.msc` in the Run menu or typing in Group Policy in the Windows Search.
 
 ![](Images/1OpenGroupPolicy.png)
 
-The Local Group Policy will appear as shown below.
+The Local Group Policy will appear as shown below.  
+
 ![](Images/2LocalGroupPolicyEditor.png)
 
 b. Select the Object Access Section on the left tree, by navigating to `Computer Configuration -> Windows Settings -> Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies -Local Group Policy Object -> Object Access`
 
-c. Select the Subcategory for "Audit File System", and then right click or double click on the subcategory. Another windows pops-up, Audit File System Properties. Check the Checkboxes for the Success and Failure conditions under the *"Condition the following event for checkbox as shown below"*.
+c. Select the Subcategory for `Audit File System`, and then right click or double click on the subcategory. Another windows pops-up, `Audit File System Properties`. Check the Checkboxes for the Success and Failure conditions under the `Condition the following event for checkbox as shown below`.
 
 With the above-mentioned steps, we have enabled the File System Auditing on the Operating System. Next, we will explore how to set up logging for the Folder which needs to be monitored.
 
@@ -72,9 +73,9 @@ e. Define *who* or which user should be monitored by entering the information in
 
 > **Everyone** is the name of the special group in windows which includes almost all users.
 
-f. Next, Select the Type drop-down, We may select **Success** only for a file deletion operation or select **All** if we want to monitor a Success along with the failed operation. 
+f. Next, Select the Type drop-down, We may select **Success** only for a successful file deletion operation or select **All** if we want to monitor a Success along with the failure operation. 
 
-Also, select what permissions need to be audited. Since we are looking for the Delete operation, we need to click on the Show **"Advanced Permission"** link and then select Delete & Delete Subfolders and Files checkbox and click **Ok** button as shown below.
+Also, select what permissions need to be audited. Since we are looking for the Delete operation, we need to click on the Show `Advanced Permission` link and then select `Delete & Delete Subfolders and Files` checkbox and click **Ok** button as shown below.
 
 ![](Images/9DefineAuditPermission.png)
 
@@ -86,35 +87,39 @@ Click Apply and close the Dialog.
 ## 3. Verify the Audit Logs to get details of who deleted the file.
 We have set up the Audit policy on the Operating System and the Folder in the above steps. Now, it's the time for Action. The File Audit policy would monitor and once the file is deleted from the Folder an entry is logged into the Event Viewer. Following steps would provide more details on how to find the entry in the Event Viewer.
 
-a. Open the event viewer. `eventvwr.msc` is the shortcut command for launching event viewer from the run menu.
+For demonstration purpose, I would be deleting few files under the folder `D:\FileAudit\Demo`
+
+a. Open the event viewer. 
+> `eventvwr.msc` is the shortcut command for launching event viewer from the run menu.
 
 b. All the File Audit entries would be logged to the **Security** Log. So, navigate to the Security log as shown below.
 
 ![](Images/11EventViewerEntry.png)
 
-c. Since there are a lot of events in the Security log and we are only interested in file deletion we will filter the event viewer log by the event ID. Right click on "Security" Log on the left tree and select filter log. A new dialog window would open as shown below. Enter the Event ID 4660 & 4663 to filter. This helps us narrow down the results in the event viewer and we can look for relevant information.
+c. Since there are a lot of events in the Security log and we are only interested in file deletion we will filter the event viewer log by the event ID. Right click on the "Security" Log on the left tree and select filter log. A new dialog window would open as shown below. Enter the Event ID 4660 & 4663 to filter. This helps us narrow down the results in the event viewer and we can look for relevant information.
 
-4660 -
-4663 - 
+### What are Event ID 4660 and 4663
+4660 - This event generates when an object was deleted.
+4663 - This event indicates that a specific operation was performed on an object. 
 
 ![](Images/12EvntVwrFilter.png)
 
 d. We can click on a Row in the event viewer and get the detail in the Preview pane as shown below.
-Below event shows the event 4663, which details who accessed the object. We can see user Abhinav, in the Domain - Central tried to access the file. Additional details like time and access result (success/failure) are also mentioned.
+Below event shows the event 4663, which details who accessed the object. We can see user Abhinav tried to access the file. Additional details like time and access result (success/failure) are also mentioned.
 
 ![](Images/13EvntVwrEventDetails.png)
 
-We can also see the Object name as shown in below screenshot which was accessed. The file at location:\FileAudit\Demo\New Text Document.txt` was accessed.
+We can also see the Object name as shown in below screenshot which was accessed. The file at location `D:\FileAudit\Demo\New Text Document.txt` was accessed.
 
 ![](Images/14EvntVwrEventDetailsCont.png)
 
-e. Next, we will move to event 4060 which is the event we are actually interested in and is related to the deletion of the file. As can be seen in below screenshot, the details of the Event describes "An object was deleted." and the Subject details provides who deleted the file. Account name and Account domain provides the relevant information and helps in identifying the culprit. 
+e. Next, we will move to event 4060 which is the event we are actually interested in and is related to the deletion of the file. As can be seen in below screenshot, the details of the Event describes **An object was deleted.** and the Subject details provides who deleted the file. Account name and Account domain provides the relevant information and helps in identifying the culprit.
 
 
 ![](Images/15EvntVwrFilter4060.png)
 
 
-We can get more details of the event by double-clicking the event. In the following screenshot, we can see that the windows explorer process was used to delete the File the username was Abhinav and Domain was central.
+We can get more details of the event by double-clicking the event. In the following screenshot, we can see that the `windows explorer` process was used to delete the File by User `Abhinav Galodha`.
 
 ![](Images/16EvntVwrDetails.png)
 
@@ -123,7 +128,7 @@ We can get more details of the event by double-clicking the event. In the follow
 So, finally, we tracked who deleted the file.
 
 ## Conclusion
-This article provides a technique to add file Auditing on the machine and identifying the user which deleted the file. This technique can be extended to the similar scenario like "Who has made an unsuccessful attempt to delete a file". Also, there are various other file permissions which can be audited. Additionally, we can attach the task to an event ID. As an example, we can add a task to send the email whenever we see the file has been deleted. The event viewer is a handy tool to gather information on the System.
+This article provides a technique to add the File Auditing on the machine and then steps to identify the user who  deleted the file. This technique can be extended to the similar scenario like "Who has made an unsuccessful attempt to delete a file". Also, there are various other file permissions which can be audited. Additionally, we can attach the task to an event ID. As an example, we can add a task to send the email whenever we see the file has been deleted. The event viewer is a handy tool to gather information on the System.
 
 
 
