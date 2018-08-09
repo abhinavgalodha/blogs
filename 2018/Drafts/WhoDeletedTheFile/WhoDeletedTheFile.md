@@ -1,6 +1,8 @@
 # Who deleted the file?
 Have you ever experienced a scenario, where a file has been deleted from a machine and you are wondering who deleted the file and had no idea who was the culprit? Good Luck! In this article, I will try to explain a technique available on the windows machine to find out who deleted the file.
 
+![](Images/MemeWhoDeleted.gif)
+
 ## Motivation
 The urge for writing this article comes from an issue in our production environment and it might be useful for readers if ever they encounter such an issue. Our problem started when one of our production servers went out of the load balancer. We had recently deployed an Asp.net core 2.x application, which was deployed as a Self-contained Application. In a self-contained deployment, the complete .net core framework is bundled in a folder and it also includes your asp.net core Exe which is launched by the IIS server. In our scenario, the exe was being deleted which was causing 502.5 process error as the Host Process couldn't be started. Since the production server has restricted access, it wasn't possible that a user is deleting the file. It was a sporadic delete operation and happened on some servers while others were working fine. This was the inspiration for identifying how the exe was getting deleted.
 
