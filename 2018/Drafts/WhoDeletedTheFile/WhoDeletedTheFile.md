@@ -103,8 +103,8 @@ b. All the File Audit entries would be logged to the **Security** Log. So, navig
 c. Since there are a lot of events in the Security log and we are only interested in file deletion we will filter the event viewer log by the event ID. Right click on the "Security" Log on the left tree and select filter log. A new dialog window would open as shown below. Enter the Event ID 4660 & 4663 to filter. This helps us narrow down the results in the event viewer and we can look for relevant information.
 
 ### What are Event ID 4660 and 4663
-4660 - This event generates when an object was deleted.
-4663 - This event indicates that a specific operation was performed on an object. 
+**4660**-This event generates when an object was deleted.   
+**4663** - This event indicates that a specific operation was performed on an object. 
 
 ![](Images/12EvntVwrFilter.png)
 
