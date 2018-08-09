@@ -54,6 +54,8 @@ With the above-mentioned steps, we have enabled the File System Auditing on the 
 ## 2. Configure the Audit process on the File/Folder to be monitored.
 Basically, in this step, we will define *what* kind of File System Access (Read/Write/Delete) needs to be monitored and *what* Users & Roles need to be tracked.
 
+![](Images/MemeTrap.gif)
+
 a. Select the folder in the windows explorer which needs to be monitored for the file deletion.
 
 b. Right click on the folder, go to properties, Navigate to **Security** Tab and then click on the Advanced button as shown below.
@@ -128,6 +130,8 @@ We can get more details of the event by double-clicking the event. In the follow
 ![](Images/17EvntVwrDetails1.png)
 
 So, finally, we tracked who deleted the file.
+
+![](Images/MemeCongratulations.gif)
 
 ## Conclusion
 This article provides a technique to add the File Auditing on the machine and then steps to identify the user who  deleted the file. This technique can be extended to the similar scenario like "Who has made an unsuccessful attempt to delete a file". Also, there are various other file permissions which can be audited. Additionally, we can attach the task to an event ID. As an example, we can add a task to send the email whenever we see the file has been deleted. The event viewer is a handy tool to gather information on the System.
