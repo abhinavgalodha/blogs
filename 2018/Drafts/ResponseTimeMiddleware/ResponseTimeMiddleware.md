@@ -46,6 +46,7 @@ public IActionResult Get()
     var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
 }
 ` 
+
 This code should be able to calculate the time spent in an operation. But this doesn't seem to be the right approach for the following reasons.
 * If an API has lot of operations, then we need to add this code at multiple places which is not good for maintanability.
 * This code measure the time spent in the method only, it doesn't measure the time spent in other activities like middleware, filters, Controller selection, action method selection, Model binding etc.
