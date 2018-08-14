@@ -60,15 +60,91 @@ We will implement a filter for calculating the Response time.
 This code still doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc.
 
 ### Third Attempt
-We will use the Asp.net Core Middleware to Calculate the Response time of the API. Middleware is the ...
-Order of middleware
+We will use the Asp.net Core Middleware to Calculate the Response time of the API. 
 
+### So, What is a Middleware?
+Basically, Middleware are software components which handles the Request/Response. 
+Middleware are assembled into an application pipeline and serves in the incoming request. Each component does the following operations.
+	• Chooses whether to pass the request to the next component in the pipeline.
+	• Can perform work before and after the next component in the pipeline is invoked.
 
+If you have worked with `HTTPModules` or `HTTPHandlers` in Asp.net, then you can think of Middleware as a replacement in Asp.net core. Some of the examples of middleware are
+* MVC Middleware
+* Authentication
+* Static File Serving
+* Caching
+* CORS
 
-## What is Asp.Net Core Middleware
+![](Images/MiddlewarePipeline.png)
+
+We want to add code to start the timer once the Request Enters the Asp.net core pipeline and stop the timer once the Response is processed by the Pipeline. A Custom Middleware at the start of the request pipeline seems to be the best approach for getting the access to the request as early as possible and access till the last step is executed in the pipeline.
+
+We will build a Response Time Middleware which we will add as the first Middleware to the request Pipeline so that we can start the timer as soon the request enters the Asp.net core pipeline.
 
 ## What to do with the Response time data?
+Once we capture the response time data we can process data in following ways
+1. Add the Response time data to a Reporting database or an analytics solution.
+2. Write the Response time data to a log file.
+3. Pass the response time data to a message queue which can further be processed by another application for reporting and analytics.
+4. Send the Response time information to the client applications consuming our Rest API using the Response headers.
 
-## Defining the code
+There may be other useful ways of using the response time data. Please leave a comment and tell how you process the response time data in your application.
+
+## Let's write the code
+We will write the code considering following points
+1. Calcuating the Response time data for the API
+2. Reporting the data back to client applications by passing the data in the Response headers.
+
+Full code snippet for the ResponseTimeMiddleware is shown below.
+
+`
+public class ResponseTimeMiddleware
+    {
+        // Name of the Response Header, Custom Headers starts with "X-"
+        private const string RESPONSE_HEADER_RESPONSE_TIME = "X-Response-Time-ms";
+        
+        // Handle to the next Middleware in the pipeline
+        private readonly RequestDelegate _next;
+
+        public ResponseTimeMiddleware(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public Task InvokeAsync(HttpContext context)
+        {
+            // Start the Timer using Stopwatch
+            var watch = new Stopwatch();
+            watch.Start();
+
+            context.Response.OnStarting(() => 
+            {
+                // Stop the timer information and calculate the time
+                watch.Stop();
+                var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
+
+
+                // Add the Response time information in the Response headers.
+                context.Response.Headers[RESPONSE_HEADER_RESPONSE_TIME] =  responseTimeForCompleteRequest.ToString(); 
+                return Task.CompletedTask;
+            });
+
+            // Call the next delegate/middleware in the pipeline
+            return this._next(context);
+        }
+    }
+
+### Explanation of the code
+The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` class to start the stopwatch once the requests enters into the first middleware of the request and then Stop the Stopwatch once the Request has been processed and the response is ready to be sent back to the client.
+
+?? We use the OnStarting Method, Passing an action where we define what needs to happen once the response is ready to be sent to the client.
+
+Lastly, we add the Response time information in a Custom Header. We use the `X-Response-Time-ms` header as a Response Header. As a convention, the Custom Header start with an`X`.
+
+### What factors are we ignoring?
+It's important to understand that this discussion doesn't include the time spent in N/W, Time spent in IIS, and Application Pool Startup if the application Pool wasn't up and running which can affect the overall response time of the API.
+
+
 
 ## Conclusion
+In this article, we understood how to leverage Asp.net middleware to manage cross cutting concerns like measuring response time of the API's. There are various other useful use cases of using middleware which can helps use reuse code and improve the maintainability of the Application.
