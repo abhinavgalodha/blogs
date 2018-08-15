@@ -1,10 +1,7 @@
-# Summary
-Measuring and Reporting the Response time of an API (Asp.Net Core).
+# Measuring and Reporting the Response time of an API (Asp.Net Core).
 
 ## Introduction
 Performance is the buzz word for the API's. One of the most important and measurable parameters of the performance of an API is the Response time of the API. In this article, we will understand how to add code to measure the response time of the API and then return the Response time data to the end client.
-
-
 
 ## What is the need?
 So, let's take a moment to think why we would ever need such a feature to measure the Response time of an API. 
@@ -20,12 +17,11 @@ Following are some of the points that have been inspiration for writing code to 
 You might also have encountered similar requests in your project and it is worthwhile looking at an approach to capture the response time for the API.
 
 ## Where to add the code?
-Ignore the N/w
-Ignore the IIS Startup..
-
-
 Let's explore a couple of approaches to capture the Response time of our API focusing mostly on capturing the time spent in our API. 
 Our objective is to calculate the time elapsed in milliseconds from the time the request is recieved by the Asp.net core runtime to the time the response is processed and sent back from the Server.
+
+### What factors are we ignoring?
+It's important to understand that this discussion doesn't include the time spent in N/W, Time spent in IIS, and Application Pool Startup. If the application Pool wasn't up and running then the first request can affect the overall response time of the API. There are Application Initialization Module which we can make use of but that is out of scope for this article.
 
 ### First Attempt
 
@@ -57,7 +53,11 @@ If you have worked with earlier versions of Asp.net Web API, you would be famili
 
 We will implement a filter for calculating the Response time.
 
-This code still doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc.
+![](Images/ActionFilter.png)
+###### Image taken from docs.microsoft.com
+
+
+This code still doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc. The The filter pipeline runs after the MVC selects the action to execute.
 
 ### Third Attempt
 We will use the Asp.net Core Middleware to Calculate the Response time of the API. 
@@ -141,10 +141,11 @@ The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` cla
 
 Lastly, we add the Response time information in a Custom Header. We use the `X-Response-Time-ms` header as a Response Header. As a convention, the Custom Header start with an`X`.
 
-### What factors are we ignoring?
-It's important to understand that this discussion doesn't include the time spent in N/W, Time spent in IIS, and Application Pool Startup if the application Pool wasn't up and running which can affect the overall response time of the API.
 
 
 
 ## Conclusion
 In this article, we understood how to leverage Asp.net middleware to manage cross cutting concerns like measuring response time of the API's. There are various other useful use cases of using middleware which can helps use reuse code and improve the maintainability of the Application.
+
+## References
+https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-2.1
