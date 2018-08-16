@@ -49,7 +49,7 @@ This code should be able to calculate the time spent in an operation. But this d
 
 ### Second Attempt
 Let's try to improve the above code by centralizing the code in one place so that it is easier to maintain. We need to execute the response time calculation code before and after a method is getting executed. 
-If you have worked with earlier versions of Asp.net Web API, you would be familiar with concepts of Filter. Filter allows to encapsulate code which needs to run before and after a method is executed.
+If you have worked with earlier versions of Asp.net Web API, you would be familiar with concepts of Filter. Filters allow you to run code before or after specific stages in the request processing pipeline.
 
 We will implement a filter for calculating the Response time.
 
