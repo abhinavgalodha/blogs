@@ -51,7 +51,25 @@ This code should be able to calculate the time spent in an operation. But this d
 Let's try to improve the above code by centralizing the code in one place so that it is easier to maintain. We need to execute the response time calculation code before and after a method is getting executed. 
 If you have worked with earlier versions of Asp.net Web API, you would be familiar with concepts of Filter. Filters allow you to run code before or after specific stages in the request processing pipeline.
 
-We will implement a filter for calculating the Response time.
+We will implement a filter for calculating the Response time as shown below
+
+`public class ResponseTimeActionFilter : IActionFilter 
+    {
+        private const string ResponseTimeKey = "ResponseTimeKey";
+
+        public void OnActionExecuting(ActionExecutingContext context)
+        {
+            // Start the timer
+            context.HttpContext.Items[ResponseTimeKey] = Stopwatch.StartNew();
+        }
+
+        public void OnActionExecuted(ActionExecutedContext context)
+        {
+            Stopwatch stopwatch = (Stopwatch)context.HttpContext.Items[ResponseTimeKey] ;
+            // Calculate the time elapsed
+            var timeElapsed = stopwatch.Elapsed;
+        }
+    }`
 
 ![](Images/ActionFilter.png)
 ###### Image taken from docs.microsoft.com
