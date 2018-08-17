@@ -27,7 +27,8 @@ It's important to understand that this discussion doesn't include the time spent
 
 One very naive approach to capture response time of an API would be to add code to every API method at start and end and then measure the delta to calculate the response time as shown below.
 
-`// GET api/values/5
+```
+// GET api/values/5
 [HttpGet]
 public IActionResult Get()
 {
@@ -41,7 +42,7 @@ public IActionResult Get()
     watch.Stop();
     var responseTimeForCompleteRequest = watch.ElapsedMilliseconds;
 }
-` 
+```
 
 This code should be able to calculate the time spent in an operation. But this doesn't seem to be the right approach for the following reasons.
 * If an API has lot of operations, then we need to add this code at multiple places which is not good for maintanability.
@@ -53,7 +54,8 @@ If you have worked with earlier versions of Asp.net Web API, you would be famili
 
 We will implement a filter for calculating the Response time as shown below. We will create a Filter and use the `OnActionExecuting` to start the timer and then stop the timer in method `OnActionExecuted`, thus calculating the response time of the API.
 
-`public class ResponseTimeActionFilter : IActionFilter 
+```
+public class ResponseTimeActionFilter : IActionFilter 
     {
         private const string ResponseTimeKey = "ResponseTimeKey";
 
@@ -69,15 +71,13 @@ We will implement a filter for calculating the Response time as shown below. We 
             // Calculate the time elapsed
             var timeElapsed = stopwatch.Elapsed;
         }
-    }`
+    }
+```
 
 This code is not the reliable technique for calculating the resposne time as it doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc. The filter pipeline runs after the MVC selects the action to execute. So, it effectively doesn't instrument the time spent in the Other Asp.net pipeline.
 
 ![](Images/ActionFilter.png)
 ###### Image taken from docs.microsoft.com
-
-
-
 
 ### Third Attempt
 We will use the Asp.net Core Middleware to Calculate the Response time of the API. 
@@ -117,7 +117,7 @@ We will write the code considering following points
 
 Full code snippet for the ResponseTimeMiddleware is shown below.
 
-`
+```
 public class ResponseTimeMiddleware
     {
         // Name of the Response Header, Custom Headers starts with "X-"
@@ -153,6 +153,8 @@ public class ResponseTimeMiddleware
             return this._next(context);
         }
     }
+
+```
 
 ### Explanation of the code
 The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` class to start the stopwatch once the requests enters into the first middleware of the request and then Stop the Stopwatch once the Request has been processed and the response is ready to be sent back to the client.
