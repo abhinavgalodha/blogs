@@ -51,7 +51,7 @@ This code should be able to calculate the time spent in an operation. But this d
 Let's try to improve the above code by centralizing the code in one place so that it is easier to maintain. We need to execute the response time calculation code before and after a method is getting executed. 
 If you have worked with earlier versions of Asp.net Web API, you would be familiar with concepts of Filter. Filters allow you to run code before or after specific stages in the request processing pipeline.
 
-We will implement a filter for calculating the Response time as shown below
+We will implement a filter for calculating the Response time as shown below. We will create a Filter and use the `OnActionExecuting` to start the timer and then stop the timer in method `OnActionExecuted`, thus calculating the response time of the API.
 
 `public class ResponseTimeActionFilter : IActionFilter 
     {
@@ -71,11 +71,13 @@ We will implement a filter for calculating the Response time as shown below
         }
     }`
 
+This code is not the reliable technique for calculating the resposne time as it doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc. The filter pipeline runs after the MVC selects the action to execute. So, it effectively doesn't instrument the time spent in the Other Asp.net pipeline.
+
 ![](Images/ActionFilter.png)
 ###### Image taken from docs.microsoft.com
 
 
-This code still doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc. The The filter pipeline runs after the MVC selects the action to execute.
+
 
 ### Third Attempt
 We will use the Asp.net Core Middleware to Calculate the Response time of the API. 
