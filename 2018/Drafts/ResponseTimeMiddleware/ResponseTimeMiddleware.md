@@ -56,7 +56,7 @@ We will implement a filter for calculating the Response time as shown below. We 
 
 ```
 public class ResponseTimeActionFilter : IActionFilter 
-    {
+{
         private const string ResponseTimeKey = "ResponseTimeKey";
 
         public void OnActionExecuting(ActionExecutingContext context)
@@ -71,13 +71,14 @@ public class ResponseTimeActionFilter : IActionFilter
             // Calculate the time elapsed
             var timeElapsed = stopwatch.Elapsed;
         }
-    }
+}
 ```
 
 This code is not the reliable technique for calculating the resposne time as it doesn't address the issue of calculating the time spent in execution of middleware, Controller selection, action method selection, Model binding etc. The filter pipeline runs after the MVC selects the action to execute. So, it effectively doesn't instrument the time spent in the Other Asp.net pipeline.
 
 ![](Images/ActionFilter.png)
-###### Image taken from docs.microsoft.com
+###### [Image taken from here](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-2.1)  
+
 
 ### Third Attempt
 We will use the Asp.net Core Middleware to Calculate the Response time of the API. 
@@ -119,7 +120,7 @@ Full code snippet for the ResponseTimeMiddleware is shown below.
 
 ```
 public class ResponseTimeMiddleware
-    {
+{
         // Name of the Response Header, Custom Headers starts with "X-"
         private const string RESPONSE_HEADER_RESPONSE_TIME = "X-Response-Time-ms";
         
@@ -152,22 +153,17 @@ public class ResponseTimeMiddleware
             // Call the next delegate/middleware in the pipeline
             return this._next(context);
         }
-    }
+}
 
 ```
 
 ### Explanation of the code
-The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` class to start the stopwatch once the requests enters into the first middleware of the request and then Stop the Stopwatch once the Request has been processed and the response is ready to be sent back to the client.
-
-?? We use the OnStarting Method, Passing an action where we define what needs to happen once the response is ready to be sent to the client.
+The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` class to start the stopwatch once the requests enters into the first middleware of the request and then Stop the Stopwatch once the Request has been processed and the response is ready to be sent back to the client. `OnStarting` method provides an oppurunity to write a custom code to Add a delegate to be invoked just before response headers will be sent to the client.
 
 Lastly, we add the Response time information in a Custom Header. We use the `X-Response-Time-ms` header as a Response Header. As a convention, the Custom Header start with an`X`.
-
-
-
 
 ## Conclusion
 In this article, we understood how to leverage Asp.net middleware to manage cross cutting concerns like measuring response time of the API's. There are various other useful use cases of using middleware which can helps use reuse code and improve the maintainability of the Application.
 
 ## References
-https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-2.1
+
