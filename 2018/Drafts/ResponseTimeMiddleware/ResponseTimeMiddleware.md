@@ -45,7 +45,7 @@ public IActionResult Get()
 ```
 
 This code should be able to calculate the time spent in an operation. But this doesn't seem to be the right approach for the following reasons.
-* If an API has a lot of operations, then we need to add this code at multiple places which are not good for maintainability.
+* If an API has a lot of operations, then we need to add this code at multiple places which is not good for maintainability.
 * This code measure the time spent in the method only, it doesn't measure the time spent on other activities like middleware, filters, Controller selection, action method selection, Model binding etc.
 
 ### Second Attempt
@@ -103,7 +103,7 @@ We want to add code to start the timer once the Request Enters the Asp.net core 
 We will build a Response Time Middleware which we will add as the first Middleware to the request Pipeline so that we can start the timer as soon the request enters the Asp.net core pipeline.
 
 ## What to do with the Response time data?
-Once we capture the response time data we can process data in the following ways
+Once we capture the response time data we can process data in the following ways:
 1. Add the Response time data to a Reporting database or an analytics solution.
 2. Write the Response time data to a log file.
 3. Pass the response time data to a message queue which can further be processed by another application for reporting and analytics.
@@ -163,7 +163,7 @@ The interesting part happens in the `InvokeAsync` method, We use `Stopwatch` cla
 Lastly, we add the Response time information in a Custom Header. We use the `X-Response-Time-ms` header as a Response Header. As a convention, the Custom Header start with an `X`.
 
 ## Conclusion
-In this article, we understood how to leverage Asp.net middleware to manage cross-cutting concerns like measuring the response time of the API's. There are various other useful use cases of using middleware which can help use reuse code and improve the maintainability of the Application.
+In this article, we understood how to leverage Asp.net middleware to manage cross-cutting concerns like measuring the response time of the API's. There are various other useful use cases of using middleware which can help to reuse code and improve the maintainability of the Application.
 
 ## References
 
