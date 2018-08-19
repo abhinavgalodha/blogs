@@ -3,7 +3,7 @@
 ## Introduction
 Performance is the buzzword for the API's. One of the most important and measurable parameter of the API performance is the Response time. In this article, we will understand how to add code to measure the response time of an API and then return the Response time data to the end client.
 
-![](Images\Time.gif)
+![](Images/Time.gif)
 
 ## What is the need?
 So, let's take a moment to think why we would ever need such a feature to measure the Response time of an API. 
