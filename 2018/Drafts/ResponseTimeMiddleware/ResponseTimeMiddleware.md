@@ -1,4 +1,4 @@
-# Measuring and Reporting the Response time of an API (Asp.Net Core).
+# Measuring and Reporting the Response time of an Asp.Net Core API
 
 ## Introduction
 Performance is the buzzword for the API's. One of the most important and measurable parameter of the API performance is the Response time. In this article, we will understand how to add code to measure the response time of an API and then return the Response time data to the end client.
