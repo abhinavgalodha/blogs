@@ -2,7 +2,8 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job. 
+If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
 
 ## Do i need a Salary Raise?
 
@@ -20,7 +21,7 @@ Foremost, do your homework and make a plan and understand **Do's** and **Don't**
 
 <TODO - Introspection Gif>
 
-* Start with introspection and take a look at what you are currently doing and what you want to do in near future. It's Ok to ask yourself if you deserve that High Salary or not.
+* Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis and question yourselve. It's Ok to ask yourself if you deserve that High Salary or not.
 * Find out a Salary range which is acceptable to you.
 * Other than Salary, what other benefits can you consider and prioritize benefits as per your liking.
 
@@ -30,9 +31,11 @@ Finally, It's never too late. It better to ask for a raise than just wondering a
 
 Other than doing your own self assessment, it is imperative to look external resources to Collobaorate your findings.
 
-* Analyze the *Specific Position* in your *Area* and how much salary is offered for that particular Role. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Experience and Location are keywords. The salary will vary depending on these factors.
+* Analyze the *Specific Position* in your *Area* and how much salary is offered for that particular Role. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Years of Experience, Technology Demand, your Skillset and Location are keywords. The salary will vary depending on these factors.
 
 * There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position.
+
+TODO: Example of salary of .net developer in India - Delhi, Chicago etc.
 
 * Analyze how much the company that you are working/expected to join pays for that specific Position.
 
@@ -40,29 +43,31 @@ Other than doing your own self assessment, it is imperative to look external res
 
 ## Things to do before negotiation
 
-* Know more about the decision maker. Research about them, use Social media/linkedin to get information about their profile, what kind of work they have done and what kind of candidates have they hired in the past.
+* Know more about the decision maker. Research about them, use Social media/Linkedin to get information about their profile, what kind of work they have done and what kind of candidates have they hired in the past.
 
-* Think what Hiring Manager is interested in why they might be asking a question. Not just think about answering a question. Their might be a covert reason for asking the question. Try figuring those..
+* Think what Hiring Manager is interested in why they might be asking a question. Not just think about answering a question. Their might be a covert reason for asking the question. Try figuring those Covert reasons and mold your answer accordingly.
 
-* Have different style, check and analyze and adapt. Understand the person you are talking to. HR manager might have one view, but your manager might have different view. Different person.
+* Everyone has a different viewpoint. Understand the person you are talking to and analyze and adapt. HR manager might have one view, but your manager might have different view for the same issue. Try to work with different personalities.
 
-* Be prepared for tough questions. Do you don't have offers during summer internship? So, don't be thinking that interviewers will not ask, but rather prepare..
+* Be prepared for tough questions. Don't wish and pray that Hiring Manager wouldn't ask that Tough question which you are not able to answer. Take your time and prepare for the tough questions. You might have some years of Gap between Completion of Education and Employment. Think and prepare how you can explain this to Hiring Manager. List all the questions that make you uncomfortable and try to get answers and be prepared to answer those questions. Do you don't have offers during summer internship? So, don't be thinking that Hiring Manager will not ask, but rather prepare. The hiring manager throws some difficult questions, and if you are not able to handle it gracefully, you will be be loosing the plot.
 
 * Mike Tyson - Everyone has a plan until they are punched in the face… Similary, during negotiation process, all is looking well and you have prepared everything and then
 
-The hiring manager throws some difficult questions, and if you are not able to handle it gracefully, you will be be loosing the plot..
-
 ## What should I keep in mind during negotiation?
 
-* **Stay Calm, Polite and respectful.** Easy to say, but difficult to do, this will not happen in a day but you need imbibe calmness in yourselve and it will take time.
-* Look at the entire deal and the bigger picture. Like what will you get In future..
-* Stay at the table - Stay in touch..
-* They might have constraints, try to understand those but don't go in the details… or prove too much..
-* Let them know your priority and present them together. Don't do one more thing, one more thing.. It can be irritating..
+* **Stay Calm, Polite and respectful.** Easy to say, but difficult to do, this will not happen in a day but you need imbibe calmness in yourselve and it will take time. Try Meditation or any other thing which helps you keep calm.
+
+* Look at the entire deal and the bigger picture. Fixed Salary might be the most important thing, but don't ignore other things like Yearly Bonus, Equity, Insurance Coverage, Travel allowance, work environment etc. Look at the entire package and don't be narrow minded and worrry about the fixed Salary.Other benefits should be considered while considering the overall Salary Negotiation. You might get a better overall deal while still getting a lower Fixed salary as per your expectations.
+
+* Hiring Managers might have constraints, try to understand those but don't go in the details like why the Salary is fixed for a employee at a particular Grade/Band/Level.  
+
+* Present all your Priorities together in one meeting. Don't drag on the benefits to the Next meeting.  Don't do one more thing, one more thing.. It can be irritating..
+
 * Don't haggle/fight for every small thing, this will make them dislike you..
 * When someone says "No" in a negotiation. It means that at that point in time the answer was "No". But, it may change at some time in future..
 * Form your request as a question not as a directive.
 * Give yourself a way to accept offer..
+* Stay at the table - Stay in touch..
 
 ## Don't in Negotiation
 
