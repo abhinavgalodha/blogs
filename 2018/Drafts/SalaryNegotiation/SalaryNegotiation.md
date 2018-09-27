@@ -1,9 +1,12 @@
-# Salary 
+# Salary Negotiation
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job. 
-If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+Stack overflow survey results - the importance bof the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+
+![](Images/SOSurvey.png)
+
+![Stack Overflow Link](Images/https://insights.stackoverflow.com/survey/2018#work)
 
 ## Do i need a Salary Raise?
 
@@ -21,7 +24,7 @@ Foremost, do your homework and make a plan and understand **Do's** and **Don't**
 
 <TODO - Introspection Gif>
 
-* Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis and question yourselve. It's Ok to ask yourself if you deserve that High Salary or not.
+* Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis and question yourselve.
 * Find out a Salary range which is acceptable to you.
 * Other than Salary, what other benefits can you consider and prioritize benefits as per your liking.
 
@@ -29,11 +32,16 @@ Finally, It's never too late. It better to ask for a raise than just wondering a
 
 ## How much do you deserve?
 
-Other than doing your own self assessment, it is imperative to look external resources to Collobaorate your findings.
+Other than doing your own self assessment, it is imperative to look at the external resources to Collobaorate your findings.
 
 * Analyze the *Specific Position* in your *Area* and how much salary is offered for that particular Role. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Years of Experience, Technology Demand, your Skillset and Location are keywords. The salary will vary depending on these factors.
 
+![](Images/SOSurvey1.png)
+Image from here https://insights.stackoverflow.com/survey/2018#salary
+
 * There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position.
+
+TODO : Screenshot for Stackoverflow or Glassdoor and include links
 
 TODO: Example of salary of .net developer in India - Delhi, Chicago etc.
 
