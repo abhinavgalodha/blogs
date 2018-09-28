@@ -87,9 +87,9 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 > Never Lie in the Nogiation.
 
-* Don't lie in a negotiation. Never, Never, Never Lie in a conversation. Hiring manager are smarter than you think, they might be able to catch your lies and if it happens than you would loose trust and wouldn't get favourable deal.
+* Don't lie in a negotiation. Never, Never, Never Lie in a Negotiation. Hiring manager have experience and are smarter than you think, they might be able to catch your lies and if it happens than you would loose trust and wouldn't get favourable deal.
 
-* Compare your salary to some of your Colleague. This is the most common thing that i have seen with most of the employees. 
+* Compare your salary to some of your Colleague. This is the most common thing that i have seen with most of the employees.
 
 * Don't accept or make ultimatums.
 
