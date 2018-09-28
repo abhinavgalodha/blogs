@@ -91,34 +91,25 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Compare your salary to some of your Colleague. This is the most common thing that happens in the industry. We tend to compare our salary with other colleagues and demand that we get similar salary. There are lot of factors that govern the salary and you might not have best idea about all the reasons that other colleagues are getting better salary. So, it is best to avoid salary comparisons with other colleagues.
 
-* Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
+* Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
 * Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
 
-* Don't accept or make ultimatums.
-
+* Don't accept or make ultimatums. 
 
 ## How do I get more? How to ask for Higher Salary?
 
-If your salary is in the range for similar jobs in the industry, that's going to be a ceiling on any salary increase. In that case, , but you're going to have to tie it to some concrete numbers. If you're already making more than the competition, then you have some work ahead of you to justify that raise you want, so read on.
+If your salary is in the range for similar jobs in the industry, that's going to be a ceiling on any salary increase. If you're already making more than the competition, then you have some work ahead of you to justify that raise you want, so read on.
 
 > Make them like you. The more they like you. The more chances of raise.
 
-* you might want to push for a one-time bonus or other variable compensation rather than a straight annual increase.
+* One very simple way to increase your chances of favourable raise is to make them like you more. The reason that they are offering you a Job is because they liked you and you fit into the Role Perfectly. If they like you more they might be able to offer more. Give them the reasons to like you more.
 
-* Sharpen the saw..
+* You might want to push for a one-time bonus or other variable compensation rather than a straight annual increase.
 
-* Be a doer
+* Communicate your achievements. During interview, they might not have time to go through your resume line by line and in detail and might not be knowing a lot of things about you. You may talk to them about your achievements and how your past achievements would help you in your current Role and the value addition it brings.
 
-* Create things rather than doing the rot.
-
-* Understand the priority of the team, direction and align to the goals. Like they want more user acceptance.
-
-* Be innovative, leadership.
-
-* Communicate Your achievements
-
-* Make sure your boss and other key personnel understand when the reason things are "running smoothly" is you. This is an ongoing process. In other words, you need to constantly remind them when you contribute to a major success or preempt a significant problem. Be prepared to summarize those achievements when you talk about your raise.
+If you are already in a company then try the following.
 
 * Talk about the value that you bring into the Company.  
  	* Saved Time by automating a process.
@@ -144,6 +135,22 @@ If your salary is in the range for similar jobs in the industry, that's going to
 *  Don't complain. A positive approach as to why you deserve a raise will get you more than a screed against co-workers you feel are overpaid or aren't performing as well as you are..
 
 * Record milestone. Most importantly, tie your performance to an increase in sales, revenue, or better yet, profit for your employer. While your hard work should be rewarded, it's a lot easier for your boss to give you $3,000 or $5,000 more if you've actively contributed to a bump in revenue of, say, $50,000.
+
+## Better Salary in Long term
+
+* Sharpen the saw..
+
+* Be a doer
+
+* Create things rather than doing the rot.
+
+* Understand the priority of the team, direction and align to the goals. Like they want more user acceptance.
+
+* Be innovative, leadership.
+
+
+* Make sure your boss and other key personnel understand when the reason things are "running smoothly" is you. This is an ongoing process. In other words, you need to constantly remind them when you contribute to a major success or preempt a significant problem. Be prepared to summarize those achievements when you talk about your raise.
+
 	
 * It's not always easy to know how much you contribute to the bottom line, and it's certainly easier in some jobs than in others. A sales representative can typically point at monthly reports to justify a bump in salary, but other workers have to be more creative. For example, a bartender may know that the till at the end of his shift is a lot higher than at the end of someone else's, or an auditor might complete audits on average faster and with less client pushback than her colleagues. Whatever measure you use, try to come up with a reasonably objective measure of your performance (and value to the employer) in any discussion about compensation.
 
