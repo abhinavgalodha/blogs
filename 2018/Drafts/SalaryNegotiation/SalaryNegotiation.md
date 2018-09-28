@@ -89,13 +89,13 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't lie in a negotiation. Never, Never, Never Lie in a Negotiation. Hiring manager have experience and are smarter than you think, they might be able to catch your lies and if it happens than you would loose trust and wouldn't get favourable deal.
 
-* Compare your salary to some of your Colleague. This is the most common thing that i have seen with most of the employees.
+* Compare your salary to some of your Colleague. This is the most common thing that happens in the industry. We tend to compare our salary with other colleagues and demand that we get similar salary. There are lot of factors that govern the salary and you might not have best idea about all the reasons that other colleagues are getting better salary. So, it is best to avoid salary comparisons with other colleagues.
+
+* Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
+
+* Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
 
 * Don't accept or make ultimatums.
-
-
-* Give a Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
-* Emotional or tell you have a big family to serve.. Only share if you the Decision Maker in person..
 
 
 ## How do I get more? How to ask for Higher Salary?
