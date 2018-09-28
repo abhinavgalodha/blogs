@@ -111,10 +111,10 @@ If your salary is in the range for similar jobs in the industry, that's going to
 
 If you are already in a company then try the following.
 
-* Talk about the value that you bring into the Company.  
- 	* Saved Time by automating a process.
- 	* Increase productivity.
- 	* Value saved in $.
+* Talk about the value that you bring into the Company. What actions have you done recently or in the past which increases your worth. 
+ 	* Did you saved time and money by automating a process.
+ 	* Did you in any capacity done anything to increase productivity.
+ 	* If you can relate any work to the money/reputation, it is easy to convince your Boss. For e.g. 
 
 * Have you taken additional Responsibilities.. (for e.g. Not just a developer, but a high level understanding of the )
 
