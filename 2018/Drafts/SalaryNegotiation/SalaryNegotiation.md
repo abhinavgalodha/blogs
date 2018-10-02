@@ -2,7 +2,7 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance bof the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
 
 ![](Images/SOSurvey.png)
 
@@ -111,10 +111,10 @@ If your salary is in the range for similar jobs in the industry, that's going to
 
 If you are already in a company then try the following.
 
-* Talk about the value that you bring into the Company. What actions have you done recently or in the past which increases your worth. 
- 	* Did you saved time and money by automating a process.
- 	* Did you in any capacity done anything to increase productivity.
- 	* If you can relate any work to the money/reputation, it is easy to convince your Boss. For e.g. 
+* Talk about the value that you bring into the Company. What actions have you done recently or in the past which increases your worth. Some of the examples are mentioned below.
+ 	* Did you saved time and money by automating a process?
+ 	* Did you in any capacity done anything to increase productivity?
+ 	* If you can relate any work to the money/reputation, it is easy to convince your Boss. For e.g. You automated the Deployment and thus saved 30 mins of daily time in the Deployment Task. That's effectively a saving of 7560 minutes (considering 252 working days) that would ultimately mean a saving of certain Currency. it's good to relate to Monetary benefit of your work as it is easier to talk to managers abou the concrete numbers.
 
 * Have you taken additional Responsibilities.. (for e.g. Not just a developer, but a high level understanding of the )
 
