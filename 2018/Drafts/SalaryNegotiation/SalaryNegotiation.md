@@ -111,12 +111,12 @@ If your salary is in the range for similar jobs in the industry, that's going to
 
 If you are already in a company then try the following.
 
-* Talk about the value that you bring into the Company. What actions have you done recently or in the past which increases your worth. Some of the examples are mentioned below.
+* Talk about the **value** that you bring into the Company. What actions have you done recently or in the past which increases your worth. Some of the examples are mentioned below.
  	* Did you saved time and money by automating a process?
  	* Did you in any capacity done anything to increase productivity?
  	* If you can relate any work to the money/reputation, it is easy to convince your Boss. For e.g. You automated the Deployment and thus saved 30 mins of daily time in the Deployment Task. That's effectively a saving of 7560 minutes (considering 252 working days) that would ultimately mean a saving of certain Currency. it's good to relate to Monetary benefit of your work as it is easier to talk to managers abou the concrete numbers.
 
-* Have you taken additional Responsibilities.. (for e.g. Not just a developer, but a high level understanding of the )
+* Have you taken additional Responsibilities. You might have been working on an additional Project or helping another team as being the single point of contact for your team. Being a developer, you might be taking additional responsibility in talking to Business owners and helping with requirement gathering. Make a note of additional Responsibilities, convey to your supervisor and check if that stands a reason for an additional increment.
 
 * If your duties have changed, remind your boss. Even better, put a figure on the savings or gain to the employer from your additional work and make your raise reflect a reasonable percentage of that savings.
 	* Leading in 2 Projects. Earlier only one..
