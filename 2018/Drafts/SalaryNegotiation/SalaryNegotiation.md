@@ -100,6 +100,33 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't accept or make ultimatums. 
 
+## What to do if the Salary is fixed (Non-Negotiable)?
+
+Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations. Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can allow yourself a chance when the salary is fixed.
+
+* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company.
+
+* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year.
+
+* Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums?
+ 
+* you join mid term (pro-rata).. And also make sure you follow-up With them.. Look for a better deal which include complete package - salary, location, benefits..
+
+* If you are doing well, can they look at revisiting the salary in the next Cycle..
+
+* Any Additional Benefits and perks..
+
+* Negotiate for better projects, 
+
+* Flexibility in Locations and working from home.
+
+* If you like travel, you may ask for more travel oppurtunities and travel and see new places while doing your your work assignments.
+
+* 1, 2 Conference in an year, logistics around training and learning..
+
+* Offer explanations for any increase or any favors offer why…
+
+
 ## How do I get more? How to ask for Higher Salary?
 
 If your salary is in the range for similar jobs in the industry, that's going to be a ceiling on any salary increase. If you're already making more than the competition, then you have some work ahead of you to justify that raise you want, so read on.
@@ -124,11 +151,10 @@ If you are already in a company then try the following.
 
 * Have you completed a successful project? Throughout the year, keep a track of your accomplishments and remind your manager about the successful projects and deliverables you have helped the company. E.g. As a developer, you might have deployed the first Microservices in your Group/Company.
 
-* If your duties have changed, remind your boss. Even better, put a figure on the savings or gain to the employer from your additional work and make your raise reflect a reasonable percentage of that savings.
-	* Leading in 2 Projects. Earlier only one..
-	*  Interview and selecting candidates.
-	* Trust with leadership. 
-	* Supervised People..
+* If your duties have changed, remind your boss. Even better, put a figure on the savings or gain to the employer from your additional work and make your raise reflect a reasonable percentage of that savings. Some examples are shown below
+	* You are leading/involved in more than 1 projects which was originally allocated to you.
+	* You have been involved in Interview and selecting candidates.
+	* You have been Supervising more people than previously.
 
 * Record milestone. Most importantly, tie your performance to an increase in sales, revenue, or better yet, profit for your employer. While your hard work should be rewarded, it's a lot easier for your boss to give you $3,000 or $5,000 more if you've actively contributed to a bump in revenue of, say, $50,000.
 
@@ -150,29 +176,6 @@ If you are already in a company then try the following.
 	
 * It's not always easy to know how much you contribute to the bottom line, and it's certainly easier in some jobs than in others. A sales representative can typically point at monthly reports to justify a bump in salary, but other workers have to be more creative. For example, a bartender may know that the till at the end of his shift is a lot higher than at the end of someone else's, or an auditor might complete audits on average faster and with less client pushback than her colleagues. Whatever measure you use, try to come up with a reasonably objective measure of your performance (and value to the employer) in any discussion about compensation.
 
-## What to do if the Salary is fixed (Non-Negotiable)?
-
-Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations. Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can allow yourself a chance when the salary is fixed.
-
-* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company.
-
-* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year.
-
-* Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums?
- 
-* you join mid term (pro-rata).. And also make sure you follow-up With them.. Look for a better deal which include complete package - salary, location, benefits..
-
-* If you are doing well, can they look at revisiting the salary in the next Cycle..
-
-* Any Additional Benefits and perks..
-
-* Negotiate for better projects, 
-
-* Flexibility in Locations.
-
-* 1, 2 Conference in an year, logistics around training and learning..
-
-* Offer explanations for any increase or any favors offer why…
 
 ## it is process
 
