@@ -93,6 +93,9 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
+* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain and 
+
+
 * Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
 
 * Don't accept or make ultimatums. 
@@ -118,21 +121,14 @@ If you are already in a company then try the following.
 
 * Have you taken additional Responsibilities. You might have been working on an additional Project or helping another team as being the single point of contact for your team. Being a developer, you might be taking additional responsibility in talking to Business owners and helping with requirement gathering. Make a note of additional Responsibilities, convey to your supervisor and check if that stands a reason for an additional increment.
 
+
+* Have you completed a successful project? Throughout the year, keep a track of your accomplishments and remind your manager about the successful projects and deliverables you have helped the company. E.g. As a developer, you might have deployed the first Microservices in your Group/Company.
+
 * If your duties have changed, remind your boss. Even better, put a figure on the savings or gain to the employer from your additional work and make your raise reflect a reasonable percentage of that savings.
 	* Leading in 2 Projects. Earlier only one..
 	*  Interview and selecting candidates.
 	* Trust with leadership. 
 	* Supervised People..
-
-* Have you completed a successful project?
-	○ AppDynamics (Monitoring)
-	○ Customer Story & Collaboration
-
-* Talk about your accomplishments.
-	○ Deployed first Microservices on asp.net core and then on Docker, container and cloud.
-	○ Detailed Monitoring solution for the application..
-
-*  Don't complain. A positive approach as to why you deserve a raise will get you more than a screed against co-workers you feel are overpaid or aren't performing as well as you are..
 
 * Record milestone. Most importantly, tie your performance to an increase in sales, revenue, or better yet, profit for your employer. While your hard work should be rewarded, it's a lot easier for your boss to give you $3,000 or $5,000 more if you've actively contributed to a bump in revenue of, say, $50,000.
 
