@@ -99,7 +99,7 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't accept or make ultimatums. 
 
-## What to do if the Salary is fixed (Non-Negotiable)?
+## What to do if the Salary is fixed (Non-Negotiable)? What are other options to consider?
 
 Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations? Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can provides you with other choices when the salary is fixed.
 
@@ -115,22 +115,21 @@ TODO: Check data for shares for equity.
 	* Kids Day Care and expenses
 	* Meal Expenses
 	* Internet and phone expenses
+
+TODO - Are there any other expenses which can be added?
 	
 
-* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year. If you are doing well, can they look at revisiting the salary in the next 6 months instead of an year.
+* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year. If you are doing well, can they look at revisiting the salary in the next 6 months instead of an year? It's imperative to understand that they might not be able to give you something today, but might be able to accomodate in the future.
 
 * Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums? You might open an oppurtunity for getting compensation in another way which has already been done in the past.
  
-* You join mid term (pro-rata).. And also make sure you follow-up With them.. Look for a better deal which include complete package - salary, location, benefits..
-
-* You might have technical inclination for doing a specific set of work. As an example, currently, i am more interested in working in Asp.net core and microservices. So, i may ask for an oppurtunity to work on a similar project. If you get a work which can you find solace then it would be great.
+* You might have technical inclination for doing a specific set of work. As an example, currently, i am more interested in working in Asp.net core and microservices. So, i may ask for an oppurtunity to work on a similar project. If you get a work which can you find solace then it would be great and you will find peace.
 
 * Explore options of flexibility in Location and working from home. If you have family and kids, it is good to avoid commute and save time and spend quality time with family.
 
 * If you like travel, you may ask for more travel oppurtunities and travel and see new places while doing your your work assignments.
 
-* You can also try to get yourself sponsored for conference/training/seminars. As an example, i have asked for a sponsorship to Microsoft Build event.
-
+* You can also try to get yourself sponsored for conference/training/seminars. As an example, I have tried for sponsorship to Microsoft events like Build event.
 
 ## How do I get more? How to ask for Higher Salary?
 
@@ -165,15 +164,19 @@ If you are already in a company then try the following.
 
 ## Better Salary in Long term
 
-* Sharpen the saw..
+Rome wasn't built in a single day. Similarly, you might not be able to get a great salary today, but you can prepare yourselve and find a better deal in future by proper preparation and understanding what it takes to be the Most valuable person in the team.
 
-* Be a doer
+* Foremost, Sharpen the saw.. Invest in yourself, Become a better individual. Learn from your mistakes, prioritize the right tasks and spend more time on important tasks and less on Urgent work. 
 
-* Create things rather than doing the rot.
+* Be a doer. Don't profess and boast about things you can do, always better to show the results. Be an executor and finish the things you undertake.
 
-* Understand the priority of the team, direction and align to the goals. Like they want more user acceptance.
+TODO: AAmir sohail vide..
 
-* Be innovative, leadership.
+* Create things rather than doing the rot. Don't be stuck in things which are mundane and boring. Try and experiment with new ideas and see how your company can benefit from those ideas. Be innovative and solve the problems.
+
+* Understand the priority, direction and align to the goals of your Manager and comapnies. 
+
+TODO : example
 
 
 * Make sure your boss and other key personnel understand when the reason things are "running smoothly" is you. This is an ongoing process. In other words, you need to constantly remind them when you contribute to a major success or preempt a significant problem. Be prepared to summarize those achievements when you talk about your raise.
