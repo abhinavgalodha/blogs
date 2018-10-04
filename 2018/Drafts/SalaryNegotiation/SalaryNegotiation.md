@@ -103,14 +103,18 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations? Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can provides you with other choices when the salary is fixed.
 
-* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company which can be beneficial.
+* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company which can be beneficial and will be adding monitary benefit.
 
-* Any Additional Benefits and perks..
-	Health insurance
-	Travel allowance
-	Kids Day Care and expenses
-	Meal Expenses
-	Internet and phone expenses
+TODO: Check data for shares for equity.
+
+* Get a good deal with Health Insurance. In certain countries like USA, the cost of health insurance is high and if you can get a better deal with Health insurance it would save you certain money. Try to reduce your contribution and get more contribution from the employer.
+
+* Certain companies also allow for travel allowance by paying for Train, Bus and Commuting costs. In one of my previous companies, we used to get free commute.
+
+* Explore about other Additional Benefits and perks such as
+	* Kids Day Care and expenses
+	* Meal Expenses
+	* Internet and phone expenses
 	
 
 * Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year. If you are doing well, can they look at revisiting the salary in the next 6 months instead of an year.
