@@ -2,7 +2,7 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's the tipping point which can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
 
 ![](Images/SOSurvey.png)
 
@@ -10,7 +10,7 @@ Stack overflow survey results - the importance of the salary as #1 factor in the
 
 ## Do i need a Salary Raise?
 
-There may be myriad reasons for the Salary Raise. Are you preparing for the Next annual Review meeting with your manager. Some of the possible reasons are mentioned below.
+There may be myriad reasons for the Salary Raise. Are you preparing for the Next annual Review meeting with your manager. Some of the possible reasons that i can think of are mentioned below.
 
 * Annual Increment is pending.
 * You might be Joining a new company.
@@ -19,12 +19,12 @@ There may be myriad reasons for the Salary Raise. Are you preparing for the Next
 
 ## Yes, I need a Salary Raise, what's next?
 
-Foremost, do your homework and make a plan and understand **Do's** and **Don't**  and considerations which can help in getting the best deal. Also, bear in mind following points as you prepare yourselve.
+Foremost, do your homework and make a plan and understand **Do's** and **Don't**  and other considerations which can help in getting the best deal. Also, bear in mind following points as you prepare yourselve.
 
 
 <TODO - Introspection Gif>
 
-* Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis and question yourselve.
+* Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis, question yourselve and make an honest assessment of your skills and the value addition that your bring into the company.
 * Find out a Salary range which is acceptable to you.
 * Other than Salary, what other benefits can you consider and prioritize benefits as per your liking.
 
@@ -34,12 +34,12 @@ Finally, It's never too late. It better to ask for a raise than just wondering a
 
 Other than doing your own self assessment, it is imperative to look at the external resources to Collobaorate your findings.
 
-* Analyze the *Specific Position* in your *Area* and how much salary is offered for that particular Role. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Years of Experience, Technology Demand, your Skillset and Location are keywords. The salary will vary depending on these factors.
+* Analyze the *Specific Position* in your *Area* and how much salary is offered for that *particular Role*. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Years of Experience, Technology Demand, your Skillset and Location are keywords. The salary will vary depending on these factors. If you move to an expensive location, you will need a higher salary. Following is an link from Stackoverflow, which shows the Salary Range in US depending on the Language and Years of Experience.
 
 ![](Images/SOSurvey1.png)
 Image from here https://insights.stackoverflow.com/survey/2018#salary
 
-* There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position.
+* There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. These website would let you gauge the salary limits depending on number of factors. Also, the salaries are reported by actual employess. So, the number is pretty accurate. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position.
 
 TODO : Screenshot for Stackoverflow or Glassdoor and include links
 
@@ -93,8 +93,7 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
-* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain and 
-
+* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain about external factors which is stoping you from doing your Job, but provide solutions to those problems and ask your manager for any help in implementing those solutions.
 
 * Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
 
@@ -102,29 +101,31 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 ## What to do if the Salary is fixed (Non-Negotiable)?
 
-Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations. Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can allow yourself a chance when the salary is fixed.
+Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations? Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can provides you with other choices when the salary is fixed.
 
-* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company.
-
-* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year.
-
-* Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums?
- 
-* you join mid term (pro-rata).. And also make sure you follow-up With them.. Look for a better deal which include complete package - salary, location, benefits..
-
-* If you are doing well, can they look at revisiting the salary in the next Cycle..
+* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company which can be beneficial.
 
 * Any Additional Benefits and perks..
+	Health insurance
+	Travel allowance
+	Kids Day Care and expenses
+	Meal Expenses
+	Internet and phone expenses
+	
 
-* Negotiate for better projects, 
+* Negotiate for things which they can give us in the future. Like 6 months, 1 year, e.g. bonus after completion of 1 year. If you are doing well, can they look at revisiting the salary in the next 6 months instead of an year.
 
-* Flexibility in Locations and working from home.
+* Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums? You might open an oppurtunity for getting compensation in another way which has already been done in the past.
+ 
+* You join mid term (pro-rata).. And also make sure you follow-up With them.. Look for a better deal which include complete package - salary, location, benefits..
+
+* You might have technical inclination for doing a specific set of work. As an example, currently, i am more interested in working in Asp.net core and microservices. So, i may ask for an oppurtunity to work on a similar project. If you get a work which can you find solace then it would be great.
+
+* Explore options of flexibility in Location and working from home. If you have family and kids, it is good to avoid commute and save time and spend quality time with family.
 
 * If you like travel, you may ask for more travel oppurtunities and travel and see new places while doing your your work assignments.
 
-* 1, 2 Conference in an year, logistics around training and learning..
-
-* Offer explanations for any increase or any favors offer why…
+* You can also try to get yourself sponsored for conference/training/seminars. As an example, i have asked for a sponsorship to Microsoft Build event.
 
 
 ## How do I get more? How to ask for Higher Salary?
