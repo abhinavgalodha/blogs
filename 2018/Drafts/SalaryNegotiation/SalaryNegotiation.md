@@ -51,15 +51,17 @@ TODO: Example of salary of .net developer in India - Delhi, Chicago etc.
 
 ## Things to do before negotiation
 
-* Know more about the decision maker. Research about them, use Social media/Linkedin to get information about their profile, what kind of work they have done and what kind of colleagues they work with.
+* Know more about the decision maker. Research about them, use Social media/Linkedin to get information about their profile, what kind of work they have done and what kind of colleagues they work with. This knowledge about them would help you in conversation with them.
 
 * Think what Hiring Manager is interested in and why they might be asking a question. Not just think about answering a question. Their might be a covert reason for asking the question. Try figuring those Covert reasons and mold your answer accordingly.
 
-* Everyone has a different viewpoint. Understand the person you are talking to and analyze and adapt. HR manager might have one view, but your manager might have different view for the same issue. Try to work with different personalities.
+* Everyone has a different viewpoint. Understand the person you are talking to and analyze and adapt. HR manager might have one view, but your manager might have different view for the same issue. Try to work with different personalities. If you have a niche skill, you might be easily able to explain to your manager about the skill and link with salary increase than talking with an HR Manager.
 
 * Be prepared for tough questions. Don't wish and pray that Hiring Manager wouldn't ask that Tough question which you are not able to answer. Take your time and prepare for the tough questions. You might have some years of Gap between Completion of Education and Employment. Think and prepare how you can explain this to Hiring Manager. List all the questions that make you uncomfortable and try to get answers and be prepared to answer those questions. Do you don't have offers during summer internship? So, don't be thinking that Hiring Manager will not ask, but rather prepare. The hiring manager throws some difficult questions, and if you are not able to handle it gracefully, you will be be loosing the plot.
 
-* Mike Tyson - Everyone has a plan until they are punched in the face… Similary, during negotiation process, all is looking well and you have prepared everything and then
+An example from Mike Tyson from youtube video...
+
+* Mike Tyson - Everyone has a plan until they are punched in the face… Similary, during negotiation process, all is looking well you have prepared everything, until 
 
 ## What should I keep in mind during negotiation?
 
@@ -67,11 +69,10 @@ TODO: Example of salary of .net developer in India - Delhi, Chicago etc.
 
 * Look at the entire deal and the bigger picture. Fixed Salary might be the most important thing, but don't ignore other things like Yearly Bonus, Equity, Insurance Coverage, Travel allowance, work environment etc. Look at the entire package and don't be narrow minded and worrry about the fixed Salary.Other benefits should be considered while considering the overall Salary Negotiation. You might get a better overall deal while still getting a lower Fixed salary as per your expectations.
 
-* Hiring Managers might have constraints, try to understand those but don't go in the details like why the Salary is fixed for a employee at a particular Grade/Band/Level.  
+* Hiring Managers might have constraints, try to understand those but don't go in the details like why the Salary is fixed for a employee at a particular Grade/Band/Level. They might not be able to share the data with you.
 
-* Present all your Priorities together in one meeting. Don't come up with new demands in every meeting. It can be irritating for the hiring manager and they might think that you are not clear and confused.  
-
-I have made this mistake. In the first meeting, i mentioned that i need X salary, in next meeting again told the hiring manager that i need X+Y salary and in next meeting when they were ready to offer X+Y Salary, i demanded another benefit. As you might be able to imagine this didn't go well and i didn't get all i desired. The learning for me was clear that i need to be better prepared and think about Salary and all benefits before first meeting and present them together.
+* Present all your Priorities together in one meeting. Don't come up with new demands in every meeting. It can be irritating for the hiring manager and they might think that you are not clear and confused.   
+I have made this mistake. In the first meeting, i mentioned that I need X salary, in next meeting again told the hiring manager that i need X+Y salary and in next meeting when they were ready to offer X+Y Salary, i demanded another benefit. As you might be able to imagine this didn't go well and i didn't get all i desired. The learning for me was clear that i need to be better prepared and think about Salary and all benefits before first meeting and present them together.
 
 * Don't haggle/fight for every small thing, this will make them dislike you.
 
@@ -79,9 +80,9 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Form your request as a question not as a directive. 
 
-* Give yourself a way to accept offer. Think about what you can compromise on and accept the offer. Don't be rigid and be flexible and open to alternative form of compensations or other give yourself other options.
+* Give yourself a way to accept offer. Think about what you can compromise on and accept the offer. Don't be rigid and be flexible and open to alternative form of compensations or other give yourself other options. Don't assume that you will get everything you want, be flexible and open for various options.
 
-* Stay at the table - Stay in touch
+* Stay at the table - Stay in touch. Things change and circumstances can alter which may mean that something which was not possible earlier, might be possible now. If you can't make a negotiation at this point, try in near future and check back how things are in future.
 
 ## Don't in Negotiation
 
@@ -89,7 +90,7 @@ I have made this mistake. In the first meeting, i mentioned that i need X salary
 
 * Don't lie in a negotiation. Never, Never, Never Lie in a Negotiation. Hiring manager have experience and are smarter than you think, they might be able to catch your lies and if it happens than you would loose trust and wouldn't get favourable deal.
 
-* Compare your salary to some of your Colleague. This is the most common thing that happens in the industry. We tend to compare our salary with other colleagues and demand that we get similar salary. There are lot of factors that govern the salary and you might not have best idea about all the reasons that other colleagues are getting better salary. So, it is best to avoid salary comparisons with other colleagues.
+* Compare your salary to some of your Colleague. This is the most common thing that happens in the industry. We tend to compare our salary with other colleagues and demand that we get similar salary. There are lot of factors that decide the salary and you might not have best idea about all the reasons that other colleagues are getting better salary. So, it is best to avoid salary comparisons with other colleagues.
 
 * Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
