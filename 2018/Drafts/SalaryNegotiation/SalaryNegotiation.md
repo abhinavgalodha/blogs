@@ -104,7 +104,7 @@ I have made this mistake. In the first meeting, i mentioned that I need X salary
 
 Let's accept it, certain time the Hiring manager has to abide by the policies and procedures and can't offer the salary beyond a certain limit. What should you do in such situations? Be flexible and look at the bigger picture and try to substiture the salary for other perks. Following are some of the ways which you can provides you with other choices when the salary is fixed.
 
-* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company which can be beneficial and will be adding monitary benefit.
+* Take Equity if Base Pay is fixed. Check if company can offer certain shares of the company which can be beneficial and will be a monitery benefit.
 
 TODO: Check data for shares for equity.
 
@@ -116,7 +116,9 @@ TODO: Check data for shares for equity.
 	* Kids Day Care and expenses
 	* Meal Expenses
 	* Internet and phone expenses
-
+	* Lease Breakage and Relocation
+	* Education paid options like nanodegree or executive programs.
+    
 TODO - Are there any other expenses which can be added?
 	
 
@@ -124,13 +126,13 @@ TODO - Are there any other expenses which can be added?
 
 * Check with your manager have they ever compensated other employees in different ways for salary hike, what has been other mediums? You might open an oppurtunity for getting compensation in another way which has already been done in the past.
  
-* You might have technical inclination for doing a specific set of work. As an example, currently, i am more interested in working in Asp.net core and microservices. So, i may ask for an oppurtunity to work on a similar project. If you get a work which can you find solace then it would be great and you will find peace.
+* You might have technical inclination for doing a specific set of work. As an example, currently, i am more interested in working in Asp.net core. So, I may ask for an oppurtunity to work on a similar project. If you get a work which can you find solace then it would be great and you will find peace.
 
 * Explore options of flexibility in Location and working from home. If you have family and kids, it is good to avoid commute and save time and spend quality time with family.
 
 * If you like travel, you may ask for more travel oppurtunities and travel and see new places while doing your your work assignments.
 
-* You can also try to get yourself sponsored for conference/training/seminars. As an example, I have tried for sponsorship to Microsoft events like Build event.
+* You can also try to get yourself sponsored for conference/training/seminars. You can try for sponsorship to Microsoft events like Build event, Ignite, Google I/O, Facebook etc.
 
 ## How do I get more? How to ask for Higher Salary?
 
@@ -169,6 +171,12 @@ Rome wasn't built in a single day. Similarly, you might not be able to get a gre
 
 * Foremost, Sharpen the saw.. Invest in yourself, Become a better individual. Learn from your mistakes, prioritize the right tasks and spend more time on important tasks and less on Urgent work. 
 
+
+### Introspection
+
+Remember that working hard or working long hours is not the be all and end all for an increase in salary. If it takes you longer to do something than it takes your peers, you're not likely to get a raise for that. Similarly, if your work process is inefficient, resulting in a lot of effort for the same result, that's probably not going to get you a raise. Improving that process or improving your performance may.
+
+
 * Be a doer. Don't profess and boast about things you can do, always better to show the results. Be an executor and finish the things you undertake.
 
 TODO: AAmir sohail vide..
@@ -185,6 +193,35 @@ TODO : example
 	
 * It's not always easy to know how much you contribute to the bottom line, and it's certainly easier in some jobs than in others. A sales representative can typically point at monthly reports to justify a bump in salary, but other workers have to be more creative. For example, a bartender may know that the till at the end of his shift is a lot higher than at the end of someone else's, or an auditor might complete audits on average faster and with less client pushback than her colleagues. Whatever measure you use, try to come up with a reasonably objective measure of your performance (and value to the employer) in any discussion about compensation.
 
+## Tata Sky - Mangne me kya jata hai..
+
+## Disclaimer
+
+I hope you had a good time reading this article. This might not necessarily work for everyone. There are so many different people, culture and it varies. 
+
+	
+## Do i need to provide an Immediate Response?
+
+Did the hiring manager made an offer/salary figures and need your response now? Don't rush, take your time, think about it and consult your friends and family if need arise. You may say something like re, "l understand. However, I'm not sure I'm ready to walk away with the salary offered. So, I'd like to sleep on this and call you tomorrow morning with an answer." 
+
+## What about No Deal
+
+Sometime, the offer might not just work and might not be meeting your criteria. It's hard, but It's ok to walk away from the deal. If you have decided that you wouldn't be able to accept the offer then you may something like "I understand and I really do appreciate the time  and effort you put into considering me but I'll have to  decline the offer." 
+
+
+## Final Note
+
+* Be happy
+* Content  - How much people earning.
+* Enjoy the journey.
+* It's not all about salary.
+* Look for a change…
+
+
+### Todo
+
+1. Images and Mimes
+2. Stack overflow developer survey results for Salary.
 
 ## it is process
 
@@ -198,27 +235,6 @@ TODO : example
 
 ## How i got
 
-## Tata Sky - Mangne me kya jata hai..
-
-## Disclaimer
-
-Not necessarily work for everyone.. So many different peoples and culture, may or may not work.
-
-	
-If Employer asks for your salary?
-You may give evasive answer which is fine. You may ask if the salary offered depends on your current salary.
-I am willing to entertain any reasonable offer. Or give them some range…
-
-When Employer gives you a number?
-Think about it and come back later..
-
-Immediate Response?
-"l understand. However, I'm not sure I'm ready to walk away with the salary offered. So, I'd like to sleep on this and call 
-you tomorrow morning with an answer." 
-
-No Deal
-It's ok to walk away from the deal..
-"Sure, I understand. Well, I really do appreciate the time  and effort you put into considering me but I'll have to  decline the offer." 
 
 ## Also find about these
 * What are the things that they are expecting from me, what kind of contributions can I make..
@@ -245,20 +261,3 @@ It's ok to walk away from the deal..
 * Possible to review the salary again, later?
 * Additional opportunities to earn like project/interview?
 
-## Introspection
-
-Remember that working hard or working long hours is not the be all and end all for an increase in salary. If it takes you longer to do something than it takes your peers, you're not likely to get a raise for that. Similarly, if your work process is inefficient, resulting in a lot of effort for the same result, that's probably not going to get you a raise. Improving that process or improving your performance may.
-
-## Final Note
-
-* Be happy
-* Content  - How much people earning.
-* Enjoy the journey.
-* It's not all about salary.
-* Look for a change…
-
-
-### Todo
-
-1. Images and Mimes
-2. Stack overflow developer survey results for Salary.
