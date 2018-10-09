@@ -2,7 +2,7 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's the tipping point which can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's are the things that can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
 
 ![](Images/SOSurvey.png)
 
@@ -34,12 +34,12 @@ Finally, It's never too late. It better to ask for a raise than just wondering a
 
 Other than doing your own self assessment, it is imperative to look at the external resources to Collobaorate your findings.
 
-* Analyze the *Specific Position* in your *Area* and how much salary is offered for that *particular Role*. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. Position, Role, Years of Experience, Technology Demand, your Skillset and Location are keywords. The salary will vary depending on these factors. If you move to an expensive location, you will need a higher salary. Following is an link from Stackoverflow, which shows the Salary Range in US depending on the Language and Years of Experience.
+* Analyze the *Specific Position* in your *Area* and how much salary is offered for that *particular Role*. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. **Position, Role, Years of Experience, Technology Demand, your Skillset and Location** are keywords. The salary will vary depending on these factors. If you move to an expensive location, you will need a higher salary. Following is an link from Stackoverflow, which shows the Salary Range in US depending on the Language and Years of Experience.
 
 ![](Images/SOSurvey1.png)
 Image from here https://insights.stackoverflow.com/survey/2018#salary
 
-* There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. These website would let you gauge the salary limits depending on number of factors. Also, the salaries are reported by actual employess. So, the number is pretty accurate. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position.
+* There are valuable resources online to calculate and compare the salary based on above factors. Use sources like GlassDoor, Payscale, Stackoverflow Salary Calculator to get the Salary estimates. These website would let you gauge the salary limits depending on number of factors. Also, the salaries are reported by actual employess. So, the Salary numbers are pretty accurate. Don't stick to these numbers, these are just guiding figures to help you figure out what the market currently offers for the specific position and you may adjust your salary expectations.
 
 TODO : Screenshot for Stackoverflow or Glassdoor and include links
 
