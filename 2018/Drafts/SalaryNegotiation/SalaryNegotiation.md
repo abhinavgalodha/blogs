@@ -2,7 +2,7 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's are the things that can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's are the things that can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.You’re nearing the end of the job interview process and an offer is in sight. A key ingredient of salary negotiation is good communication. We need to be clear with our intentions and communications to avoid ambiguity, which could complicate things and yield undesirable results.
 
 ![](Images/SOSurvey.png)
 
@@ -51,6 +51,8 @@ TODO: Example of salary of .net developer in India - Delhi, Chicago etc.
 
 ## Things to do before negotiation
 
+> Rather than panic in the moment, be prepared.
+
 * Know more about the decision maker. Research about them, use Social media/Linkedin to get information about their profile, what kind of work they have done and what kind of colleagues they work with. This knowledge about them would help you in conversation with them.
 
 * Think what Hiring Manager is interested in and why they might be asking a question. Not just think about answering a question. Their might be a covert reason for asking the question. Try figuring those Covert reasons and mold your answer accordingly.
@@ -94,9 +96,11 @@ I have made this mistake. In the first meeting, i mentioned that I need X salary
 
 * Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
-* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain about external factors which is stoping you from doing your Job, but provide solutions to those problems and ask your manager for any help in implementing those solutions.
+* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain about external factors which is stoping you from doing your Job, but provide solutions to those problems and ask your manager for any help in implementing those solutions. Instead of “No, that doesn’t work for me” (two negative words) you can say, “I would be more comfortable with . . . ” (positive words). Negative words slow things down and may put up walls that make collaboration difficult. Using only positive words is difficult at first, but you’ll get better with practice.”
 
 * Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
+
+* No matter how many times you rehearse what to say, there’s always that risk of fumbling right at the five-yard line. Instead of panicking, get prepared.
 
 * Don't accept or make ultimatums. 
 
