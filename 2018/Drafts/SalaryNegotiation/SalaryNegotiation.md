@@ -288,3 +288,6 @@ Instead, try something like :
 
 References:
 https://www.fastcompany.com/90246630/what-not-to-say-in-a-salary-negotiation
+
+https://www.glassdoor.com/Salaries/know-your-worth.htm?utm_source=referral&utm_medium=FastCo
+
