@@ -34,7 +34,7 @@ Finally, It's never too late. It better to ask for a raise than just wondering a
 
 Other than doing your own self assessment, it is imperative to look at the external resources to Collobaorate your findings.
 
-* Analyze the *Specific Position* in your *Area* and how much salary is offered for that *particular Role*. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. **Position, Role, Years of Experience, Technology Demand, your Skillset and Location** are keywords. The salary will vary depending on these factors. If you move to an expensive location, you will need a higher salary. Following is an link from Stackoverflow, which shows the Salary Range in US depending on the Language and Years of Experience.
+* Analyze the *Specific Position* in your *Area* and how much salary is offered for that *particular Role*. Get the concrete information Like a Asp.net Web API developer with 5 Year of Experience Earns XXX amount at particular *location*. **Position, Role, Years of Experience, Technology Demand, your Skillset and Location** are keywords. The salary will vary depending on these factors. If you move to an expensive location, you will need a higher salary. Go into a negotiation with facts and figures, making a compelling case. Following is an link from Stackoverflow, which shows the Salary Range in US depending on the Language and Years of Experience. 
 
 ![](Images/SOSurvey1.png)
 Image from here https://insights.stackoverflow.com/survey/2018#salary
@@ -84,6 +84,8 @@ I have made this mistake. In the first meeting, i mentioned that I need X salary
 
 * Give yourself a way to accept offer. Think about what you can compromise on and accept the offer. Don't be rigid and be flexible and open to alternative form of compensations or other give yourself other options. Don't assume that you will get everything you want, be flexible and open for various options.
 
+* Focus on the company’s needs and how you can help meet those needs so they can easily see your value and work to compensate you for it. Can you help a company adopting or providing solutions for new age technology.
+
 * Stay at the table - Stay in touch. Things change and circumstances can alter which may mean that something which was not possible earlier, might be possible now. If you can't make a negotiation at this point, try in near future and check back how things are in future.
 
 ## Don't in Negotiation
@@ -96,9 +98,25 @@ I have made this mistake. In the first meeting, i mentioned that I need X salary
 
 * Don't list your family responsibilities as one of the reason for Salary increase. You might be the sole earner in family and you need to manage your family, most of us can relate to it but it's very difficult for hiring manager to raise your salary based on emotional issues. However, you may talk about the inflation, rent and other expenses which have a direct affect on your effective value of salary. Be prepared with concrete numbers for the data about inflation and other costs if you need to discuss.
 
-* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain about external factors which is stoping you from doing your Job, but provide solutions to those problems and ask your manager for any help in implementing those solutions. Instead of “No, that doesn’t work for me” (two negative words) you can say, “I would be more comfortable with . . . ” (positive words). Negative words slow things down and may put up walls that make collaboration difficult. Using only positive words is difficult at first, but you’ll get better with practice.”
+* Don't complain. A positive approach as to why you deserve a raise will get you more than a complaining against co-workers you feel are overpaid or aren't performing as well as you are. Also, don't complain about external factors which is stoping you from doing your Job, but provide solutions to those problems and ask your manager for any help in implementing those solutions. 
+
+* Try to use the positive words instead of using the negative words. Minimize the usage of negative words. Instead, replace and rephrase your sentences with positive phrases. 
+
+-Ve: “No, I don't know about..” (2 negative words)
+
++Ve: “I didn't get a chance to work.. and i am willing to work..
+
+-Ve: “No, that doesn’t work for me”
+
++Ve: “I would be more comfortable with” (positive words). 
+
+This will take some time and practise.
 
 * Don't give a Salary Range. Because employer would go for a lower range. Also, give the hiring manager that you are not sure what you want..
+
+* Instead of asking for “more” salary or “more” vacation, this is your time to get specific.
+Quote from FastCompany article
+“Don’t leave things to the imagination once you’re negotiating. Instead of “Could you budge on the salary?” say, ‘I would be more comfortable with a base salary of $105,000.'”
 
 * No matter how many times you rehearse what to say, there’s always that risk of fumbling right at the five-yard line. Instead of panicking, get prepared.
 
@@ -221,6 +239,9 @@ Sometime, the offer might not just work and might not be meeting your criteria. 
 * It's not all about salary.
 * Look for a change…
 
+Instead, try something like :
+
+    I’m not comfortable sharing my current salary. I would prefer to focus on the value I can add to this company rather than what I’m paid at my current job. I don’t have a specific number in mind for a desired salary, and you know better than I do what value my skill set and experience could bring to your company. I want this move to be a big step forward for me in terms of both responsibility and compensation.
 
 ### Todo
 
@@ -265,3 +286,5 @@ Sometime, the offer might not just work and might not be meeting your criteria. 
 * Possible to review the salary again, later?
 * Additional opportunities to earn like project/interview?
 
+References:
+https://www.fastcompany.com/90246630/what-not-to-say-in-a-salary-negotiation
