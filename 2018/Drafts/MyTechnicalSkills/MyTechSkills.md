@@ -6,6 +6,11 @@ Software Craftsman having a passion for Building the software in the *right way*
 * For making a living
 * Interested in building and creating new things.
 
+## What kind of things i am looking for?
+
+* AI
+* Machine Learning
+
 # Programming Languages
 
 * C#  
@@ -24,8 +29,15 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Database  
 * Web Services  
 * Window Services  
-* Window Device Drivers  
+* Window Device Drivers
 
+# Server Side Development
+
+* Asp.net Core
+* ASP.Net MVC
+* ASP.Net Web API
+* ASP.Net Web Forms  
+* WCF  
 
 # FrontEnd Skills
 
@@ -40,24 +52,28 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Angular  
 * React
 * JQuery
+* Blazor
 
-### FrontEnd
+### FrontEnd Unit Testing
 
-Mocha  
-Qunit  
-Coded UI Test  
+* Mocha
+* Qunit
+* Coded UI Test  
 
 ## HTML
 
+* HTML5
+
 ## CSS
 
-CSS3
+* CSS3
+* Flexbox
 
 ## Other Frontend
 
 * AJAX
 * Website Optimization
-  * Caching 
+  * Caching - Riverbed Steelhead
   * Rendering and Optimization
   * Bundling
   * Minification
@@ -66,14 +82,6 @@ CSS3
 
 * Webpack
 * LightHouse
-
-# Backend
-
-* Asp.net Core
-* ASP.Net MVC
-* ASP.Net Web API
-* ASP.Net Web Forms  
-* WCF  
 
 ## ORM
 
@@ -212,3 +220,23 @@ Command Prompt
 ## Release Management
 
 * RFC/CR
+
+## New interests
+
+* ML.net
+
+## Azure Cloud
+
+* Compute
+* Web App
+
+## Work Management
+
+* TFS
+* Azure Dev ops
+* Trello
+
+## Security
+
+* HTTPS
+* HP Fortify Scan
