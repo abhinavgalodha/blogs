@@ -2,7 +2,7 @@
 
 ## Why is it important?
 
-Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary it can be complicated. We might be unsure about the Salary range and what's are the things that can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well.You’re nearing the end of the job interview process and an offer is in sight. A key ingredient of salary negotiation is good communication. We need to be clear with our intentions and communications to avoid ambiguity, which could complicate things and yield undesirable results.
+Stack overflow survey results - the importance of the salary as #1 factor in the Job Satisfaction. If you are employed or looking to get employment, it is imperative to have good negotiation Skills and when it comes to Salary, it can be complicated. You might be unsure about the Salary range and what's are the things that can screw your negotiation. In this post, we will look at few of the negotiation skills which i have found useful and may be beneficial to you as well. You're nearing the end of the job interview process and an offer is in sight. A key ingredient of salary negotiation is good communication. We need to be clear with our intentions and communications to avoid ambiguity, which could complicate things and yield undesirable results.
 
 ![](Images/SOSurvey.png)
 
