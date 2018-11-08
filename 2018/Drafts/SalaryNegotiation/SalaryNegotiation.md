@@ -21,8 +21,7 @@ There may be myriad reasons for the Salary Raise. Are you preparing for the Next
 
 Foremost, do your homework and make a plan and understand **Do's** and **Don't**  and other considerations which can help in getting the best deal. Also, bear in mind following points as you prepare yourselve.
 
-
-<TODO - Introspection Gif>
+![](introspection.jpg)
 
 * Start with Self. Introspect and take a look at what you are currently doing and what you want to do in near future. Do the SWOT (Strength, Weakness, Oppurtunities and Threat) analysis, question yourselve and make an honest assessment of your skills and the value addition that your bring into the company.
 * Find out a Salary range which is acceptable to you.
