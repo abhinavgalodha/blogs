@@ -9,6 +9,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 ## What kind of things i am looking for?
 
 * AI
+* Application Development
 * Machine Learning
 
 # Programming Languages
@@ -19,6 +20,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 * C++  
 * C  
 * F#  
+* Python
 
 ## Development Experience
 
@@ -128,8 +130,8 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 
 ## Command Line Tools
 
-Powershell
-Command Prompt
+* Powershell
+* Command Prompt
 
 ## Build Automation Tools
 

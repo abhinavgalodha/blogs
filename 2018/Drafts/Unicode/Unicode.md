@@ -1,8 +1,8 @@
 # Unicode - What every Developer must know?
 
 ## Why should I care?
-
-Character encoding is the basics for of the text processing in computers.
+Character encoding is the basics of the text processing in computers.
+If you have ever encountered a piece of text which is garbled and doesn't render correctly then you will get a better understanding of what's happening after reading the article.
 
 
 ### Can you read this?
@@ -31,7 +31,7 @@ An Indian Zip code will not work in US or will give an incorrect address. The sa
  
 Initially, when computer started to handle characters and words, they were limited to mostly English words. All information in computer is stored in the bits. 1 bit can store 2 possible states and a combination of 8 bits can store 256 combinations. So, ASCII was born and it used 256 characters.
 
-Humans started to communicate across the world some time around .. They used words which consists of Characters. Each character is created by a symbol. The word *We* is same as *hum* in hindi, the intent is same, however the representation is different. Each character is different in each language and has a unique represenation. Think about a zip/postal code, a zip is unique in a country. 
+Humans started to communicate across the world some time around .. They used words which consists of Characters. Each character is created by a symbol. The word *We* is same as *hum* in hindi, the intent is same, however the representation is different. Each character is different in each language and has a unique represenation. Think about a zip/postal code, a zip is unique in a country.
 
 ## Why we need and How it started?
 
