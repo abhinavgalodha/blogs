@@ -56,15 +56,64 @@ The Access-Control-Allow-Origin header allows servers to specify how their resou
 
 ###
 
+## How CORS work?
+Inner Workings
 
+Let’s have a look at the picture below. There is a client app (https://example.com) sending a GET request to a server app (https://example.net) for some resource:
+
+Enabling CORS in ASP.NET Core
+
+All modern browsers set the Origin header automatically, which indicates the domain of the site is making the request.
+
+If the server allows Cross-origin requests from the Origin (https://example.com), it sets the Access-Control-Allow-Origin header with its value matching the origin header’s value from the request.
+
+In other way, if the server doesn’t include this header, the request fails. The browser shall receive the response data, but this data shall not be accessible to the client.
 
 ## How to add CORS in Asp.net core
+
+There are 3 steps to enable CORS in a server app:
+
+    First of all, we need the Microsoft.AspNetCore.Corspackage in our project. It should be already installed in our project via the Microsoft.AspNetCore.App package, which is created as soon as our project was created. But if for some reason, you can’t see that package in the Solution Explorer, go to Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution. Search for Microsoft.AspNetCore.Cors and install the package
+    Next, we need to inject CORS into the container so that it can be used by the application. In Startup.cs class, let’s go to the ConfigureServices method and register CORS:
+
+    Registering CORS
+    
+    	
+    public void ConfigureServices(IServiceCollection services)
+    {
+          services.AddCors();
+          services.AddMvc();
+    }
+    To enable CORS for our application, let’s add the CORS middleware to the HTTP request pipeline in the Configure method, just below the if-else statement. Let’s specify an URL from where the CORS requests are allowed when building the CORS policy. Here, we have given the Client URL:
+    Allowing requests from the client
+    	
+    app.UseCors(builder =>
+        builder.WithOrigins("http://localhost:55294"));
+
+Let’s save our Server app and re-publish it to the App Service. Now let’s open the client app and click the Try button. We should see an HTML document retrieved from the server app:
 
 
 
 ## Sample Application
 
 ## Testing CORS is working and validating
+
+## Configuring CORS Requests
+`
+{
+    services.AddCors(options =>
+    {
+        options.AddPolicy("AllowOrigin",
+            builder => builder.WithOrigins("http://localhost:55294"));
+    });
+ 
+    services.AddMvc();
+}
+
+If we only want to allow CORS requests to a selected few methods, instead of enabling CORS at the entire application level, we can also enable CORS at the controller level or at the action level.
+
+Configure CORS Policy Options
+`
 
 ## Summary
 
