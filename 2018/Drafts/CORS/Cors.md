@@ -3,23 +3,39 @@
 Are you building a microservice using asp.net core and worried about integrating with multiple frontend application?
 Do you want to understand CORS?
 
-Or have you encountered the below error, and never understood why the error happens? This article will provide an answer to the above questions
-
 <TODO: Add the image of the error>
 
-One of the issue during integration of API with Frontend might be CORS. In this post we will take a look at CORS, and how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
+Or have you encountered the below error, and never understood why the error happens? This article will provide an answer to the above questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
+
+## How Microservices are shaping the modern Application development
 
 In modern software development with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web api. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable a secure communication.
 
 ## What is CORS?
 
+Cors is a **SECURITY** mechanim employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website. 
+
+*A more naive explanation - It's like the Security Gaurd which prevents a malicious person from entering until they possess certain Authorization and allows your family and friends to your premises.*
+
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
-Cors is a **SECURITY** mechanim employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website. This is basically like trusting only your friends
 
-What is another website? Another website is def
 
-CORS introduces a standard mechanism that can be used by all browsers for implementing cross-domain requests. The spec defines a set of headers that allow the browser and server to communicate about which requests are (and are not) allowed. CORS continues the spirit of the open web by bringing API access to all.
+A more formal definition for purist for CORS is defined below
+>CORS introduces a standard mechanism that can be used by all browsers for implementing cross-domain requests. The spec defines a set of headers that allow the browser and server to communicate about which requests are (and are not) allowed. 
 
+Let's break the CORS into smaller pieces to understand it better.
+
+#### Cross-Origin
+
+Cross origin means that the origin of the request can be different from the domain that made the request. To understand it better, we need to understand the concept of the Same Origin which is explained later in the post.
+
+#### Resource
+
+A resource is like an Image, font, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
+
+#### Sharing
+
+CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed.
 
 ### Same Origin
 
