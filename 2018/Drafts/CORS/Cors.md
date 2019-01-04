@@ -21,10 +21,6 @@ Cors is a **SECURITY** mechanim employed by the browsers like (Firefox, Chrome, 
 
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
-
-A more formal definition for purist for CORS is defined below
-><TODO> Definition from the Mozilla
-
 Let's break the CORS into smaller pieces to understand it better.
 
 #### Cross-Origin
@@ -33,7 +29,7 @@ Cross origin means that the origin of the request can be different from the doma
 
 #### Resource
 
-A resource is like an Image, font, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
+A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
 
 #### Sharing
 
@@ -49,16 +45,28 @@ The same-origin policy is very restrictive. This prevents JavaScript from making
 
 An origin is made up of the following three parts: 
 
-1. Protocol : (Http/https)
-2. Host : The server name
-3. Port number : 
+1. Protocol/Scheme : (Http/https)
+2. Host : The server/domain name
+3. Port number
+
+#### Example of Same Origin
+
+<https://galodha.com/image1.jpg>  
+<https://galodha.com/image2.jpg>
+
+
+#### Example of Different Origin
+
+<https://galodha.com/image1.jpg>  
+<http://galodha.com/image1.jpg>  (Different protocol)
+<https://github.com/image1.jpg>  (different host)
 
 #### Why browsers enforced Same-Origin Policy?
 
 The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery). 
 
 ##### Example
-If you are browing a bank website and in another tab window while watching your favourite video, you have an advertisement, "You Win the  lottery", you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Mailcious site owners account. 
+If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, "You Win the  lottery", you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Mailcious site owners account. 
 `$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`, Without further security measures, this would work because authentication cookies from yourfavouriteBANK.com would be sent and authenticate you.
 
 For more information, you may be able to read here..
