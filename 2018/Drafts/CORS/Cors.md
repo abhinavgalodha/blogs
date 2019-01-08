@@ -35,15 +35,9 @@ A resource is like an Image, font, Videos, Data etc. When we are making an Ajax 
 
 CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed and enable the resources to be shared.
 
-### What is meant by Same Origin
-
-The same-origin policy is a security measure standardized among browsers. The "origin" mostly refers to a "domain". It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
-
-The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
-
 ### What is an Origin?
 
-An origin is made up of the following three parts: 
+Let's take a look at what exactly is Origin. An Origin is made up of the following three parts:
 
 1. Protocol/Scheme : (Http/https)
 2. Host : The server/domain name
@@ -61,13 +55,24 @@ An origin is made up of the following three parts:
 <http://galodha.com/image1.jpg>  (Different protocol)
 <https://github.com/image1.jpg>  (different host)
 
+
+### What is meant by Same Origin?
+
+The same-origin policy is a security measure standardized among browsers. The "origin" mostly refers to a "domain". It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
+
+The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
+
 #### Why browsers enforced Same-Origin Policy?
 
-The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery). 
+The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery).
 
 ##### Example
-If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, "You Win the  lottery", you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Mailcious site owners account. 
-`$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`, Without further security measures, this would work because authentication cookies from yourfavouriteBANK.com would be sent and authenticate you.
+
+If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, "You Win the  lottery", you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
+
+`$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
+
+ Without further security measures, this would work because authentication cookies from yourfavouriteBANK.com would be sent and authenticate you.
 
 For more information, you may be able to read here..
 <TODO : add the link>
@@ -76,11 +81,11 @@ Next, we will look how CORS allows to circumvent the Same origin policy while no
 
 ## How CORS allows to bypass the Same-Origin Policy.
 
-CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can communicate. CORS Specification defines the `Access-Control-Allow-Origin`. Let's explore this header.
+CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. CORS Specification defines the `Access-Control-Allow-Origin`. Let's explore this header.
 
 #### Access-Control-Allow-Origin
 
-The Access-Control-Allow-Origin header allows servers to specify how their resources are shared with external domains. When a GET request is made to access a resource on Server A, Server A will respond with a value for the Access-Control-Allow-Origin header. The value of this header may be set to a particular domain (or list of domains), meaning that Server A will share its resources with that specific domain (or list of domains). For development, Many times, this value will be *, meaning that Server A will share the requested resources with any domain on the Internet. Other times, t
+The Access-Control-Allow-Origin header allows servers to specify how their resources are shared with external domains. When a GET request is made to access a resource on Server A, Server A will respond with a value for the Access-Control-Allow-Origin header. The value of this header may be set to a particular domain (or list of domains), meaning that Server A will share its resources with that specific domain (or list of domains). For development, Many times, this value will be *, meaning that Server A will share the requested resources with any domain on the Internet.
 
 
 ## Pre-flight requests
@@ -99,6 +104,7 @@ TODO : Check if angular js always send the Preflight request or not..
 ###
 
 ## How CORS work?
+
 Inner Workings
 
 Let’s have a look at the picture below. There is a client app (https://example.com) sending a GET request to a server app (https://example.net) for some resource:
