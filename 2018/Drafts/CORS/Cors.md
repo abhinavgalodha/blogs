@@ -15,11 +15,21 @@ In modern software development with the advent of the microservices and the rise
 
 CORS stands for CROSS ORIGIN RESOURCE SHARING
 
-Cors is a **SECURITY** mechanim employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website. 
-
-*A more naive explanation - It's like the Security Gaurd which prevents a malicious person from entering until they possess certain Authorization and keep your family Safe.*
-
+Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
+
+
+>*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering until they possess certain Authorization and keep your family Safe. *
+
+>You are living in a secure Housing Apartment Community and having access to all the facilities and having a great time :). The access to the community is restricted to it's tenants only to ensure safety. You have a great swimming pool and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time.
+
+> However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool. 
+
+> You are thinking about a new year party in your community swimming pool and invited your friends. Since, the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the secure apartment community, you need to establish a mechanism to allow them and trust your friends. One of the mechanism, might be adding your friends name to the security whitelist, so that they can enter and enjoy the party.
+
+Above analogy was a simplistic explanation to understand the overall concept of the CORS.
+
+<TODO> : Images
 
 Let's break the CORS into smaller pieces to understand it better.
 
@@ -27,9 +37,13 @@ Let's break the CORS into smaller pieces to understand it better.
 
 Cross origin means that the origin of the request can be different from the domain that made the request. To understand it better, we need to understand the concept of the Same Origin which is explained later in the post.
 
+In our analogy, Origin refers to tenant. If a person is tenant then they are same origin, otherwise cross-origin.
+
 #### Resource
 
 A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
+
+In our analogy, swimming pool was the resource. 
 
 #### Sharing
 
@@ -81,7 +95,7 @@ Next, we will look how CORS allows to circumvent the Same origin policy while no
 
 ## How CORS allows to bypass the Same-Origin Policy.
 
-CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. CORS Specification defines the `Access-Control-Allow-Origin`. Let's explore this header.
+CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Examples are  `Access-Control-Allow-Origin`, `Access-Control-Allow-Headers`, `Access-Control-Allow-Methods`. The most important of these is `Access-Control-Allow-Origin`, Let's explore this header.
 
 #### Access-Control-Allow-Origin
 
