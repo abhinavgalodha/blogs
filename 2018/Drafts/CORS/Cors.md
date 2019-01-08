@@ -5,7 +5,7 @@ Do you want to understand CORS?
 
 <TODO: Add the image of the error>
 
-Or have you encountered the below error, and never understood why the error happens? This article will provide an answer to the above questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
+Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
 
 ## How Microservices are shaping the modern Application development
 
@@ -17,7 +17,7 @@ CORS stands for CROSS ORIGIN RESOURCE SHARING
 
 Cors is a **SECURITY** mechanim employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website. 
 
-*A more naive explanation - It's like the Security Gaurd which prevents a malicious person from entering until they possess certain Authorization and allows your family and friends to your premises.*
+*A more naive explanation - It's like the Security Gaurd which prevents a malicious person from entering until they possess certain Authorization and keep your family Safe.*
 
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
@@ -33,7 +33,7 @@ A resource is like an Image, font, Videos, Data etc. When we are making an Ajax 
 
 #### Sharing
 
-CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed.
+CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed and enable the resources to be shared.
 
 ### What is meant by Same Origin
 
