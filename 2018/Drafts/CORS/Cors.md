@@ -1,6 +1,6 @@
 # What's CORS and Adding CORS support in ASP.Net Core
 
-Are you building a microservice using asp.net core and worried about integrating with multiple frontend application?
+Are you building a Microservices using asp.net core and worried about integrating with multiple frontend application?
 Do you want to understand CORS?
 
 <TODO: Add the image of the error>
@@ -25,7 +25,7 @@ A request for a resource (like an image or a font) outside of the origin is know
 
 > However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool. 
 
-> You are thinking about a new year party in your community swimming pool and invited your friends. Since, the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the secure apartment community, you need to establish a mechanism to allow them and trust your friends. One of the mechanism, might be adding your friends name to the security whitelist, so that they can enter and enjoy the party.
+> You are thinking about a new year party in your community swimming pool and invited your friends. Since, the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the secure apartment community, you need to establish a mechanism to allow them and trust your friends. One of the mechanism, might be giving your friends some Unique Passes which the security would trust and allow your friends to enjoy the party.
 
 Above analogy was a simplistic explanation to understand the overall concept of the CORS.
 
