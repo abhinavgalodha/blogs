@@ -18,7 +18,6 @@ CORS stands for CROSS ORIGIN RESOURCE SHARING
 Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
-
 >*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering until they possess certain Authorization and keep your family Safe. *
 
 >You are living in a secure Housing Apartment Community and having access to all the facilities and having a great time :). The access to the community is restricted to it's tenants only to ensure safety. You have a great swimming pool and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time.
@@ -27,7 +26,7 @@ A request for a resource (like an image or a font) outside of the origin is know
 
 > You are thinking about a new year party in your community swimming pool and invited your friends. Since, the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the secure apartment community, you need to establish a mechanism to allow them and trust your friends. One of the mechanism, might be giving your friends some Unique Passes which the security would trust and allow your friends to enjoy the party.
 
-Above analogy was a simplistic explanation to understand the overall concept of the CORS.
+Above analogy was a simplistic explanation to understand the overall concept of the CORS. The notion of the security for a Housing apartment is similar to the security implemented by the browsers using the same origin policy. I will refer this example later while explaining the CORS concept in this article.
 
 <TODO> : Images
 
@@ -35,19 +34,21 @@ Let's break the CORS into smaller pieces to understand it better.
 
 #### Cross-Origin
 
-Cross origin means that the origin of the request can be different from the domain that made the request. To understand it better, we need to understand the concept of the Same Origin which is explained later in the post.
+Cross origin means that the origin of the request can be different from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin. We will understand later what exactly makes the request Cross Origin. 
 
-In our analogy, Origin refers to tenant. If a person is tenant then they are same origin, otherwise cross-origin.
+In our analogy, Origin refers to tenant. 2 tenants are from the same Origin as they belong to the same Apartment Community.
 
 #### Resource
 
 A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
 
-In our analogy, swimming pool was the resource. 
+In our analogy, swimming pool was the resource.
 
 #### Sharing
 
 CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed and enable the resources to be shared.
+
+In our analogy, swimming pool was to be shared.
 
 ### What is an Origin?
 
@@ -76,6 +77,8 @@ The same-origin policy is a security measure standardized among browsers. The "
 
 The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
 
+In our Analogy, we had a Secured Apartment Community which only allowed the tenants the access to the resources. Imagine if the access to the apartment resources is not restricted, a malicious person can enter the Community and damage the swimming pool or other resources.
+
 #### Why browsers enforced Same-Origin Policy?
 
 The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery).
@@ -95,7 +98,12 @@ Next, we will look how CORS allows to circumvent the Same origin policy while no
 
 ## How CORS allows to bypass the Same-Origin Policy.
 
-CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Examples are  `Access-Control-Allow-Origin`, `Access-Control-Allow-Headers`, `Access-Control-Allow-Methods`. The most important of these is `Access-Control-Allow-Origin`, Let's explore this header.
+CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
+* `Access-Control-Allow-Origin`
+* `Access-Control-Allow-Headers`
+* `Access-Control-Allow-Methods`
+
+The most important of these is `Access-Control-Allow-Origin`, Let's explore this header.
 
 #### Access-Control-Allow-Origin
 
