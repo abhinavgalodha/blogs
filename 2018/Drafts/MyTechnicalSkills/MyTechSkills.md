@@ -62,6 +62,12 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Qunit
 * Coded UI Test  
 
+### Architecture and Modeling
+
+* Domain Driven Design
+* Microservices
+* SOA
+
 ## HTML
 
 * HTML5
