@@ -127,6 +127,22 @@ TODO : Check if angular js always send the Preflight request or not..
 
 ## How CORS work?
 
+## Demo Application
+
+## Demo Application Server - (Asp.net core)
+
+Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API.
+
+1. If you already don't have a Asp.net core project in your solution, then Firstly add a new project as shown below.
+
+![](Images/NewProject.jpg.gif)
+
+2. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the support for the asp.net core
+
+
+
+
+We need to 
 Inner Workings
 
 Let’s have a look at the picture below. There is a client app (https://example.com) sending a GET request to a server app (https://example.net) for some resource:
@@ -172,7 +188,7 @@ Let’s save our Server app and re-publish it to the App Service. Now let’s op
 
 ## Testing CORS is working and validating
 
-## Configuring CORS Requests
+## Configuring CORS Server
 `
 {
     services.AddCors(options =>
@@ -183,10 +199,15 @@ Let’s save our Server app and re-publish it to the App Service. Now let’s op
  
     services.AddMvc();
 }
+`
+
+## Configuring CORS Client
 
 If we only want to allow CORS requests to a selected few methods, instead of enabling CORS at the entire application level, we can also enable CORS at the controller level or at the action level.
 
-Configure CORS Policy Options
+### Configure CORS Policy Options
+
+## How it actually works?
 `
 
 ## Summary
