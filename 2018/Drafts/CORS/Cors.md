@@ -129,15 +129,35 @@ TODO : Check if angular js always send the Preflight request or not..
 
 ## Demo Application
 
+
+
 ## Demo Application Server - (Asp.net core)
 
-Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API.
+We will create an API which would return the current date time of the server.
+
 
 1. If you already don't have a Asp.net core project in your solution, then Firstly add a new project as shown below.
 
-![](Images/NewProject.jpg.gif)
+![](Images/NewProject.jpg)
 
-2. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the support for the asp.net core
+2. We will add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
+
+`
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DateController : ControllerBase
+    {
+        // GET api/values
+        [HttpGet]
+        public ActionResult<DateTime> Get()
+        {
+            return DateTime.Now;
+        }
+
+    }
+`
+
+2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
 
 
 

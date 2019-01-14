@@ -43,10 +43,13 @@ namespace Server
             }
 
             app.UseHttpsRedirection();
+
+            // Add CORS support for localhost
             app.UseCors(options => options.WithOrigins("localhost")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
+
             app.UseMvc();
         }
     }
