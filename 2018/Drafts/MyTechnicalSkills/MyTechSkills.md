@@ -103,7 +103,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 * PostGres  
 * Oracle  
 
-## Non Relational
+## Non Relational (NO SQL)
 
 * CouchBase
 * MongoDB
