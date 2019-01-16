@@ -1,15 +1,14 @@
 # What's CORS and Adding CORS support in ASP.Net Core
 
-Are you building a Microservices using asp.net core and worried about integrating with multiple frontend application?
-Do you want to understand CORS?
+Do you want to understand CORS? Does it sound too complicated to understand? Are you building Microservices and worried about integrating with multiple frontend application?
 
 ![Client error](Images/ClientError.png)
 
-Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
+Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. I will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development
 
-In modern software development with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web api. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable a secure communication.
+In modern software development, with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web API. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable secure communication.
 
 ## What is CORS?
 
@@ -18,17 +17,15 @@ CORS stands for CROSS ORIGIN RESOURCE SHARING
 Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
->*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering until they possess certain Authorization and keep your family Safe. *
+>*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering your premises until they possess certain Authorization and hence keeps your family Safe.*
 
->You are living in a secure Housing Apartment Community and having access to all the facilities and having a great time :). The access to the community is restricted to it's tenants only to ensure safety. You have a great swimming pool and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time.
+You are living in a secure Housing Apartment Community and having access to all the facilities and having a great time :). The access to the community is restricted to its tenants only to ensure safety. You have a **great swimming pool** and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time. However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool.
 
-> However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool. 
+> You are thinking about a new year party in your community swimming pool and invited your friends. Since the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the apartment community, you need to establish a mechanism to allow your friends to come inside the Apartment Complex. One of the mechanism might be giving your friends some Unique Passes which the security would trust and allow access.
 
-> You are thinking about a new year party in your community swimming pool and invited your friends. Since, the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the secure apartment community, you need to establish a mechanism to allow them and trust your friends. One of the mechanism, might be giving your friends some Unique Passes which the security would trust and allow your friends to enjoy the party.
+Above analogy was a simplistic explanation to understand the overall concept of the CORS. The notion of the security for a Housing apartment is similar to the security implemented by the browsers using the same origin policy. I will refer to this example later while explaining the CORS concept in this article.
 
-Above analogy was a simplistic explanation to understand the overall concept of the CORS. The notion of the security for a Housing apartment is similar to the security implemented by the browsers using the same origin policy. I will refer this example later while explaining the CORS concept in this article.
-
-<TODO> : Images
+![Permit Images](Images/Permit.gif)
 
 Let's break the CORS into smaller pieces to understand it better.
 
