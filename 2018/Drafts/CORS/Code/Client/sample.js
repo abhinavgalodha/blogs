@@ -1,5 +1,7 @@
-function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
+function getCurrentServerDateTime() {
+
+  var url = ""
+  var xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
         var responseText = xhr.responseText;
@@ -11,7 +13,7 @@ function createCORSRequest(method, url) {
          console.log('There was an error!');
        };
 
-    xhr.open(method, url);
+    xhr.open('Get', url);
 
     xhr.send();
   }

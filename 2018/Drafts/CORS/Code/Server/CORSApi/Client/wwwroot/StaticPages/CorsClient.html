@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <button type="button" onclick="getCurrentServerDateTime()">Get Current Server Date Time</button>
+<script scr="cors.js" type="text/javascript">
+
+    function getCurrentServerDateTime() {
+
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", reqListener);
+        xhr.open("GET", "https://localhost:5001/api/Date");
+        xhr.send();
+    }
+
+    function reqListener() {
+
+    }
+
+</script>
+</body>
+</html>

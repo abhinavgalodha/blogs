@@ -3,7 +3,6 @@ D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\bin\Debug\net
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\bin\Debug\netcoreapp2.2\Server.runtimeconfig.dev.json
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\bin\Debug\netcoreapp2.2\Server.dll
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\bin\Debug\netcoreapp2.2\Server.pdb
-D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.csprojAssemblyReference.cache
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.csproj.CoreCompileInputs.cache
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.RazorAssemblyInfo.cache
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.RazorAssemblyInfo.cs
