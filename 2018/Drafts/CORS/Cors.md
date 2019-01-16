@@ -3,7 +3,7 @@
 Are you building a Microservices using asp.net core and worried about integrating with multiple frontend application?
 Do you want to understand CORS?
 
-![Client error](Images/ClientError.jpg)
+![Client error](Images/ClientError.png)
 
 Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
 
