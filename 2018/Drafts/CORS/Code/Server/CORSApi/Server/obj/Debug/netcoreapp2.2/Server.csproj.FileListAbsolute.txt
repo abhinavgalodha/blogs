@@ -11,3 +11,4 @@ D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\net
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.RazorTargetAssemblyInfo.cache
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.dll
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.pdb
+D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Server\obj\Debug\netcoreapp2.2\Server.csprojAssemblyReference.cache

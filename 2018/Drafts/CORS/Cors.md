@@ -3,7 +3,7 @@
 Are you building a Microservices using asp.net core and worried about integrating with multiple frontend application?
 Do you want to understand CORS?
 
-![Client error](ClientError.jpg)
+![Client error](Images/ClientError.jpg)
 
 Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web api to enable multiple clients in different domain to interact with the API.
 
@@ -188,19 +188,21 @@ There are 3 steps to enable CORS in a server app:
     Registering CORS
     
     	
-    `
+```
     public void ConfigureServices(IServiceCollection services)
     {
           services.AddCors();
           services.AddMvc();
     }
-    `
+```
     
     To enable CORS for our application, let’s add the CORS middleware to the HTTP request pipeline in the Configure method, just below the if-else statement. Let’s specify an URL from where the CORS requests are allowed when building the CORS policy. Here, we have given the Client URL:
     Allowing requests from the client
     	
+``` 
     app.UseCors(builder =>
         builder.WithOrigins("http://localhost:55294"));
+```
 
 Let’s save our Server app and re-publish it to the App Service. Now let’s open the client app and click the Try button. We should see an HTML document retrieved from the server app:
 
@@ -211,7 +213,8 @@ Let’s save our Server app and re-publish it to the App Service. Now let’s op
 ## Testing CORS is working and validating
 
 ## Configuring CORS Server
-`
+
+```
 {
     services.AddCors(options =>
     {
@@ -221,7 +224,7 @@ Let’s save our Server app and re-publish it to the App Service. Now let’s op
  
     services.AddMvc();
 }
-`
+```
 
 ## Configuring CORS Client
 

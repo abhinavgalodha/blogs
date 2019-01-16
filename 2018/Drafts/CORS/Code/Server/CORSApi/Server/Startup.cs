@@ -45,7 +45,7 @@ namespace Server
             app.UseHttpsRedirection();
 
             // Add CORS support for localhost
-            app.UseCors(options => options.WithOrigins("localhost")
+            app.UseCors(options => options.WithOrigins("*")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
