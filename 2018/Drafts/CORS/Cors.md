@@ -128,21 +128,21 @@ TODO : Check if angular js always send the Preflight request or not..
 
 ## Demo Application
 
+To demonstrate CORS policy in action, we need a Client (Web Page) and a Server (API). Both should be running on seperate Origin.
+We have covered Origin earlier.
+
 We will create a Server side API and a frontend client which will invoke the API.
 The API is just returning the Current Server Date time and then UI refreshes the span with the latest date time.
 
 
-
 ## Demo Application Server - (Asp.net core)
-
-We will create an API which would return the current date time of the server.
-
 
 1. If you already don't have a Asp.net core project in your solution, then Firstly add a new project as shown below.
 
 ![](Images/NewProject.jpg)
 
 2. We will add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
+   The code for the `DateController` is shown below.
 
 ```
     [Route("api/[controller]")]
@@ -158,6 +158,57 @@ We will create an API which would return the current date time of the server.
 
     }
 ```
+
+3. Let's test the Date controller's, Get Method, we will open the browser and browse to API Host address, which in mine machine is `https://localhost:5001/api/Date` and we can see the Current Server date time. Works perfectly. Neat..
+
+![API Response](Images/APIResponse.png)
+
+Please note that the Server Address will depend on your configuration and can be updated.
+
+Before adding the middleware, let's see how the response looks like if we try to call the API from a web page running on another domain. Let's create a simple Web page which we will host in an asp.net core website. 
+
+## Demo Client - (HTML Page with JS)
+
+To keep the demonstration simple, i will use a simple web page with javascript to call the API.
+
+![Web page](Images/WebPage.png)
+
+1. The web page has 2 controls a Button control to click and an `span` to show the output.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample CORS Client</title>
+</head>
+<body>
+    <button type="button" onclick="getCurrentServerDateTime()">Get Time</button>
+    <span id="currentServerDateTime"></span>
+</body>
+```
+
+2. Let's wire up the javascript to call the API and see what response do we get. To keep it simple and avoid any dependencies, i am using the native `XMLHttpRequest` object to connect to the API.
+
+```
+<script type="text/javascript">
+
+    function getCurrentServerDateTime() {
+
+        var apiUrl = "https://localhost:5001/api/Date";
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", responseCompleted);
+        xhr.open("GET", apiUrl);
+        xhr.send();
+    }
+
+    function responseCompleted(eventData) {
+
+    }
+
+</script>
+```
+
+
 
 2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
 

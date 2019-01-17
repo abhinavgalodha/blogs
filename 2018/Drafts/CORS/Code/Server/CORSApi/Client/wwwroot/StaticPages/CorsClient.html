@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
+    <title>Sample CORS Client</title>
+</head>
 <body>
-<button type="button" onclick="getCurrentServerDateTime()">Get Current Server Date Time</button>
+<button type="button" onclick="getCurrentServerDateTime()">Get Time</button>
 <span id="currentServerDateTime"></span>
-<script scr="cors.js" type="text/javascript">
+<script type="text/javascript">
 
     function getCurrentServerDateTime() {
-
+        var apiUrl = "https://localhost:5001/api/Date";
         var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", responseCompleted);
-        xhr.open("GET", "https://localhost:5001/api/Date");
+        xhr.open("GET", apiUrl);
         xhr.send();
     }
 
