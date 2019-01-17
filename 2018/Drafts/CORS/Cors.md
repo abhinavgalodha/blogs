@@ -189,6 +189,9 @@ To keep the demonstration simple, i will use a simple web page with javascript t
 
 2. Let's wire up the javascript to call the API and see what response do we get. To keep it simple and avoid any dependencies, i am using the native `XMLHttpRequest` object to connect to the API.
 
+We will get the API Url, which in our case is running at `https://localhost:5001`, then construct an `XMLHttpRequest`, set the properties and call the send method.
+
+
 ```
 <script type="text/javascript">
 
@@ -208,6 +211,14 @@ To keep the demonstration simple, i will use a simple web page with javascript t
 </script>
 ```
 
+3. So far so good, we need to host the website in a different origin, so i would be creating another Asp.net core MVC project for hosting client side code (our web page created earlier). I would be adding the web page created above to the wwwroot folder which is the place for all the static content and allows to serve the content from the client side.
+
+Let's peek a look into the solution explorer in visual studio to see how it looks.
+
+![Solution Explorer View]("Images/SolutionExplorerView.png")
+
+4. Wait it over, let's test the web page interaction with the API.
+ Go to visual studio, and change the solution properties to allow for multiple start up projects
 
 
 2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
