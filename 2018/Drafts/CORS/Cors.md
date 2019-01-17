@@ -4,7 +4,7 @@ Do you want to understand CORS? Does it sound too complicated to understand? Are
 
 ![Client error](Images/ClientError.png)
 
-Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. I will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. I will demonstrate an interaction between a static webpage accessing an API on a different origin.
+Or have you encountered the above error, and never understood why the error happens? This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. In this article, we will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development
 
@@ -128,6 +128,9 @@ TODO : Check if angular js always send the Preflight request or not..
 
 ## Demo Application
 
+We will create a Server side API and a frontend client which will invoke the API.
+The API is just returning the Current Server Date time and then UI refreshes the span with the latest date time.
+
 
 
 ## Demo Application Server - (Asp.net core)
@@ -141,7 +144,7 @@ We will create an API which would return the current date time of the server.
 
 2. We will add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
 
-`
+```
     [Route("api/[controller]")]
     [ApiController]
     public class DateController : ControllerBase
@@ -154,7 +157,7 @@ We will create an API which would return the current date time of the server.
         }
 
     }
-`
+```
 
 2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
 
