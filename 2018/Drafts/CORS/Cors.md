@@ -139,7 +139,7 @@ The API is just returning the Current Server Date time and then UI refreshes the
 
 1. If you already don't have a Asp.net core project in your solution, then Firstly add a new project as shown below.
 
-![](Images/NewProject.jpg)
+![](Images/NewProject.png)
 
 2. We will add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
    The code for the `DateController` is shown below.
@@ -173,7 +173,7 @@ To keep the demonstration simple, i will use a simple web page with javascript t
 
 ![Web page](Images/WebPage.png)
 
-1. The web page has 2 controls a Button control to click and an `span` to show the output.
+1. The web page has 2 controls a `Button` control to click and a `span` to show the output.
 
 ```
 <!DOCTYPE html>
@@ -215,10 +215,12 @@ We will get the API Url, which in our case is running at `https://localhost:5001
 
 Let's peek a look into the solution explorer in visual studio to see how it looks.
 
-![Solution Explorer View]("Images/SolutionExplorerView.png")
+![Solution Explorer View](Images/SolutionExplorerView.png)
 
-4. Wait it over, let's test the web page interaction with the API.
- Go to visual studio, and change the solution properties to allow for multiple start up projects
+4. Let's keep Rolling and test the web page interaction with the API.
+ Go to visual studio, and change the solution properties to allow for multiple start up projects. This allows to launch both the client and Server projects with one click.
+
+ ![Multiple Startup Projects](Images/MultipleStartupProjects.png)
 
 
 2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
