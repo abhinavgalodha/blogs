@@ -2,6 +2,7 @@
 
 
 ## Introduction
+
 * Do you want to understand CORS?
 * Does it sound too complicated to understand?
 * Are you building Microservices and worried about integrating with multiple frontend application?
@@ -9,7 +10,7 @@
 
 ![Client error](Images/ClientError.png)
 
- This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. In this article, we will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. The article will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development
 
@@ -17,14 +18,14 @@ In modern software development, with the advent of the microservices and the ris
 
 ## What is CORS?
 
-CORS stands for CROSS ORIGIN RESOURCE SHARING
+CORS stands for CROSS ORIGIN RESOURCE SHARING.
 
 Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
 >*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering your premises until they possess certain Authorization and hence keeps your family Safe.*
 
-You are living in a secure Housing Apartment Community and having access to all the facilities and having a great time :). The access to the community is restricted to its tenants only to ensure safety. You have a **great swimming pool** and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time. However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool.
+Let's take an analogy to understand CORS. Imagine, You are living in a **secure** Housing Apartment Community and have access to all the facilities and having a great time 😄. The access to the community is restricted to its tenants only to ensure safety. You have a **great swimming pool** and your friends want to come and enjoy the pool. If you are a tenant, then you can come in and come out at any time. However, if any person who is not a tenant tries to enter into community premises, she/he would be denied permission and wouldn't be able to access the swimming pool.
 
 > You are thinking about a new year party in your community swimming pool and invited your friends. Since the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the apartment community, you need to establish a mechanism to allow your friends to come inside the Apartment Complex. One of the mechanism might be giving your friends some Unique Passes which the security would trust and allow access.
 
