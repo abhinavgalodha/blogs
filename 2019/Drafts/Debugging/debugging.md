@@ -10,7 +10,13 @@ In this article, we will take dive into debugging and understand the behavior of
 
 ### Problem
 
-I was working in an Asp.net Core API where one of the Properties of an Object was coming as null. 
+I was working in an Asp.net Core API where one of the Properties of an Object was coming as null.
+
+For the purpose of brevity, I will replace my actual code with a simple code.
+
+
+
+
 
 Though the client was passing the 
 
