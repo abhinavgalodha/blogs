@@ -100,7 +100,11 @@ Next, we will look how CORS allows to circumvent the Same origin policy while no
 
 ## How CORS allows to bypass the Same-Origin Policy.
 
-CORS specification provides a list of **Headers** values which browser and server communicate and understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
+CORS specification provides a list of **Headers** values which **browser** and **server** communicate and understand to ensure that the different Origin can share resources. 
+
+*In our Analogy, this was the Authorization piece which is basically a way to inform the security to allow and trust your friends.*
+
+Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
 
 * `Access-Control-Allow-Origin`
 * `Access-Control-Allow-Headers`
@@ -261,23 +265,23 @@ In other way, if the server doesn’t include this header, the request fails. Th
 
 There are 3 steps to enable CORS in a server app:
 
-    First of all, we need the Microsoft.AspNetCore.Cors package in our project. It should be already installed in our project via the Microsoft.AspNetCore.App package, which is created as soon as our project was created. But if for some reason, you can’t see that package in the Solution Explorer, go to Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution. Search for Microsoft.AspNetCore.Cors and install the package.
+First of all, we need the Microsoft.AspNetCore.Cors package in our project. It should be already installed in our project via the Microsoft.AspNetCore.App package, which is created as soon as our project was created. But if for some reason, you can’t see that package in the Solution Explorer, go to Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution. Search for Microsoft.AspNetCore.Cors and install the package.
 
-    Next, we need to inject CORS into the Asp.net pipelines so that it can be used by the application. In Startup.cs class, let’s go to the ConfigureServices method and register CORS:
+Next, we need to inject CORS into the Asp.net pipelines so that it can be used by the application. In Startup.cs class, let’s go to the ConfigureServices method and register CORS:
 
-    Registering CORS
+Registering CORS
     
     	
 ```
-    public void ConfigureServices(IServiceCollection services)
-    {
-          services.AddCors();
-          services.AddMvc();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+     services.AddCors();
+     services.AddMvc();
+}
 ```
     
-    To enable CORS for our application, let’s add the CORS middleware to the HTTP request pipeline in the Configure method, just below the if-else statement. Let’s specify an URL from where the CORS requests are allowed when building the CORS policy. Here, we have given the Client URL:
-    Allowing requests from the client
+To enable CORS for our application, let’s add the CORS middleware to the HTTP request pipeline in the Configure method, just below the if-else statement. Let’s specify an URL from where the CORS requests are allowed when building the CORS policy. Here, we have given the Client URL:
+Allowing requests from the client
     	
 ``` 
     app.UseCors(builder =>
