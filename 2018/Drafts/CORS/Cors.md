@@ -129,15 +129,19 @@ So, following response header would allow the Client Browsers to make a request 
 
 ## Pre-flight requests
 
-If a request may have implications on user data, a simple request is insufficient. Instead, a preflight CORS request is sent in advance of the actual request to ensure that the actual request is safe to send. Preflight requests are appropriate when the actual request is any HTTP Method other than GET, POST, or HEAD or if a POST request's content type is anything other than application/x-www-form-urlencoded, multipart/form-data, or text/plain. Also, if the request contains any custom headers, then a preflight request is required.
+Certain times, an additional Server Request is made **before** the actual request which is known as the Pre-Flight Request. 
+
+If a request may have implications on user data, a simple request is insufficient. Instead, a preflight CORS request is sent in advance of the actual request to ensure that the actual request is safe to send.
+
+What conditions Trigger a Pre-Flight Request?
+
+* Preflight requests are appropriate when the actual request is any HTTP Method other than GET, POST, or HEAD.
+* If a POST request's content type is anything other than application/x-www-form-urlencoded, multipart/form-data, or text/plain.
+*  Also, if the request contains any custom headers, then a preflight request is required.
 
 The preflight request is essentially asking the server if it would allow the DELETE request, without actually sending the DELETE request
 
 Preflight requests use the OPTIONS header. The preflight request is sent before the original request, hence the term "preflight." The purpose of the preflight request is to determine whether or not the original request is safe (for example, a DELETE request)
-
-()[]
-
-AngularJS 
 
 TODO : Check if angular js always send the Preflight request or not..
 
@@ -146,25 +150,25 @@ TODO : Check if angular js always send the Preflight request or not..
 
 ## How CORS work?
 
+
 ## Demo Application
 
 To demonstrate CORS policy in action, we need a Client (Web Page) and a Server (API). Both should be running on seperate Origin.
-We have covered Origin earlier.
 
-We will create a Server side API and a frontend client which will invoke the API.
+We will create a Server side API (.Net Core) and a frontend client which will invoke the API.
 The API is just returning the Current Server Date time and then UI refreshes the span with the latest date time.
 
+### Server Side API - (Asp.net core)
 
-## Demo Application Server - (Asp.net core)
+1. Add a new Asp.net core project selecting the API Template as shown below.
 
-1. If you already don't have a Asp.net core project in your solution, then Firstly add a new project as shown below.
+    ![API Template Project](Images/NewProject.png)
 
-![](Images/NewProject.png)
+2. Next, add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
 
-2. We will add a DateTime Controller, which will have a Get operation which would return the current date time of the server.
-   The code for the `DateController` is shown below.
+    The code for the `DateController` is shown below.
 
-```
+    ```
     [Route("api/[controller]")]
     [ApiController]
     public class DateController : ControllerBase
@@ -177,70 +181,73 @@ The API is just returning the Current Server Date time and then UI refreshes the
         }
 
     }
-```
+    ```
 
 3. Let's test the Date controller's, Get Method, we will open the browser and browse to API Host address, which in mine machine is `https://localhost:5001/api/Date` and we can see the Current Server date time. Works perfectly. Neat..
 
-![API Response](Images/APIResponse.png)
+    ![API Response](Images/APIResponse.png)
 
-Please note that the Server Address will depend on your configuration and can be updated.
+    Please note that the Server Address will depend on your configuration. Next, let's build a Client Application.
 
-Before adding the middleware, let's see how the response looks like if we try to call the API from a web page running on another domain. Let's create a simple Web page which we will host in an asp.net core website. 
 
-## Demo Client - (HTML Page with JS)
+### Client - (HTML Page with JS)
 
-To keep the demonstration simple, i will use a simple web page with javascript to call the API.
+To keep the demonstration simple, I will use a simple web page with javascript to call the API.
 
 ![Web page](Images/WebPage.png)
 
-1. The web page has 2 controls a `Button` control to click and a `span` to show the output.
+1. The web page has 2 controls a `Button` control to click and a `span` to show the output. On Click of a button we will invoke our API to get the Current Server date time and update the span value.
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sample CORS Client</title>
-</head>
-<body>
-    <button type="button" onclick="getCurrentServerDateTime()">Get Time</button>
-    <span id="currentServerDateTime"></span>
-</body>
-```
+    Following shows hows our HTML page might look like.
+    ```
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Sample CORS Client</title>
+    </head>
+    <body>
+        <button type="button" onclick="getCurrentServerDateTime()">Get Time</button>
+        <span id="currentServerDateTime"></span>
+    </body>
+    ```
 
 2. Let's wire up the javascript to call the API and see what response do we get. To keep it simple and avoid any dependencies, i am using the native `XMLHttpRequest` object to connect to the API.
 
-We will get the API Url, which in our case is running at `https://localhost:5001`, then construct an `XMLHttpRequest`, set the properties and call the send method.
+    We will get the API Url, which in our case is running at `https://localhost:5001`, then construct an `XMLHttpRequest`, set the properties and call the send method.
 
 
-```
-<script type="text/javascript">
+    ```
+    <script type="text/javascript">
 
-    function getCurrentServerDateTime() {
+        function getCurrentServerDateTime() {
 
-        var apiUrl = "https://localhost:5001/api/Date";
-        var xhr = new XMLHttpRequest();
-        xhr.addEventListener("load", responseCompleted);
-        xhr.open("GET", apiUrl);
-        xhr.send();
-    }
+            var apiUrl = "https://localhost:5001/api/Date";
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", responseCompleted);
+            xhr.open("GET", apiUrl);
+            xhr.send();
+        }
 
-    function responseCompleted(eventData) {
+        function responseCompleted(eventData) {
 
-    }
+        }
 
-</script>
-```
+    </script>
+    ```
 
-3. So far so good, we need to host the website in a different origin, so i would be creating another Asp.net core MVC project for hosting client side code (our web page created earlier). I would be adding the web page created above to the wwwroot folder which is the place for all the static content and allows to serve the content from the client side.
+3. So far so good, we need to host the website in a different origin. We would be creating another Asp.net core MVC project for hosting client side code. We would be adding the web page created above to the `wwwroot` folder which is the place for all the static content in asp.net Core and allows to serve the content from the client side.
 
-Let's peek a look into the solution explorer in visual studio to see how it looks.
+    Let's peek a look into the solution explorer in visual studio to see how it looks.
 
-![Solution Explorer View](Images/SolutionExplorerView.png)
+    ![Solution Explorer View](Images/SolutionExplorerView.png)
 
 4. Let's keep Rolling and test the web page interaction with the API.
  Go to visual studio, and change the solution properties to allow for multiple start up projects. This allows to launch both the client and Server projects with one click.
 
  ![Multiple Startup Projects](Images/MultipleStartupProjects.png)
+
+Before adding the CORS middleware into the Asp.net core pipeline, let's see how the response looks like if we try to call the API from a web page running on another domain. Let's create a simple Web page which we will host in an asp.net core website. 
+
 
 
 2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
