@@ -13,5 +13,9 @@ namespace DebuggingJSON
 
         public Address Address { get; set; }
 
+        public static IEnumerable<Person> Get()
+        {
+        }
+
     }
 }

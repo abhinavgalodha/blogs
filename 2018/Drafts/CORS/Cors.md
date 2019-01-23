@@ -12,7 +12,7 @@
 
  This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. The article will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
-## How Microservices are shaping the modern Application development
+## How Microservices are shaping the modern Application development?
 
 In modern software development, with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web API. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable secure communication.
 
@@ -88,30 +88,40 @@ The same Origin policy was enforced in order to prevent security attacks like CS
 
 ##### Example
 
-If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, "You Win the  lottery", you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
+If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, **"You Won the  lottery"**, you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
 
 `$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
 
- Without further security measures, this would work because authentication cookies from yourfavouriteBANK.com would be sent and authenticate you.
+ Without further security measures, this would work because authentication cookies from `yourfavouriteBANK.com` would be sent and authenticate you.
 
-For more information, you may be able to read here..
-<TODO : add the link>
+For more information, you may be able to read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
 
 ## How CORS allows to bypass the Same-Origin Policy.
 
-CORS specification provides a list of headers values which browser and server understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
+CORS specification provides a list of **Headers** values which browser and server communicate and understand to ensure that the different Origin can share resources. Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
+
 * `Access-Control-Allow-Origin`
 * `Access-Control-Allow-Headers`
 * `Access-Control-Allow-Methods`
+* `Access-Control-Allow-Credentials`
 
 The most important of these is `Access-Control-Allow-Origin`, Let's explore this header.
 
 #### Access-Control-Allow-Origin
 
-The Access-Control-Allow-Origin header allows servers to specify how their resources are shared with external domains. When a GET request is made to access a resource on Server A, Server A will respond with a value for the Access-Control-Allow-Origin header. The value of this header may be set to a particular domain (or list of domains), meaning that Server A will share its resources with that specific domain (or list of domains). For development, Many times, this value will be *, meaning that Server A will share the requested resources with any domain on the Internet.
+The `Access-Control-Allow-Origin` header allows servers to specify how their resources are shared with external domains. 
 
+*Referring back to our analogy,This basically allows to specify the list of friends which are allowed in your pool party. You are allowed to specify the list of the names that you would want to allow for the party.*
+
+During development stage, the value can be set to `*`, meaning that Server will share the requested resources with any domain on the Internet.
+
+#### Example
+
+So, following response header would allow the Client Browsers to make a request to Origin `http://galodha.com`.
+
+`Access-Control-Allow-Origin: http://galodha.com`
 
 ## Pre-flight requests
 
