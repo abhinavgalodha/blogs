@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +16,7 @@ namespace DebuggingJSON.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Person>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Person.Get();
         }
 
         // GET api/values/5

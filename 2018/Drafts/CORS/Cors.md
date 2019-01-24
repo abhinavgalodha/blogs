@@ -241,8 +241,9 @@ To keep the demonstration simple, I will use a simple web page with javascript t
 
     ![Solution Explorer View](Images/SolutionExplorerView.png)
 
-4. Let's keep Rolling and test the web page interaction with the API.
- Go to visual studio, and change the solution properties to allow for multiple start up projects. This allows to launch both the client and Server projects with one click.
+4. Let's keep Rolling and test the web page interaction with the API. 
+   
+ Go to visual studio, and change the solution properties to allow for multiple start up projects. This allows to launch both the client and Server projects with one click as shown below.
 
  ![Multiple Startup Projects](Images/MultipleStartupProjects.png)
 
@@ -250,7 +251,7 @@ Before adding the CORS middleware into the Asp.net core pipeline, let's see how 
 
 
 
-2. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
+1. Asp.net supports the CORS Middleware which we can plugin into our request pipeline to add CORS support to our API. Let's see how to add CORS to our Asp.net core API. Add the Reference to package  `Microsoft.AspNetCore.Cors package` which provides the sup
 
 
 
