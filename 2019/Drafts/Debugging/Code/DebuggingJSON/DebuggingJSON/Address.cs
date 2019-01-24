@@ -17,5 +17,32 @@ namespace DebuggingJSON
 
         public int Zip { get;set;}
 
+        public static Address GetFirstAddress()
+        {
+            return GetAddress().FirstOrDefault();
+        }
+
+        public static List<Address> GetAddress()
+        {
+            return new List<Address>
+            {
+                new Address
+                {
+                    AddressLine1 = "1800 Continental Avenue",
+                    City = "Austin",
+                    State = "Texas",
+                    Zip = 60606
+                },
+                new Address
+                {
+                    AddressLine1 = "1800 Continental Avenue",
+                    AddressLine2 = "Apt 456",
+                    City = "Austin",
+                    State = "Texas",
+                    Zip = 60606
+                }
+            };
+        }
+
     }
 }
