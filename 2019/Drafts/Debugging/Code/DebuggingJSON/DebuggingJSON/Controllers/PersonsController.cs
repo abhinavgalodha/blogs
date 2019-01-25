@@ -10,13 +10,13 @@ namespace DebuggingJSON.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PersonController : ControllerBase
+    public class PersonsController : ControllerBase
     {
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<Person>> Get()
         {
-            return Person.Get();
+            return Ok(Person.GetPersons());
         }
 
         // GET api/values/5
@@ -28,7 +28,7 @@ namespace DebuggingJSON.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Person person)
         {
         }
 

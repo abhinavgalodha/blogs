@@ -1,46 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DebuggingJSON
 {
     public class Person
     {
-        public string FirstName {get; set; }
+        public Person(string firstName, string lastName) : this(firstName, string.Empty, lastName)
+        {
+        }
 
-        public string LastName { get; set; }
+        public Person(string firstName, string middleName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
 
-        public Address Address { get; set; }
+        public Person(string firstName, string lastName, int age) : this(firstName, lastName)
+        {
+            this.Age = age;
+        }
 
-        public static IEnumerable<Person> Get()
+
+        public string FirstName { get; }
+
+        public string MiddleName { get;  }
+
+        public string LastName { get; }
+
+        public int Age { get; }
+
+        public static IEnumerable<Person> GetPersons()
         {
             return new List<Person>
             {
-                new Person
-                {
-                    FirstName = "Abhinav",
-                    LastName = "Galodha",
-                    Address = new Address
-                    {
-                        AddressLine1 = "1800 Continential Avenue",
-                        City = "Austin",
-                        State = "Texas",
-                        Zip = 122
-                    }
-                },
-                new Person
-                {
-                    FirstName = "Aayan",
-                    LastName = "Galodha",
-                    Address = new Address
-                    {
-                        AddressLine1 = "1 Galodha way",
-                        City = "Chicago",
-                        State = "ILLINOIS",
-                        Zip = 606
-                    }
-                },
+                new Person("Aayan", "Galodha", 1),
+                new Person("Abhinav", "Galodha")
             };
         }
 

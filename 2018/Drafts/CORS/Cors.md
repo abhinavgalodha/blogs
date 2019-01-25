@@ -1,3 +1,5 @@
+# All you wanted to know about CORS
+
 # What's CORS and Adding CORS support in ASP.Net Core
 
 
@@ -129,9 +131,7 @@ So, following response header would allow the Client Browsers to make a request 
 
 ## Pre-flight requests
 
-Certain times, an additional Server Request is made **before** the actual request which is known as the Pre-Flight Request. 
-
-If a request may have implications on user data, a simple request is insufficient. Instead, a preflight CORS request is sent in advance of the actual request to ensure that the actual request is safe to send.
+Certain times, an additional Server Request is made by the browser  **before** the actual request which is known as the Pre-Flight Request. The purpose of the preflight request is to determine whether or not the original request is safe (for example, a DELETE request). Preflight requests use the OPTIONS header.
 
 What conditions Trigger a Pre-Flight Request?
 
@@ -141,7 +141,7 @@ What conditions Trigger a Pre-Flight Request?
 
 The preflight request is essentially asking the server if it would allow the DELETE request, without actually sending the DELETE request
 
-Preflight requests use the OPTIONS header. The preflight request is sent before the original request, hence the term "preflight." The purpose of the preflight request is to determine whether or not the original request is safe (for example, a DELETE request)
+
 
 TODO : Check if angular js always send the Preflight request or not..
 
