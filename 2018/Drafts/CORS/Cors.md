@@ -131,7 +131,12 @@ So, following response header would allow the Client Browsers to make a request 
 
 ## Pre-flight requests
 
-Certain times, an additional Server Request is made by the browser  **before** the actual request which is known as the Pre-Flight Request. The purpose of the preflight request is to determine whether or not the original request is safe (for example, a DELETE request). Preflight requests use the OPTIONS header.
+Certain times, an additional Server Request is made by the browser  **before** the actual request which is known as the Pre-Flight Request. Preflight requests use the OPTIONS header.
+
+#### Why does browser sends an additional request in form of pre-flight request? Isn't it an overhead?
+
+The Pre-flight Request was added to the CORS Specification to allow communication with the Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
+
 
 What conditions Trigger a Pre-Flight Request?
 
