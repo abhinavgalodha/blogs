@@ -1,0 +1,1 @@
+# How to add environment in Asp.net core project

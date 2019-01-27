@@ -1,0 +1,1 @@
+## When not to use strings in Strongly typed languages

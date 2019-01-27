@@ -131,11 +131,20 @@ So, following response header would allow the Client Browsers to make a request 
 
 ## Pre-flight requests
 
-Certain times, an additional Server Request is made by the browser  **before** the actual request which is known as the Pre-Flight Request. Preflight requests use the OPTIONS header.
+Certain times, an additional Server Request is made by the browser  **before** the actual request, which is also known as the Pre-Flight Request. Preflight requests use the OPTIONS header.
 
 #### Why does browser sends an additional request in form of pre-flight request? Isn't it an overhead?
 
 The Pre-flight Request was added to the CORS Specification to allow communication with the Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
+
+#### Example
+Suppose, A Origin like `http://galodha.com` is used by 2 servers for hosting different applications.
+1. Server X for purpose like blogs at `http://galodha.com/blogs`. This server X understands the CORS specification.
+2. Server Y for Projects at `http://galodha.com/project`. This Server Y ***Doesn't*** understands the CORS Specification. It relies on the same origin policy and allows operation like Delete.
+   
+Now, CORS specification is launched and Server X allows CORS request from all other Domain.
+
+    The  The same origin policy safegaurds against any malicious requests. This ensures that 
 
 
 What conditions Trigger a Pre-Flight Request?
@@ -336,3 +345,5 @@ If we only want to allow CORS requests to a selected few methods, instead of ena
 
 
 ## References
+https://stackoverflow.com/questions/15381105/cors-what-is-the-motivation-behind-introducing-preflight-requests
+
