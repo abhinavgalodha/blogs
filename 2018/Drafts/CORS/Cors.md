@@ -131,18 +131,41 @@ So, following response header would allow the Client Browsers to make a request 
 
 ## Pre-flight requests
 
-Certain times, an additional Server Request is made by the browser  **before** the actual request, which is also known as the Pre-Flight Request. Preflight requests use the OPTIONS header.
+At Certain times, an additional Server Request is made by the browser  **before** the actual request, which is also known as the Pre-Flight Request. Preflight requests use the OPTIONS header.
 
 #### Why does browser sends an additional request in form of pre-flight request? Isn't it an overhead?
 
 The Pre-flight Request was added to the CORS Specification to allow communication with the Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
 
-#### Example
-Suppose, A Origin like `http://galodha.com` is used by 2 servers for hosting different applications.
+#### Example : why Pre-flight request was added
+
+Let's go back in past, and Assume a time when CORS Specification wasn't defined. **Servers were not aware of the CORS Specification**, but did understand the Same-Origin Specification and allowed requests from Same Origin.
+
+A Origin like `http://galodha.com` is used by a server X for hosting blogs at `http://galodha.com/blogs`. This Server X knows about the same Origin policy and allows operation like **Delete** a blog post from the same origin.
+
+Now, CORS specification is launched. A new server Y is setup to manage projects at URL `http://galodha.com/projects`. The server Y supports the Get/Post/Delete operations on projects on same origin.
+
+The Projects are getting popular and other websites are interested to list the projects on their websites. So, you will need to allow for a Get Operation from the origin `http://galodha.com`. Fortunately, the CORS specification has been launched and you know that by using the CORS header `Access-Control-Allow-Origin: http://anotherwebsite.com`, we can allow the requests from another website/origin. Also, using the CORS header, `Access-Control-Allow-Methods: Get`, we can limit the operation to Get only.
+
+So far so good, everything is going good and Your Server Y is getting a lot of traffic from another website. 
+
+The server Y needs to supports a Delete Project operation. Additionally, the projects are getting popular and Server Y needs to Support the Get operation from other Origins as well.  
+
+
+
+
+ This server X understands the CORS specification.
+1. Server Y for Projects  This Server Y ***Doesn't*** understands the CORS Specification. It relies on the same origin policy and allows operation like Delete.
+   
+Now, CORS specification is launched, Server X allows CORS request from all other Domain.
+
+
+Suppose, A Origin like `http://galodha.com` is used by a server X for hosting different applications.
+
 1. Server X for purpose like blogs at `http://galodha.com/blogs`. This server X understands the CORS specification.
 2. Server Y for Projects at `http://galodha.com/project`. This Server Y ***Doesn't*** understands the CORS Specification. It relies on the same origin policy and allows operation like Delete.
    
-Now, CORS specification is launched and Server X allows CORS request from all other Domain.
+Now, CORS specification is launched, Server X allows CORS request from all other Domain.
 
     The  The same origin policy safegaurds against any malicious requests. This ensures that 
 
