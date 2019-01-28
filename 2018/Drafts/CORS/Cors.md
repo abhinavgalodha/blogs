@@ -137,37 +137,27 @@ At Certain times, an additional Server Request is made by the browser  **before*
 
 The Pre-flight Request was added to the CORS Specification to allow communication with the Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
 
-#### Example : why Pre-flight request was added
+#### Example : Why Pre-flight request was added?
 
-Let's go back in past, and Assume a time when CORS Specification wasn't defined. **Servers were not aware of the CORS Specification**, but did understand the Same-Origin Specification and allowed requests from Same Origin.
+Let's go back in past, and Assume a time when CORS Specification wasn't defined. **Servers were not aware of the CORS Specification**, but did understand the Same-Origin Specification and allowed requests from the Same Origin Only.
 
 A Origin like `http://galodha.com` is used by a server X for hosting blogs at `http://galodha.com/blogs`. This Server X knows about the same Origin policy and allows operation like **Delete** a blog post from the same origin.
 
 Now, CORS specification is launched. A new server Y is setup to manage projects at URL `http://galodha.com/projects`. The server Y supports the Get/Post/Delete operations on projects on same origin.
 
-The Projects are getting popular and other websites are interested to list the projects on their websites. So, you will need to allow for a Get Operation from the origin `http://galodha.com`. Fortunately, the CORS specification has been launched and you know that by using the CORS header `Access-Control-Allow-Origin: http://anotherwebsite.com`, we can allow the requests from another website/origin. Also, using the CORS header, `Access-Control-Allow-Methods: Get`, we can limit the operation to Get only.
+The Projects are getting popular and other websites are interested to list the projects on their websites. So, you will need to allow for a Get Operation from the origin `http://galodha.com`. Also, there are open source contributors, so you need to offer the Delete operation as well from other websites/origin. Fortunately, the CORS specification has been launched and you know that by using the CORS header `Access-Control-Allow-Origin: http://anotherwebsite.com`, we can allow the requests from another website/origin. Also, using the CORS header, `Access-Control-Allow-Methods: Get, POST, Delete`, we can allow the `GET/POST/DELETE` operations from other websites.
 
-So far so good, everything is going good and Your Server Y is getting a lot of traffic from another website. 
+So far so good, everything is going good and Your Server Y is getting a lot of traffic from other websites.
 
-The server Y needs to supports a Delete Project operation. Additionally, the projects are getting popular and Server Y needs to Support the Get operation from other Origins as well.  
+Next, A malicious user comes and tries to perform a **DELETE** operation on the URL `http://galodha.com/blogs` on Server X. The origin `http://galodha.com` already allows requests from other websites for Server Y at `http://galodha.com/Projects`. Note that the Same origin policy consider *only* the Scheme, HostName and port number, It doesn't consider the full path of the URL. So, a client can make a request to both `http://galodha.com/blogs` and `http://galodha.com/projects` as the browser thinks that both belongs to same origin.
 
+Since, Server X allowed Delete operations from same Origin and It doesn't know anything about the new CORS specification, what should be the behavior for a DELETE operation on server X requested from another website/origin?
 
+**Should it allow to delete a resource?.** Wouldn't it be wonderful if server X can tell that it doesn't support CORS? Can't we make an additional Request to check if a Server support CORS? 
 
+Yes, You are in Good luck, The CORS specification, defines the Preflight Request which does the same things as we mentioned above. The PreFlight Request makes an additional request to ensure that the Server understands the request or not. If server doesn't understand the request, then the client will not make the actual Request. However, if server understands the request, it will return the appropriate response mentioning that what it allows and then client can make the actual request.
 
- This server X understands the CORS specification.
-1. Server Y for Projects  This Server Y ***Doesn't*** understands the CORS Specification. It relies on the same origin policy and allows operation like Delete.
-   
-Now, CORS specification is launched, Server X allows CORS request from all other Domain.
-
-
-Suppose, A Origin like `http://galodha.com` is used by a server X for hosting different applications.
-
-1. Server X for purpose like blogs at `http://galodha.com/blogs`. This server X understands the CORS specification.
-2. Server Y for Projects at `http://galodha.com/project`. This Server Y ***Doesn't*** understands the CORS Specification. It relies on the same origin policy and allows operation like Delete.
-   
-Now, CORS specification is launched, Server X allows CORS request from all other Domain.
-
-    The  The same origin policy safegaurds against any malicious requests. This ensures that 
+TODO : An actual PreFlight request.
 
 
 What conditions Trigger a Pre-Flight Request?
@@ -175,10 +165,6 @@ What conditions Trigger a Pre-Flight Request?
 * Preflight requests are appropriate when the actual request is any HTTP Method other than GET, POST, or HEAD.
 * If a POST request's content type is anything other than application/x-www-form-urlencoded, multipart/form-data, or text/plain.
 *  Also, if the request contains any custom headers, then a preflight request is required.
-
-The preflight request is essentially asking the server if it would allow the DELETE request, without actually sending the DELETE request
-
-
 
 TODO : Check if angular js always send the Preflight request or not..
 
