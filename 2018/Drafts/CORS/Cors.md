@@ -2,11 +2,15 @@
 
 ## What's CORS and Adding CORS support in ASP.Net Core
 
+This article is a First Part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design understand, and troubleshoot CORS issue. 
+
+In the next part, we will go into further details and apply  the knowledge learnt in first part to build a Client & Server application which can communicate using CORS.
+
 
 ## Introduction
 
-* Do you want to understand CORS and the explanation you find is mostly confusing and hard to follow?
-* Does it sound too complicated to understand?
+* Do you want to understand CORS?
+* Does it sound too complicated to understand and the explanation you find is mostly confusing and hard to follow?
 * Are you building Microservices and worried about integrating with multiple frontend application?
 * Have you encountered the following error, and never understood why the error happens?
 
