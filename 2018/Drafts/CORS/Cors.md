@@ -1,18 +1,18 @@
 # All you wanted to know about CORS
 
-# What's CORS and Adding CORS support in ASP.Net Core
+## What's CORS and Adding CORS support in ASP.Net Core
 
 
 ## Introduction
 
-* Do you want to understand CORS?
+* Do you want to understand CORS and the explanation you find is mostly confusing and hard to follow?
 * Does it sound too complicated to understand?
 * Are you building Microservices and worried about integrating with multiple frontend application?
 * Have you encountered the following error, and never understood why the error happens?
 
 ![Client error](Images/ClientError.png)
 
- This article will provide an answer to the above-mentioned questions and will go into the details of what you need to understand/troubleshoot CORS Issue. The article will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development?
 
