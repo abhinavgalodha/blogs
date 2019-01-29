@@ -2,9 +2,9 @@
 
 ## What's CORS and Adding CORS support in ASP.Net Core
 
-This article is a First Part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design understand, and troubleshoot CORS issue. 
+This article is a first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design understand, and troubleshoot CORS issue. 
 
-In the next part, we will go into further details and apply  the knowledge learnt in first part to build a Client & Server application which can communicate using CORS.
+In the next part, we will go into further details and apply  the knowledge learnt in first part to build a Client & Server application which can communicate using CORS. The link would be added for the second part once available.
 
 
 ## Introduction
@@ -16,15 +16,15 @@ In the next part, we will go into further details and apply  the knowledge learn
 
 ![Client error](Images/ClientError.png)
 
- This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in the Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development?
 
-In modern software development, with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web API. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable secure communication.
+In modern software development, with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web API. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable secure communication. CORS forms a major specification which allows an API to accept multiple incoming requests from different websites.
 
 ## What is CORS?
 
-CORS stands for CROSS ORIGIN RESOURCE SHARING.
+CORS abbreviation is CROSS ORIGIN RESOURCE SHARING.
 
 Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
