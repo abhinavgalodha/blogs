@@ -16,7 +16,7 @@ In the next part, we will go into further details and apply  the knowledge learn
 
 ![Client error](Images/ClientError.png)
 
- This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in a different domain to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development?
 
@@ -35,35 +35,15 @@ A request for a resource (like an image or a font) outside of the origin is know
 
 Let's take an analogy to understand CORS. Imagine, You are living in a **secure** Housing Apartment Community and have access to all the facilities and having a great time 😄. The access to the community is restricted to its tenants only to ensure safety.  If you are a tenant, then you can come in/out at any time. For anyone else, the permission is denied.
 
-> You are thinking about a new year party in your community swimming pool and want to invite your friends. Since the access to the pool is only restricted to tenants, how would you sneak in your friends? In order for them to enter the apartment community, **you need to establish a mechanism to allow your friends to come inside the Apartment Complex**. One of the mechanism might be giving your friends some Unique Passes which the security would trust and allow access.
+You are thinking about your **Birthday party** in your community swimming pool and want to invite your friends. Since the access to the pool is only restricted to tenants, how would you sneak in your friends? 
+
+In order for them to enter the apartment community, **you need to establish a mechanism to allow your friends to come inside the Apartment Complex**. One of the mechanism might be giving your friends some Unique Passes which the security would trust and allow access.
 
 Above analogy was a simplistic explanation to understand the overall concept of the CORS. The notion of the security for a Housing apartment is similar to the security implemented by the browsers using the **same origin policy**. I will refer to this example later while explaining the CORS concept in this article.
 
 ![Permit Images](Images/Permit.gif)
 
-Let's break the CORS into smaller pieces to understand it better.
-
-#### Cross-Origin
-
-Cross origin means that the origin of the request can be different from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin. We will understand later what exactly makes the request Cross Origin. 
-
-In our analogy, Origin refers to tenant. 2 tenants from the same Apartment Community belong to same Origin.
-
-> TODO : Image
-
-#### Resource
-
-A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
-
-In our analogy, swimming pool was the resource.
-
-> TODO : Image
-
-#### Sharing
-
-CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed and enable the resources to be shared.
-
-In our analogy, swimming pool was to be shared.
+Let's understand what is all this fuss about Origin and what exactly is Origin in next section.
 
 ### What is an Origin?
 
@@ -93,6 +73,34 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 The same-origin policy is a security measure standardized among browsers. The "origin" mostly refers to a "domain". It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
 
 The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
+
+
+
+Let's break the CORS into smaller pieces to understand it better.
+
+[TODO : Images of break]
+
+#### Cross-Origin
+
+Cross origin means that the **origin** of the request can be *different* from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin. We will understand later what exactly makes the request Cross Origin.
+
+In our analogy, Origin refers to Apartment Community. 2 tenants from the same Apartment Community belong to same Origin. However, your friends residing in another Apartment community are in different Origin or Cross Origin.
+
+> TODO : Image
+
+#### Resource
+
+A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
+
+In our analogy, swimming pool was the resource. This is the valued possession which other people are interested to access.
+
+> TODO : Image
+
+#### Sharing
+
+CORS defines various headers which allows the browser and server to communicate about which requests are (and are not) allowed and enable the resources to be shared.
+
+In our analogy, swimming pool was to be shared.
 
 In our Analogy, we had a Secured Apartment Community which only allowed the tenants the access to the resources. Imagine if the access to the apartment resources is not restricted, a malicious person can enter the Community and damage the swimming pool or other resources.
 
