@@ -2,7 +2,7 @@
 
 ## What's CORS and Adding CORS support in ASP.Net Core
 
-This article is a first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design understand, and troubleshoot CORS issue. 
+This article is a first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design, understand, and troubleshoot CORS issue.
 
 In the next part, we will go into further details and apply  the knowledge learnt in first part to build a Client & Server application which can communicate using CORS. The link would be added for the second part once available.
 
@@ -26,6 +26,8 @@ In modern software development, with the advent of the microservices and the ris
 
 CORS abbreviation is CROSS ORIGIN RESOURCE SHARING.
 
+>TODO : Add an image
+
 Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
 A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
 
@@ -47,11 +49,15 @@ Cross origin means that the origin of the request can be different from the doma
 
 In our analogy, Origin refers to tenant. 2 tenants from the same Apartment Community belong to same Origin.
 
+> TODO : Image
+
 #### Resource
 
 A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
 
 In our analogy, swimming pool was the resource.
+
+> TODO : Image
 
 #### Sharing
 
@@ -79,14 +85,18 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 <http://galodha.com/image1.jpg>  (Different protocol)
 <https://github.com/image1.jpg>  (different host)
 
+> TODO : CORS Diagram
 
-### What is meant by Same Origin?
+
+### What is meant by Same Origin Policy?
 
 The same-origin policy is a security measure standardized among browsers. The "origin" mostly refers to a "domain". It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
 
 The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
 
 In our Analogy, we had a Secured Apartment Community which only allowed the tenants the access to the resources. Imagine if the access to the apartment resources is not restricted, a malicious person can enter the Community and damage the swimming pool or other resources.
+
+> TODO : Image
 
 #### Why browsers enforced Same-Origin Policy?
 
@@ -104,7 +114,7 @@ For more information, you may be able to read [here](https://www.owasp.org/index
 
 Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
 
-## How CORS allows to bypass the Same-Origin Policy.
+## How CORS allows to bypass the Same-Origin Policy?
 
 CORS specification provides a list of **Headers** values which **browser** and **server** communicate and understand to ensure that the different Origin can share resources. 
 
@@ -163,12 +173,13 @@ Yes, You are in Good luck, The CORS specification, defines the Preflight Request
 
 TODO : An actual PreFlight request.
 
+What conditions Trigger a PreFlight Request?
 
-What conditions Trigger a Pre-Flight Request?
+* When the actual request is any HTTP Method other than `GET, POST, or HEAD`.
+* If a POST request's content type is anything other than `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
+*  Also, if the request contains any custom headers, then a preflight request is required. Headers like `Accept`, `Accept-Language`, `Content-Language` etc doesn't trigger a Preflight request.
 
-* Preflight requests are appropriate when the actual request is any HTTP Method other than GET, POST, or HEAD.
-* If a POST request's content type is anything other than application/x-www-form-urlencoded, multipart/form-data, or text/plain.
-*  Also, if the request contains any custom headers, then a preflight request is required.
+There are certain additional conditions which can trigger the Preflight request. For the complete list reference the [link]( https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
 
 TODO : Check if angular js always send the Preflight request or not..
 
@@ -358,5 +369,6 @@ If we only want to allow CORS requests to a selected few methods, instead of ena
 
 
 ## References
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 https://stackoverflow.com/questions/15381105/cors-what-is-the-motivation-behind-introducing-preflight-requests
 
