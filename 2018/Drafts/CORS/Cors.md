@@ -49,11 +49,15 @@ Let's understand what is all this fuss about Origin and what exactly is Origin i
 
 Let's take a look at what exactly is Origin. An Origin is made up of the following three parts:
 
-1. Protocol/Scheme : (Http/https)
-2. Host : The server/domain name
-3. Port number
+1. **Protocol/Scheme** : (Http/https)  
+2. **Host** : The server/domain name  
+3. **Port number** : The numeric value
+
+Therefore a url like https://galodha.com, represents a Origin.
 
 #### Example of Same Origin
+
+Following are examples of 2 Origin which are having same origin, https://galodha.com. They are having the same Protocol (https), Host (galodha.com), and Port Number (443 by default for HTTPS communication).
 
 <https://galodha.com/image1.jpg>  
 <https://galodha.com/image2.jpg>
@@ -61,24 +65,39 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 
 #### Example of Different Origin
 
-<https://galodha.com/image1.jpg>  
-<http://galodha.com/image1.jpg>  (Different protocol)
-<https://github.com/image1.jpg>  (different host)
+Following are example of Origins which are having different Origin than https://galodha.com as one is having differnt protocol and other having a different Host.
 
-> TODO : CORS Diagram
+<http://galodha.com/image1.jpg>  (Different protocol)  
+<https://github.com/image1.jpg>  (Different host)
 
+Now, after gaining the understanding of Origin, let look at what exactly is the Same-Origin Policy.
 
 ### What is meant by Same Origin Policy?
 
-The same-origin policy is a security measure standardized among browsers. The "origin" mostly refers to a "domain". It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
+The same-origin policy is a security measure standardized among browsers. It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
 
 The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
 
+#### Why browsers enforced Same-Origin Policy?
+
+The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery).
+
+##### Example
+
+If you are browsing a bank website and in another tab while watching your favorite video, you have an advertisement, **"You Won the  lottery"**, you are enticed by the ad and click the advertisement, it opens another window. The Advertisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
+
+`$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
+
+ Without further security measures, this would work because authentication cookies from `yourfavouriteBANK.com` would be sent and authenticate you. All the communication from one Origin to another is possible without restriction and can lead to above attacks.
+
+For more information, you may be able to read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+
+Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
 
 
 Let's break the CORS into smaller pieces to understand it better.
 
-[TODO : Images of break]
+> TODO : Images of break
 
 #### Cross-Origin
 
@@ -106,21 +125,8 @@ In our Analogy, we had a Secured Apartment Community which only allowed the tena
 
 > TODO : Image
 
-#### Why browsers enforced Same-Origin Policy?
+> TODO : CORS Diagram
 
-The same Origin policy was enforced in order to prevent security attacks like CSRF (Cross Request Forgery).
-
-##### Example
-
-If you are browsing a bank website and in another tab window while watching your favourite video, you have an advertisement, **"You Won the  lottery"**, you are enticed by the ad and click the advertisement, it opens another window. The Adverstisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
-
-`$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
-
- Without further security measures, this would work because authentication cookies from `yourfavouriteBANK.com` would be sent and authenticate you.
-
-For more information, you may be able to read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
-
-Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
 
 ## How CORS allows to bypass the Same-Origin Policy?
 

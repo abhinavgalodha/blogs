@@ -1,15 +1,16 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/2018/Drafts/CORS/Code/Server/CORSApi/Client/obj/Release/netcoreapp2.2
-/2018/Drafts/CORS/Code/Server/CORSApi/ConsoleApp1/bin/Debug/netcoreapp2.2
-/2018/Drafts/CORS/Code/Server/CORSApi/ConsoleApp1/obj/Debug/netcoreapp2.2
+[Oo]bj/
+[Bb]in/
+.nuget/
+_ReSharper.*
+packages/
+artifacts/
 *.user
-/2018/Drafts/CORS/Code/Server/CORSApi/ConsoleApp1/.vs/ConsoleApp1
+*.suo
+*.userprefs
+*DS_Store
+*.sln.ide
 /.vs
-/2019/Drafts/Debugging/Code/.vs/Code/v16
-/2019/Drafts/Debugging/Code/.vs
-/2019/Drafts/Debugging/Code/DebuggingJSON/.vs/DebuggingJSON/v16
-/2019/Drafts/Debugging/Code/DebuggingJSON/DebuggingJSON/obj
-/2019/Drafts/Debugging/Code/DebuggingJSON/DebuggingJSON/bin/Debug/netcoreapp2.2
+/.vs/slnx.sqlite
