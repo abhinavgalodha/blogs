@@ -7,6 +7,25 @@ namespace DebuggingJSON
 {
     public class Address
     {
+
+        public Address(string addressLine1, string city, string State, int zip) :
+            this(addressLine1, string.Empty, city, State, zip)
+        {
+            
+        }
+
+        public Address(string addressLine1, string addressLine2, string city, string State, int zip)
+        {
+            this.AddressLine1 = addressLine1;
+            this.AddressLine2 = addressLine2;
+            this.City = city;
+            this.Zip = zip;
+        }
+
+        public Address()
+        {
+            
+        }
         public string AddressLine1 { get;set;}
 
         public string AddressLine2 { get;set;}
