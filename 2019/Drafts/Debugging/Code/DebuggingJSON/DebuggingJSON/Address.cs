@@ -7,7 +7,6 @@ namespace DebuggingJSON
 {
     public class Address
     {
-
         public Address(string addressLine1, string city, string State, int zip) :
             this(addressLine1, string.Empty, city, State, zip)
         {
@@ -22,10 +21,6 @@ namespace DebuggingJSON
             this.Zip = zip;
         }
 
-        public Address()
-        {
-            
-        }
         public string AddressLine1 { get;set;}
 
         public string AddressLine2 { get;set;}
@@ -44,22 +39,17 @@ namespace DebuggingJSON
         public static List<Address> GetAddress()
         {
             return new List<Address>
-            {
-                new Address
-                {
-                    AddressLine1 = "1800 Continental Avenue",
-                    City = "Austin",
-                    State = "Texas",
-                    Zip = 60606
-                },
-                new Address
-                {
-                    AddressLine1 = "1800 Continental Avenue",
-                    AddressLine2 = "Apt 456",
-                    City = "Austin",
-                    State = "Texas",
-                    Zip = 60606
-                }
+            { new Address("1800 Continental Avenue",
+                    "Austin",
+                    "Texas",
+                     60606),
+                new Address(
+                    "1800 Continental Avenue",
+                    "Apt 456",
+                    "Austin",
+                    "Texas",
+                    60606
+                )
             };
         }
 
