@@ -16,9 +16,9 @@ In the next part, we will go into further details and apply  the knowledge learn
 
 ![Client error](Images/ClientError.png)
 
- This article is will provide a **simplistic** explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article is will provide a **simplistic** explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe *how to add* the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
-## How Microservices are shaping the modern Application development?
+## Importance of CORS & How Microservices are shaping the modern Application development?
 
 In modern software development, with the advent of the microservices and the rise of the Distributed applications, more components than ever before are being developed in isolation. The monolith applications are being architectured to build smaller more manageable components in the form of the Asp.net core web API. The microservices can be deployed and scaled independently of the frontend. Also, since the Frontend needs to communicate with the API, it is the API responsibility to ensure that it allows the clients to interact and send appropriate data to clients to enable secure communication. CORS forms a major specification which allows an API to accept multiple incoming requests from different websites.
 
@@ -26,12 +26,16 @@ In modern software development, with the advent of the microservices and the ris
 
 CORS abbreviation is CROSS ORIGIN RESOURCE SHARING.
 
->TODO : Add an image
+![Resource Sharing](Images/CorsSharing.jpg)
 
-Cors is a **SECURITY** mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.
-A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) manages cross-origin requests.
+Credit: Getty Images
+
+**Cors is a SECURITY mechanism employed by the browsers like (Firefox, Chrome, IE etc.) to prevent the browsers from making calls to another Website.**
+A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request. CORS (cross-origin resource sharing) is a specification which manages cross-origin requests.
 
 >*A more naive explanation - It's like the Security Guard which prevents a malicious person from entering your premises until they possess certain Authorization and hence keeps your family Safe.*
+
+### Analogy of an Apartment Community
 
 Let's take an analogy to understand CORS. Imagine, You are living in a **secure** Housing Apartment Community and have access to all the facilities and having a great time 😄. The access to the community is restricted to its tenants only to ensure safety.  If you are a tenant, then you can come in/out at any time. For anyone else, the permission is denied.
 
@@ -43,7 +47,7 @@ Above analogy was a simplistic explanation to understand the overall concept of 
 
 ![Permit Images](Images/Permit.gif)
 
-Let's understand what is all this fuss about Origin and what exactly is Origin in next section.
+Let's understand what is all this fuss about Origin and what exactly is Origin in next section. This is the most important Concept to decipher CORS easily.
 
 ### What is an Origin?
 
@@ -53,30 +57,33 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 2. **Host** : The server/domain name  
 3. **Port number** : The numeric value
 
-Therefore a url like https://galodha.com, represents a Origin.
+Therefore a url like http://galodha.com, represents a Origin.
+
+<TODO : Highlight Protocol, Host and Port number in above>
 
 #### Example of Same Origin
 
-Following are examples of 2 Origin which are having same origin, https://galodha.com. They are having the same Protocol (https), Host (galodha.com), and Port Number (443 by default for HTTPS communication).
+Let's consider following two Url's which belongs to same origin, http://galodha.com.
 
-<https://galodha.com/image1.jpg>  
-<https://galodha.com/image2.jpg>
+<http://galodha.com/image1.jpg>  
+<http://galodha.com/image2.jpg>
 
+Above Url's are having the **same Protocol** (https), **Host** (galodha.com), and **Port Number** (80 by default for HTTP communication).
 
 #### Example of Different Origin
 
-Following are example of Origins which are having different Origin than https://galodha.com as one is having differnt protocol and other having a different Host.
+Following are example of Origins which are having different Origin than http://galodha.com. One of the Url's is having a different protocol and other belongs to a different Host.
 
-<http://galodha.com/image1.jpg>  (Different protocol)  
-<https://github.com/image1.jpg>  (Different host)
+<https://galodha.com/image1.jpg>  (Different protocol)  
+<http://github.com/image1.jpg>  (Different host)
 
 Now, after gaining the understanding of Origin, let look at what exactly is the Same-Origin Policy.
 
 ### What is meant by Same Origin Policy?
 
-The same-origin policy is a security measure standardized among browsers. It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.
+The same-origin policy is a security measure standardized among browsers. It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery. Referring to our analogy, Same origin is like the tenants belonging to the same apartment community. You can trust a tenant in your Apartment Community, but wouldn't trust another person in other Apartment Community, unless they are your friends.
 
-The same-origin policy is very restrictive. This prevents JavaScript from making requests across domain boundaries. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
+The same-origin policy is very restrictive. This prevents JavaScript from making requests across different Origin. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
 
 #### Why browsers enforced Same-Origin Policy?
 
@@ -90,9 +97,9 @@ If you are browsing a bank website and in another tab while watching your favori
 
  Without further security measures, this would work because authentication cookies from `yourfavouriteBANK.com` would be sent and authenticate you. All the communication from one Origin to another is possible without restriction and can lead to above attacks.
 
-For more information, you may be able to read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+For more information, you may read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
-Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
+CORS allows to circumvent the Same origin policy while not compromising on the security.
 
 Let's break the CORS into smaller pieces to understand it better.
 
@@ -100,19 +107,17 @@ Let's break the CORS into smaller pieces to understand it better.
 
 #### Cross-Origin
 
-Cross origin means that the **origin** of the request can be *different* from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin. We will understand later what exactly makes the request Cross Origin.
+Cross origin means that the **origin** of the request can be *different* from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin.
 
 In our analogy, Origin refers to Apartment Community. 2 tenants from the same Apartment Community belong to same Origin. However, your friends residing in another Apartment community are in different Origin or Cross Origin.
 
-> TODO : Image
+![](Images/CORSBounadry.png)
 
 #### Resource
 
 A resource is like an Image, font, Videos, Data etc. When we are making an Ajax call, we are requesting for some data which is Resource as per the terminology.
 
 In our analogy, swimming pool was the resource. This is the valued possession which other people are interested to access.
-
-> TODO : Image
 
 #### Sharing
 
@@ -122,7 +127,7 @@ In our analogy, swimming pool was to be shared.
 
 In our Analogy, we had a Secured Apartment Community which only allowed the tenants the access to the resources. Imagine if the access to the apartment resources is not restricted, a malicious person can enter the Community and damage the swimming pool or other resources.
 
-> TODO : Image
+![](Images/Sharing.jpg)
 
 > TODO : CORS Diagram
 
