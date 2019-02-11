@@ -16,7 +16,7 @@ In the next part, we will go into further details and apply  the knowledge learn
 
 ![Client error](Images/ClientError.png)
 
- This article is will provide a simplistic explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article is will provide a **simplistic** explanation of CORS using real world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe how to add the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## How Microservices are shaping the modern Application development?
 
@@ -93,7 +93,6 @@ If you are browsing a bank website and in another tab while watching your favori
 For more information, you may be able to read [here](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 Next, we will look how CORS allows to circumvent the Same origin policy while not compromising on the security.
-
 
 Let's break the CORS into smaller pieces to understand it better.
 
