@@ -131,12 +131,13 @@ In our Analogy, we had a Secured Apartment Community which only allowed the tena
 
 > TODO : CORS Diagram
 
-
 ## How CORS allows to bypass the Same-Origin Policy?
 
 CORS specification provides a list of **Headers** values which **browser** and **server** communicate and understand to ensure that the different Origin can share resources. 
 
-*In our Analogy, this was the Authorization piece which is basically a way to inform the security to allow and trust your friends.*
+*In our Analogy, this was the **Unique passes** which is basically a way to inform the security to allow and trust your friends.*
+
+Client sends Requests to server and server responds by providing the information of the resources that are allowed and how the resources can be accessed. The Server sends the information in the Response Headers. Each Response header signifies an attribute for the resource sharing. For e.g. The header `Access-Control-Allow-Methods` specifies the list of HTTP methods (GET, POST, DELETE etc.) which are allowed by the Server.
 
 Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
 
@@ -149,17 +150,16 @@ The most important of these is `Access-Control-Allow-Origin`, Let's explore this
 
 #### Access-Control-Allow-Origin
 
-The `Access-Control-Allow-Origin` header allows servers to specify how their resources are shared with external domains. 
+The `Access-Control-Allow-Origin` header allows servers to specify a list of Origins with which the server will share the resources. 
 
-*Referring back to our analogy,This basically allows to specify the list of friends which are allowed in your pool party. You are allowed to specify the list of the names that you would want to allow for the party.*
+*Referring back to our analogy,This basically allows to specify the list of friends which are allowed in your pool party. You are allowed to specify the list of the names that you would want to allow for the party. If you friend name is not in the list, they will not be allowed to come inside.* 
 
-During development stage, the value can be set to `*`, meaning that Server will share the requested resources with any domain on the Internet.
+During development stage, the value can be set to `*`, meaning that Server will share the requested resources with any domain on the Internet. But please refrain from using this setting beyond local development.
 
 #### Example
 
-So, following response header would allow the Client Browsers to make a request to Origin `http://galodha.com`.
+A browser client from Origin, `http://galodha.com`, wants to send a request to server `https://Example.com`. Due to CORS policy, the Client can't send the request to server.  However, when the Server responds with a response header `Access-Control-Allow-Origin: http://galodha.com` to the client, The Client Browsers allows to make a request to Origin `http://galodha.com`.
 
-`Access-Control-Allow-Origin: http://galodha.com`
 
 ## Pre-flight requests
 
@@ -167,7 +167,9 @@ At Certain times, an additional Server Request is made by the browser  **before*
 
 #### Why does browser sends an additional request in form of pre-flight request? Isn't it an overhead?
 
-The Pre-flight Request was added to the CORS Specification to allow communication with the Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
+The first time, I read about the Pre-flight request, I couldn't make much sense of the concept, why do we need an additional Request to send before the actual Request. Isn't it a overhead of making an additional request? 
+
+The Pre-flight Request was added to the CORS Specification to allow communication with the *Old* Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
 
 #### Example : Why Pre-flight request was added?
 
