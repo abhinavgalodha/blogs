@@ -27,4 +27,3 @@ D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Client\obj\Debug\net
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Client\obj\Debug\netcoreapp2.2\Client.dll
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Client\obj\Debug\netcoreapp2.2\Client.pdb
 D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Client\obj\Debug\netcoreapp2.2\Client.csproj.CopyComplete
-D:\Data\Blog\Git\blogs\2018\Drafts\CORS\Code\Server\CORSApi\Client\obj\Debug\netcoreapp2.2\Client.csprojAssemblyReference.cache

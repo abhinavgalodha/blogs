@@ -44,13 +44,13 @@ namespace Server
 
             app.UseHttpsRedirection();
 
-            // Add CORS support for localhost
-            //app.UseCors(options => options.WithOrigins("*")
-            //    .AllowAnyMethod()
-            //    .AllowAnyHeader()
-            //    .AllowCredentials());
+            //Add CORS support for localhost
 
-            app.UseMvc();
+           app.UseCors(options => options.WithOrigins("https://localhost:44343")
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+
+           app.UseMvc();
         }
     }
 }

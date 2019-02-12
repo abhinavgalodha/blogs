@@ -9,15 +9,17 @@
 <script type="text/javascript">
 
     function getCurrentServerDateTime() {
-        var apiUrl = "https://localhost:5001/api/Date";
-        var xhr = new XMLHttpRequest();
-        xhr.addEventListener("load", responseCompleted);
-        xhr.open("GET", apiUrl);
+        var xhr = new XMLHttpRequest(),
+            method = "GET",
+            url = "https://localhost:5001/api/Date";
+
+        xhr.open(method, url, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById("currentServerDateTime").innerText =  xhr.responseText;
+            }
+        };
         xhr.send();
-    }
-
-    function responseCompleted(eventData) {
-
     }
 
 </script>

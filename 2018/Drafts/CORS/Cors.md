@@ -170,9 +170,13 @@ In our Analogy, we had a Secured Apartment Community which only allowed the tena
 
 CORS specification provides a list of **Headers** values which **browser** and **server** communicate and understand to ensure that the different Origin can share resources. 
 
-*In our Analogy, this was the **Unique passes** which is basically a way to inform the security to allow and trust your friends.*
+*In our Analogy, this was the **Unique pass** which allows your friends to inform the Security that you have permission to enter into the Apartment community.*
 
 Client sends Requests to server and server responds by providing the information of the resources that are allowed and how the resources can be accessed. The Server sends the information in the Response Headers. Each Response header signifies an attribute for the resource sharing. For e.g. The header `Access-Control-Allow-Methods` specifies the list of HTTP methods (GET, POST, DELETE etc.) which are allowed by the Server.
+
+Following image shows how CORS response headers allows communication between 2 different Origin, `https://localhost:5001` & `https://localhost:44343`. A web page running at origin `https://localhost:44343` makes a request to another origin `https://localhost:5001`. By default due to same origin policy, the Ajax request is blocked to a different Origin. However, We have enabled the CORS on the API at `https://localhost:5001`. We can see the response headers include the header `Access-Control-Allow-Origin: https://localhost:44343`, which is allowing the API at `https://localhost:5001` to receive any request from Origin `https://localhost:44343`
+
+![Response Headers](Images/ResponseHeaders.png)
 
 Most of the headers are prefixed with 'Access-Control-Allow'. Few Examples are  shown below.
 
