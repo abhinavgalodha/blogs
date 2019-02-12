@@ -1,5 +1,42 @@
 # All you wanted to know about CORS
 
+- [All you wanted to know about CORS](#all-you-wanted-to-know-about-cors)
+  - [What's CORS and Adding CORS support in ASP.Net Core](#whats-cors-and-adding-cors-support-in-aspnet-core)
+  - [Introduction](#introduction)
+  - [Importance of CORS & How Microservices are shaping the modern Application development?](#importance-of-cors--how-microservices-are-shaping-the-modern-application-development)
+  - [What is CORS?](#what-is-cors)
+    - [Analogy of an Apartment Community](#analogy-of-an-apartment-community)
+    - [What is an Origin?](#what-is-an-origin)
+      - [Example of Same Origin](#example-of-same-origin)
+      - [Example of Different Origin](#example-of-different-origin)
+    - [What is meant by Same Origin Policy?](#what-is-meant-by-same-origin-policy)
+      - [Why browsers enforced Same-Origin Policy?](#why-browsers-enforced-same-origin-policy)
+        - [Example](#example)
+      - [Cross-Origin](#cross-origin)
+      - [Resource](#resource)
+      - [Sharing](#sharing)
+  - [How CORS allows to bypass the Same-Origin Policy?](#how-cors-allows-to-bypass-the-same-origin-policy)
+      - [Access-Control-Allow-Origin](#access-control-allow-origin)
+      - [Example](#example-1)
+  - [Pre-flight requests](#pre-flight-requests)
+      - [Why does browser sends an additional request in form of pre-flight request? Isn't it an overhead?](#why-does-browser-sends-an-additional-request-in-form-of-pre-flight-request-isnt-it-an-overhead)
+      - [Example : Why Pre-flight request was added?](#example--why-pre-flight-request-was-added)
+      - [What conditions Trigger a PreFlight Request?](#what-conditions-trigger-a-preflight-request)
+  - [How CORS work?](#how-cors-work)
+  - [Demo Application](#demo-application)
+    - [Server Side API - (Asp.net core)](#server-side-api---aspnet-core)
+    - [Client - (HTML Page with JS)](#client---html-page-with-js)
+  - [How to add CORS in Asp.net core](#how-to-add-cors-in-aspnet-core)
+  - [Sample Application](#sample-application)
+  - [Testing CORS is working and validating](#testing-cors-is-working-and-validating)
+  - [Configuring CORS Server](#configuring-cors-server)
+  - [Configuring CORS Client](#configuring-cors-client)
+    - [Configure CORS Policy Options](#configure-cors-policy-options)
+  - [How it actually works?](#how-it-actually-works)
+  - [Summary](#summary)
+  - [References](#references)
+
+
 ## What's CORS and Adding CORS support in ASP.Net Core
 
 This article is a first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design, understand, and troubleshoot CORS issue.
