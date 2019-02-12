@@ -14,3 +14,5 @@ artifacts/
 *.sln.ide
 /.vs
 /.vs/slnx.sqlite
+2018/Drafts/CORS/Code/Server/CORSApi/.vs/CORSApi/v15/Server/sqlite3/storage.ide-wal
+2018/Drafts/CORS/Code/Server/CORSApi/.vs/CORSApi/v15/.suo

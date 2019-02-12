@@ -103,8 +103,6 @@ CORS allows to circumvent the Same origin policy while not compromising on the s
 
 Let's break the CORS into smaller pieces to understand it better.
 
-> TODO : Images of break
-
 #### Cross-Origin
 
 Cross origin means that the **origin** of the request can be *different* from the domain that made the request. In Simple words, when a user browsing website X makes another request to website B, it is considered as Cross-Origin.
@@ -183,7 +181,7 @@ The Projects are getting popular and other websites are interested to list the p
 
 So far so good, everything is going good and Your Server Y is getting a lot of traffic from other websites.
 
-Next, A malicious user comes and tries to perform a **DELETE** operation on the URL `http://galodha.com/blogs` on Server X. The origin `http://galodha.com` already allows requests from other websites for Server Y at `http://galodha.com/Projects`. Note that the Same origin policy consider *only* the Scheme, HostName and port number, It doesn't consider the full path of the URL. So, a client can make a request to both `http://galodha.com/blogs` and `http://galodha.com/projects` as the browser thinks that both belongs to same origin.
+Next, A malicious user enters, and is using `http://anotherwebsite.com` and tries to perform a **DELETE** operation on the URL `http://galodha.com/blogs` on Server X. The origin `http://galodha.com` already allows requests from other websites for Server Y at `http://galodha.com/Projects`. Note that the Same origin policy consider *only* the Scheme, HostName and port number, It doesn't consider the full path of the URL. So, a client can make a request to both `http://galodha.com/blogs` and `http://galodha.com/projects` as the browser thinks that both belongs to same origin.
 
 Since, Server X allowed Delete operations from same Origin and It doesn't know anything about the new CORS specification, what should be the behavior for a DELETE operation on server X requested from another website/origin?
 
@@ -193,7 +191,9 @@ Yes, You are in Good luck, The CORS specification, defines the Preflight Request
 
 TODO : An actual PreFlight request.
 
-What conditions Trigger a PreFlight Request?
+#### What conditions Trigger a PreFlight Request?
+A Pre-flight request is not made for all the Requests, but is only applicable in certain cases. Following is the list of the conditions which govern if a pre-flight request is made or not.
+
 
 * When the actual request is any HTTP Method other than `GET, POST, or HEAD`.
 * If a POST request's content type is anything other than `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
