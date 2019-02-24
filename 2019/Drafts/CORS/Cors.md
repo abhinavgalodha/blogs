@@ -257,6 +257,7 @@ There are certain additional conditions which can trigger the Preflight request.
 
 
 ## References
-https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-https://stackoverflow.com/questions/15381105/cors-what-is-the-motivation-behind-introducing-preflight-requests
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS  
+* https://stackoverflow.com/questions/15381105/ 
+* cors-what-is-the-motivation-behind-introducing-preflight-requests
 
