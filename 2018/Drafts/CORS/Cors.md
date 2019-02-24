@@ -10,6 +10,8 @@
       - [Example of Same Origin](#example-of-same-origin)
       - [Example of Different Origin](#example-of-different-origin)
     - [What is meant by Same Origin Policy?](#what-is-meant-by-same-origin-policy)
+      - [Example Same Origin Allowing communication](#example-same-origin-allowing-communication)
+      - [Example Cross Origin (Different Origin) Forbidding communication.](#example-cross-origin-different-origin-forbidding-communication)
       - [Why browsers enforced Same-Origin Policy?](#why-browsers-enforced-same-origin-policy)
         - [Example](#example)
       - [Cross-Origin](#cross-origin)
@@ -118,7 +120,17 @@ Now, after gaining the understanding of Origin, let look at what exactly is the 
 
 The same-origin policy is a security measure standardized among browsers. It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery. Referring to our analogy, Same origin is like the tenants belonging to the same apartment community. You can trust a tenant in your Apartment Community, but wouldn't trust another person in other Apartment Community, unless they are your friends.
 
+#### Example Same Origin Allowing communication
+
+Following image shows the communication between client and browser in same origin. A Client browsing website `http://galodha.com` can  make the calls to `http://galodha.com/projects` API to get the data. The origin **(http://galodha.com)** is same for the client and the server and hence communication is allowed. 
+
+![](Images/ExampleSameOrigin.jpg)
+
 The same-origin policy is very restrictive. This prevents JavaScript from making requests across different Origin. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
+
+#### Example Cross Origin (Different Origin) Forbidding communication.
+![](Images/ExampleCorsNotAllowed.jpg)
+
 
 #### Why browsers enforced Same-Origin Policy?
 
@@ -162,17 +174,12 @@ In our Analogy, we had a Secured Apartment Community which only allowed the tena
 
 ![](Images/Sharing.jpg)
 
-> TODO : CORS Diagram
-> Client - Server
-> 
-
-![](Images/ExampleSameOrigin.jpg)
-![](Images/ExampleCorsNotAllowed.jpg)
-![](Images/ExampleCorsAllowed.jpg)
 
 ## How CORS allows to bypass the Same-Origin Policy?
 
 CORS specification provides a list of **Headers** values which **browser** and **server** communicate and understand to ensure that the different Origin can share resources. 
+
+![](Images/ExampleCorsAllowed.jpg)
 
 *In our Analogy, this was the **Unique pass** which allows your friends to inform the Security that you have permission to enter into the Apartment community.*
 
