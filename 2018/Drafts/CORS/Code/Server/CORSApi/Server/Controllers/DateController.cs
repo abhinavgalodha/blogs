@@ -10,9 +10,14 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class DateController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
         public ActionResult<DateTime> Get()
+        {
+            return DateTime.Now;
+        }
+
+        [HttpPut]
+        public ActionResult<DateTime> Update(DateTime dateTime)
         {
             return DateTime.Now;
         }

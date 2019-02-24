@@ -214,8 +214,8 @@ During development stage, the value can be set to `*`, meaning that Server will 
 
 #### Example
 
-A browser client from Origin, `http://galodha.com`, wants to send a request to server `https://api.github.com`. 
-Due to Same origin policy, the Client can't send the request to server.  However, when the Server responds with a response header `Access-Control-Allow-Origin: http://galodha.com` to the client, The Client Browsers allows to make a request to Origin `http://api.github.
+A browser client from Origin, `http://galodha.com`, wants to send a request to server `https://api.github.com` 
+Due to Same origin policy, the Client can't send the request to server.  However, when the Server responds with a response header `Access-Control-Allow-Origin: http://galodha.com` to the client, The Client Browsers allows to make a request to Origin `http://api.github.       
 
 ![](Images/ExampleCorsAllowed.jpg)
 
@@ -228,6 +228,10 @@ At Certain times, an additional Server Request is made by the browser  **before*
 The first time, I read about the Pre-flight request, I couldn't make much sense of the concept, why do we need an additional Request to send before the actual Request. Isn't it a overhead of making an additional request? 
 
 The Pre-flight Request was added to the CORS Specification to allow communication with the *Old* Servers which don't understand CORS and safeguard against the Potentially dangerous requests like Delete.
+
+Following screenshot from the Chrome Developer tools shows the OPTIONS Request before the actual request is made. This is the pre-flight request.
+
+![](Images/PreFlightRequest.png)
 
 #### Example : Why Pre-flight request was added?
 
@@ -249,7 +253,7 @@ Since, Server X allowed Delete operations from same Origin and It doesn't know a
 
 Yes, You are in Good luck, The CORS specification, defines the Preflight Request which does the same things as we mentioned above. The PreFlight Request makes an additional request to ensure that the Server understands the request or not. If server doesn't understand the request, then the client will not make the actual Request. However, if server understands the request, it will return the appropriate response mentioning that what it allows and then client can make the actual request.
 
-TODO : An actual PreFlight request.
+
 
 #### What conditions Trigger a PreFlight Request?
 A Pre-flight request is not made for all the Requests, but is only applicable in certain cases. Following is the list of the conditions which govern if a pre-flight request is made or not.
@@ -261,7 +265,7 @@ A Pre-flight request is not made for all the Requests, but is only applicable in
 
 There are certain additional conditions which can trigger the Preflight request. For the complete list reference the [link]( https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
 
-TODO : Check if angular js always send the Preflight request or not..
+
 
 
 ###
