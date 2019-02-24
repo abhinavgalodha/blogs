@@ -96,8 +96,6 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 
 Therefore a url like http://galodha.com, represents a Origin.
 
-<TODO : Highlight Protocol, Host and Port number in above>
-
 #### Example of Same Origin
 
 Let's consider following two Url's which belongs to same origin, http://galodha.com.
@@ -165,6 +163,12 @@ In our Analogy, we had a Secured Apartment Community which only allowed the tena
 ![](Images/Sharing.jpg)
 
 > TODO : CORS Diagram
+> Client - Server
+> 
+
+![](Images/ExampleSameOrigin.jpg)
+![](Images/ExampleCorsNotAllowed.jpg)
+![](Images/ExampleCorsAllowed.jpg)
 
 ## How CORS allows to bypass the Same-Origin Policy?
 
