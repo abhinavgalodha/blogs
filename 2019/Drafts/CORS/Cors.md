@@ -84,23 +84,23 @@ Let's take a look at what exactly is Origin. An Origin is made up of the followi
 2. **Host** : The server/domain name  
 3. **Port number** : The numeric value
 
-Therefore a url like http://galodha.com, represents a Origin.
+Therefore a url like https://galodha.com, represents a Origin.
 
 #### Example of Same Origin
 
-Let's consider following two Url's which belongs to same origin, http://galodha.com.
+Let's consider following two Url's which belongs to same origin, https://galodha.com.
 
-<http://galodha.com/image1.jpg>  
-<http://galodha.com/image2.jpg>
+<https://galodha.com/image1.jpg>  
+<https://galodha.com/image2.jpg>
 
 Above Url's are having the **same Protocol** (https), **Host** (galodha.com), and **Port Number** (80 by default for HTTP communication).
 
 #### Example of Different Origin
 
-Following are example of Origins which are having different Origin than http://galodha.com. One of the Url's is having a different protocol and other belongs to a different Host.
+Following are example of Origins which are having different Origin than https://galodha.com. One of the Url's is having a different protocol and other belongs to a different Host.
 
 <https://galodha.com/image1.jpg>  (Different protocol)  
-<http://github.com/image1.jpg>  (Different host)
+<https://github.com/image1.jpg>  (Different host)
 
 Now, after gaining the understanding of Origin, let look at what exactly is the Same-Origin Policy.
 
@@ -110,7 +110,7 @@ The same-origin policy is a security measure standardized among browsers. It pre
 
 #### Example: Same Origin Allowing communication
 
-Following image shows the communication between client and browser in same origin. A Client browsing website `http://galodha.com` can  make the calls to `http://galodha.com/projects` API to get the data. The origin **(http://galodha.com)** is same for the client and the server and hence communication is allowed. 
+Following image shows the communication between client and browser in same origin. A Client browsing website `https://galodha.com` can  make the calls to `https://galodha.com/projects` API to get the data. The origin **(https://galodha.com)** is same for the client and the server and hence communication is allowed. 
 
 ![Same origin communication allowed](Images/ExampleSameOrigin.jpg)
 
@@ -118,7 +118,7 @@ Following image shows the communication between client and browser in same origi
 
 #### Example: Cross Origin (Different Origin) Forbidding communication.
 
-Following image shows the communication between 2 different origin. Client browser is browsing website at origin, `http://galodha.com` and making ajax requests to `http://anotherwebsite.com/api/users` which is at origin `http://anotherwebsite.com. Since the client and server are at different Origin, the communication is forbidden.
+Following image shows the communication between 2 different origin. Client browser is browsing website at origin, `https://galodha.com` and making ajax requests to `https://anotherwebsite.com/api/users` which is at origin `https://anotherwebsite.com. Since the client and server are at different Origin, the communication is forbidden.
 
 ![Cross origin communication forbidden](Images/ExampleCorsNotAllowed.jpg)
 
@@ -131,7 +131,7 @@ The same Origin policy was enforced in order to prevent security attacks like CS
 
 If you are browsing a bank website and in another tab while watching your favorite video, you have an advertisement, **"You Won the  lottery"**, you are enticed by the ad and click the advertisement, it opens another window. The Advertisement is a malicious website and has ajax code to send the money from your account to Malicious site owners account. 
 
-`$.post('http://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
+`$.post('https://yourfavouriteBANK.com/transfer', { to: 'maliciousOwner', ammount: '10000000' })`,
 
  Without further security measures, this would work because authentication cookies from `yourfavouriteBANK.com` would be sent and authenticate you. All the communication from one Origin to another is possible without restriction and can lead to above attacks.
 
@@ -202,8 +202,8 @@ During development stage, the value can be set to `*`, meaning that Server will 
 
 #### Example
 
-A browser client from Origin, `http://galodha.com`, wants to send a request to server `https://api.github.com` 
-Due to Same origin policy, the Client can't send the request to server.  However, when the Server responds with a response header `Access-Control-Allow-Origin: http://galodha.com` to the client, The Client Browsers allows to make a request to Origin `http://api.github.       
+A browser client from Origin, `https://galodha.com`, wants to send a request to server `https://api.github.com` 
+Due to Same origin policy, the Client can't send the request to server.  However, when the Server responds with a response header `Access-Control-Allow-Origin: https://galodha.com` to the client, The Client Browsers allows to make a request to Origin `https://api.github.       
 
 ![](Images/ExampleCorsAllowed.jpg)
 
@@ -225,15 +225,15 @@ Following screenshot from the Chrome Developer tools shows the OPTIONS Request b
 
 Let's go back in past, and Assume a time when CORS Specification wasn't defined. **Servers were not aware of the CORS Specification**, but did understand the Same-Origin Specification and allowed requests from the Same Origin Only.
 
-A Origin like `http://galodha.com` is used by a server X for hosting blogs at `http://galodha.com/blogs`. This Server X knows about the same Origin policy and allows operation like **Delete** a blog post from the same origin.
+A Origin like `https://galodha.com` is used by a server X for hosting blogs at `https://galodha.com/blogs`. This Server X knows about the same Origin policy and allows operation like **Delete** a blog post from the same origin.
 
-Now, CORS specification is launched. A new server Y is setup to manage projects at URL `http://galodha.com/projects`. The server Y supports the Get/Post/Delete operations on projects on same origin.
+Now, CORS specification is launched. A new server Y is setup to manage projects at URL `https://galodha.com/projects`. The server Y supports the Get/Post/Delete operations on projects on same origin.
 
-The Projects are getting popular and other websites are interested to list the projects on their websites. So, you will need to allow for a Get Operation from the origin `http://galodha.com`. Also, there are open source contributors, so you need to offer the Delete operation as well from other websites/origin. Fortunately, the CORS specification has been launched and you know that by using the CORS header `Access-Control-Allow-Origin: http://anotherwebsite.com`, we can allow the requests from another website/origin. Also, using the CORS header, `Access-Control-Allow-Methods: Get, POST, Delete`, we can allow the `GET/POST/DELETE` operations from other websites.
+The Projects are getting popular and other websites are interested to list the projects on their websites. So, you will need to allow for a Get Operation from the origin `https://galodha.com`. Also, there are open source contributors, so you need to offer the Delete operation as well from other websites/origin. Fortunately, the CORS specification has been launched and you know that by using the CORS header `Access-Control-Allow-Origin: https://anotherwebsite.com`, we can allow the requests from another website/origin. Also, using the CORS header, `Access-Control-Allow-Methods: Get, POST, Delete`, we can allow the `GET/POST/DELETE` operations from other websites.
 
 So far so good, everything is going good and Your Server Y is getting a lot of traffic from other websites.
 
-Next, A malicious user enters, and is using `http://anotherwebsite.com` and tries to perform a **DELETE** operation on the URL `http://galodha.com/blogs` on Server X. The origin `http://galodha.com` already allows requests from other websites for Server Y at `http://galodha.com/Projects`. Note that the Same origin policy consider *only* the Scheme, HostName and port number, It doesn't consider the full path of the URL. So, a client can make a request to both `http://galodha.com/blogs` and `http://galodha.com/projects` as the browser thinks that both belongs to same origin.
+Next, A malicious user enters, and is using `https://anotherwebsite.com` and tries to perform a **DELETE** operation on the URL `https://galodha.com/blogs` on Server X. The origin `https://galodha.com` already allows requests from other websites for Server Y at `https://galodha.com/Projects`. Note that the Same origin policy consider *only* the Scheme, HostName and port number, It doesn't consider the full path of the URL. So, a client can make a request to both `https://galodha.com/blogs` and `https://galodha.com/projects` as the browser thinks that both belongs to same origin.
 
 Since, Server X allowed Delete operations from same Origin and It doesn't know anything about the new CORS specification, what should be the behavior for a DELETE operation on server X requested from another website/origin?
 
@@ -253,11 +253,6 @@ A Pre-flight request is not made for all the Requests, but is only applicable in
 
 There are certain additional conditions which can trigger the Preflight request. For the complete list reference the [link]( https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
 
-
-
-
 ## References
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS  
-* https://stackoverflow.com/questions/15381105/ 
-* cors-what-is-the-motivation-behind-introducing-preflight-requests
-
+* https://stackoverflow.com/questions/15381105/cors-what-is-the-motivation-behind-introducing-preflight-requests
