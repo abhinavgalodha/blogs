@@ -1,11 +1,11 @@
-# What I learned from debugging the most Downloaded Library in .net JSON.Net to diagnose my problem
+# Lessons from debugging the most Downloaded Library in .net JSON.Net to diagnose my problem.
 
 ## Introduction
 
 * Have you ever run into problem and thought about debugging a library source code to understand the actual implementation? 
 * Have you been pulling your hairs about a problem you can't understand and searched across the internet and didn't found any details for your issue?
 
-In this article, we will take dive into debugging and understand the behavior of the popular **Newtonsoft JSON** library to understand *how it deserializes a type from a string*. This is an actual problem that I faced during development and had to dig into the library code to understand the behavior. The same approach can be applied to other open source projects and would be useful to debug and understand the library code.
+In this article, we will take dive into debugging and understand the behavior of the popular **Newtonsoft JSON** library to understand *how it deserializes a type from a string*. This is an actual problem that I faced during development and had to dig into the library code to understand the behavior. The same approach can be applied to other open source projects and would be useful to debug and understand the library code. I will also share the lessons learned 
 
 
 ### Problem

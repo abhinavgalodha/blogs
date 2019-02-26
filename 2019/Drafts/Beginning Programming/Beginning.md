@@ -9,7 +9,7 @@
 
 ## Less writing on code more on whiteboard/paper
 
-## Think about real life.s
+## Think about real life scenario
 
 ##
 
