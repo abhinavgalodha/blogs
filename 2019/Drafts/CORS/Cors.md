@@ -1,7 +1,6 @@
 # All you wanted to know about CORS
 
 - [All you wanted to know about CORS](#all-you-wanted-to-know-about-cors)
-  - [What's CORS and Adding CORS support in ASP.Net Core](#whats-cors-and-adding-cors-support-in-aspnet-core)
   - [Introduction](#introduction)
   - [Importance of CORS & How Microservices are shaping the modern Application development?](#importance-of-cors--how-microservices-are-shaping-the-modern-application-development)
   - [What is CORS?](#what-is-cors)
@@ -26,8 +25,6 @@
       - [What conditions Trigger a PreFlight Request?](#what-conditions-trigger-a-preflight-request)
   - [References](#references)
 
-
-## What's CORS and Adding CORS support in ASP.Net Core
 
 This article is the first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design, understand, and troubleshoot CORS issue.
 
