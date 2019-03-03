@@ -23,12 +23,13 @@
       - [Why does the browser send an additional request in form of a pre-flight request? Isn't it an overhead?](#why-does-the-browser-send-an-additional-request-in-form-of-a-pre-flight-request-isnt-it-an-overhead)
       - [Example : Why Pre-flight request was added?](#example--why-pre-flight-request-was-added)
       - [What conditions Trigger a PreFlight Request?](#what-conditions-trigger-a-preflight-request)
+  - [Conclusion](#conclusion)
   - [References](#references)
 
 
 This article is the first part in a series of two articles for CORS. This part provides an introduction to CORS which will help you grasp the CORS Concept in an effortless way and allow you to better design, understand, and troubleshoot CORS issue.
 
-In the next part, we will go into further details and apply  the knowledge learned in the first part to build a Client & Server application which can communicate using CORS. The link would be added for the second part once available.
+In the next part, we will go into further details, write code and apply  the knowledge learned in the first part to build a Client & Server application which can communicate using CORS. The link would be added for the second part once available.
 
 
 ## Introduction
@@ -40,7 +41,7 @@ In the next part, we will go into further details and apply  the knowledge learn
 
 ![Client error](Images/ClientError.png)
 
- This article is will provide a **simplistic** explanation of CORS using real-world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe *how to add* the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
+ This article will provide a **simplistic** explanation of CORS using real-world analogy. We will go into the details of what you need to understand & troubleshoot CORS Issue. The article will also describe *how to add* the CORS support in an Asp.net core web API to enable multiple clients in different domains to interact with the API. Later, we will demonstrate an interaction between a static webpage accessing an API on a different origin.
 
 ## Importance of CORS & How Microservices are shaping the modern Application development?
 
@@ -103,13 +104,14 @@ Now, after gaining the understanding of Origin, let look at what exactly is the 
 
 ### What is meant by Same Origin Policy?
 
-The same-origin policy is a security measure standardized among browsers. It prevents different origins from interacting with each other, to prevent attacks such as Cross-Site Request Forgery. Referring to our analogy, the Same origin is like the tenants belonging to the same apartment community. You can trust a tenant in your Apartment Community, but wouldn't trust another person in other Apartment Community, unless they are your friends.
+The same-origin policy is a **security measure standardized among browsers**. *It prevents different origins from interacting with each other*, to prevent attacks such as Cross-Site Request Forgery. Referring to our analogy, the Same origin is like the tenants belonging to the same apartment community. You can trust a tenant in your Apartment Community, but wouldn't trust another person in other Apartment Community, unless they are your friends.
 
 #### Example: The Same Origin Allowing communication
 
 Following image shows the communication between client and browser in the same origin. A Client browsing website `https://galodha.com` can  make the calls to `https://galodha.com/projects` API to get the data. The origin **(https://galodha.com)** is same for the client and the server and hence communication is allowed. 
 
 ![Same origin communication allowed](Images/ExampleSameOrigin.jpg)
+Sharing resources
 
 **The same-origin policy is very restrictive.** This prevents JavaScript from making requests across different Origin. Although the same-origin policy is effective in preventing resources from different origins, it also prevents legitimate interactions between a server and clients of a known and trusted origin.
 
@@ -250,6 +252,14 @@ A Pre-flight request is not made for all the Requests, but is only applicable in
 
 There are certain additional conditions which can trigger the Preflight request. For the complete list reference the [link]( https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
 
+## Conclusion
+
+We gained a better understanding of the Origin, What makes and Origin (Scheme, Host and Port Number). Why browser enforced Same origin Policy and how CORS Specification allows the communication between different Origin. We looked at various CORS Headers which Server needs to send to the client to allow the communication. I hope the analogy of the Apartment Community was helpful to understand the security concern and how the Security Pass help us get around it. Lastly, we covered the Pre-Flight requests which might be confusing the first time you see the request popped up in the network Toolbar.
+
+I hope you have a better understanding of CORS now and can easily sneak in your friends into your secure Apartment Community. All thanks to CORS. In the next article, we will take a look at the code that needs to be added at the Server side and also take a look at a simple Javascript client which will communicate over a different Origin.
+
+
 ## References
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS  
 * https://stackoverflow.com/questions/15381105/cors-what-is-the-motivation-behind-introducing-preflight-requests
+* https://enable-cors.org/
