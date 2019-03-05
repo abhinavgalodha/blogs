@@ -41,9 +41,11 @@ To keep this article simple, we will create an Asp.net core API Project and depl
 
 ![](Images/1VisualStudioNewProject.png)
 
-This is how our file structure looks in Visual studio. It has one controller, ValuesController. We will use the et method on the values controller to validate the deployment.
+This is how our file structure looks in Visual studio. It has one controller, ValuesController. We will use the Http GET method on the values controller to validate the deployment.
 
 ![](Images/2VSProjectStructure.png) 
+
+Let's take a look at the various deployment options as mentioned above.
 
 ### Self Contained Deployment (SCD)
 
@@ -51,7 +53,13 @@ We will deploy our application as SCD, so we need to publish our application in 
 
 #### Publish using Visual Studio
 
+Right click on the API/Web Project and you will see an option of Publish as shown below. 
 
+![](Images/VSPublishOption.png)
+
+Clicking on the publish option open a new dialog as shown below. This dialog provides various options to deploy. Again, to keep the article simple, 
+
+![](Images/VSPublishOption1.png)
 
 #### Publish using command line/ Dotnet cli
 
