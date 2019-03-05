@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this article, we will do a step by step setup of an Asp.Net core Application in IIS. The Web Site/Web API will reside in IIS and can leverage the existing functionality of the IIS.We will take a look into various options of Deploying an Asp.net core application like Self Contained Deployment and Framework Dependent Deployments.
+In this article, we will do a step by step setup of an Asp.Net core Application in IIS. The Web Site/Web API will reside in IIS and can leverage the existing functionality of the IIS.We will take a look into various options of Deploying an Asp.net core application like Self Contained Deployment and Framework Dependent Deployments. I would be using Visual Studio 2019 Preview and Asp.net core 2.2 SDK. If your VS or .net SDK version is different, there might be subtle difference in the steps but majority of steps should remain the same.
 
 ## Why Host in IIS
 
@@ -21,25 +21,39 @@ The first step is to create Artifacts/outputs for our Application. We need to co
 * Self Contained Deployment (SCD)
   * Ships the entire Asp.net core runtime and the application together in Same Folder.
   * Allows side by side versioning allowing multiple versions of the Asp.net core runtime to be used on the same machine.
+  * Need to specify the Target machine runtime.
   * Artifact size is bigger.
   
 * Framework Dependent Deployment (FDD)
   * Requires the Asp.net core runtime to be installed on the machine.
   * Artifacts size is smaller.
   * Doesn't allow multiple version of the .net core runtime to be installed.
+  * Same Deployed package can be run on multiple machine as there is no limitation to specify the target machine runtime identifier.
 
 You will need to decide which deployment mode works for you. For more information, refer here
-<ToDO> Ms docs link
+<ToDO> Ms docs link. 
 
+### Code and Project Setup
 
+To keep this article simple, we will create an Asp.net core API Project and deploy it to the IIS. I will not make any changes to the code as created by the default template as our focus is on the deployment.
 
+##### Create new Project in Visual Studio
 
+![](Images/1VisualStudioNewProject.png)
 
+This is how our file structure looks in Visual studio. It has one controller, ValuesController. We will use the et method on the values controller to validate the deployment.
+
+![](Images/2VSProjectStructure.png) 
+
+### Self Contained Deployment (SCD)
+
+We will deploy our application as SCD, so we need to publish our application in the Self Contained deployment mode which would bundle the application and the Asp.net core Runtime. We can either publish using the Visual Studio or Dotnet CLI. Next, let's take a look at each option.
 
 #### Publish using Visual Studio
 
 
-#### Publish using command line
+
+#### Publish using command line/ Dotnet cli
 
 
 
