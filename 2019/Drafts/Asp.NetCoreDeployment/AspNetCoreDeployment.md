@@ -57,23 +57,49 @@ Right click on the API/Web Project and you will see an option of Publish as show
 
 ![](Images/VSPublishOption.png)
 
-Clicking on the publish option open a new dialog as shown below. This dialog provides various options to deploy. Again, to keep the article simple, 
+Clicking on the publish option open a new dialog as shown below. This dialog provides various options to deploy. Again, to keep the article simple, we will publish the application to a Folder.
 
 ![](Images/VSPublishOption1.png)
 
+Let's take a look at the default values for the publish option.
+Click on the **Advanced** link. It would open up the following dialog
+
+![](Images/VSPublishOptionSCD.png)
+
+Take a look at the Deployment Mode DropDown, it has 2 options, one for the Self contained Deployment and the other for the Framework dependent Deployment. Also, note that the Target Runtime needs to be selected as per the machine configuration where the code needs to be deployed. If you have worked previously with the Asp.net core deployments, then you will find these as new options.
+
+Click on Save, and then Publish. The publish button would publish the application to the selected folder. The contents of the publish folder would be used to deploy the application into IIS.
+
+![](Images/VSPublishOption3.png)
+
+
 #### Publish using command line/ Dotnet cli
 
+Dotnet Command line interface (CLI) is a powerful way to automate the workflow, and I will show you how to publish the application using the dotnet cli. We need to make use of the `publish` command to deploy the application, other flags needs to be added depending on the configuration you opt for.
 
+`dotnet publish <APIProjectPath> -c Staging --self-contained true -o <OutputFolderName> -r win-x64 /p:EnvironmentName=Staging`
 
 ### Pros and Cons
 
+Now, we have the content ready for the Deployment, let's move the server where we will be deploying the application. 
+
 ## Installation on the IIS Server
+
 
 ### Hosting Bundle
 
+Asp.net core hosting bundle install the following 2 things
+
+* Asp.net core runtime
+* Asp.net core HTTP Module
+
 #### VC Runtime
 
+The asp.net core hosting bundle requires VC++ Runtime. If the server you are installing doesn't have the internet access.
+
 ### Application Pool
+
+
 
 ### Website setup and Mapping
 
