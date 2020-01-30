@@ -12,6 +12,14 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Application Development
 * Machine Learning
 
+## Programming methodologies
+
+* Functional
+* Reactive
+* Object Oriented (OOPS)
+* Procedural
+* Aspect Oriented code
+
 # Programming Languages
 
 * C#  
@@ -248,3 +256,8 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 
 * HTTPS
 * HP Fortify Scan
+
+
+## Messaging/Queue
+
+* TIbco EMS
