@@ -48,48 +48,32 @@ public void WhenStringContainsBackSlash\_ThenSplit()
 
 Seems easy.
 
-**If you expected the test to pass, then you have made the same mistake that I did. The above test fails.**
+**If you expected the test to pass, then you have made the same mistake that I did. The above test fails.**  If you were correct to guess then you probably have a good understanding of the problem and well done, pat your back.
 
-If you were correct to guess then you probably have a good understanding of the problem and well done, pat your back.
-
-The above code was shared from another co-worker and the first time I saw, I thought this should be an easy fix. After all, the string manipulation shouldn&#39;t be difficult.
-
+The above code was shared from another co-worker and the first time I saw, I thought this should be an easy fix. After all, the string manipulation shouldn&#39;t be difficult. 
 I have been working in C# for more than a decade, and at first sight, the code above looked obvious to me and should have worked.
 
-When I saw the failing tests, I was in a surprise.
-
-Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github repository
+When I saw the failing tests, I was in a surprise. Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github repository
 
 ## Steps to troubleshoot
 
-1\. A well-Designed system provides clear instructions for unexpected behavior.
-
-I am using Xunit and it provides a descriptive error message which eases further troubleshooting. In the Failed test description, the actual value is 1. However, the expected value was 2.
-
-It means no exception was thrown, and the Split didn&#39;t work as expected.
+1\. A well-Designed system provides clear instructions for unexpected behavior. I am using Xunit and it provides a descriptive error message which eases further troubleshooting. In the Failed test description, the actual value is 1. However, the expected value was 2. It means no exception was thrown, and the Split didn&#39;t work as expected.
 
 ![Test Results window](Images/01TestResults.jpg)
 
-2\. Trusting my instincts I quickly scan the code and see if any mistakes in the code.
+2\. Trusting my instincts I quickly scan the code and see if any mistakes in the code. The split symbol looks fine. But the test failed.
 
-The split symbol looks fine. But the test failed.
+3\. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening. 
 
-3\. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening.
-
-First, we will look at the variable `givenString`, the debugger shows the value correctly.
-
-Then I need to check the splittedArray. The split operation is not throwing an exception, but the Split operation returns the original string. Wait, what happened, The Split function is
+First, we will look at the variable `givenString`, the debugger shows the value correctly.Then I need to check the splittedArray. The split operation is not throwing an exception, but the Split operatio n returns the original string. Wait, what happened, The Split function is
 
 Not working as expected.  This helps us to narrow down the problem, it seems the problem with the `Split` function. Bare eyes, the code looks fine and the split should have worked.
 
 ![String during debugging](Images/02_DebugString.jpg)
 
+In the string visualizer, the strange character is shown something. Something fishy. The `\v` is not appearing in a string visualizer and a box-like character is displayed instead. This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
 
-In the string visualizer, the strange character is shown something. Something fishy. The `\v` is not appearing in a string visualizer and a box-like character is displayed instead.
-
-This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
-
- ![Text Visualizer](Images/03_TextVisualizer.jpg)
+![Text Visualizer](Images/03_TextVisualizer.jpg)
 
 4\. Focus the attention on the Strings.
 
@@ -99,8 +83,7 @@ C# strings are stored as UTF-16 and represented as Char array. The split functio
 
 To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually
 
-Is the character representation of the String. I will use the ToCharArray method of the String class. Visual Studio debuggerextremely helpful and provides the Unicode values
-
+Is the character representation of the String. I will use the ToCharArray method of the String class. Visual Studio debuggerextremely helpful and provides the Unicode values.
 Along with the character representation.  The following screenshot provides the output of the `ToCharArray` function.
 
  ![Immediate Window](Images/04_ImmediateWindow.jpg)
@@ -191,4 +174,4 @@ We need to be open to trying alternative solutions and leverage Tools to find ou
 ##### References
 
 [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
-[**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
+Y[**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
