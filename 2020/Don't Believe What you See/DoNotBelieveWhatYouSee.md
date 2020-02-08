@@ -1,9 +1,5 @@
 # Don&#39;t believe what you see
 
-Thursday, January 30, 2020
-
-5:49 PM
-
 ### Version History
 
 | S.No. | Date | Changes | Effort |
@@ -13,18 +9,12 @@ Thursday, January 30, 2020
 | 3 | 2/1/2020 | Modified Purpose | 30 mins |
 | 4 | 2/4/2020 | Added Fixes and Philosophical Reflections | 60 mins |
 | 5 | 2/6/2020 | Conclusion, Grammarly check, ProofReading | 150 mins |
-| 6 | 2/7/2020 | Added Code | 20 mins |
-
-##
-
-##
+| 6 | 2/7/2020 | Added Code project | 30 mins |
+| 7 | 2/7/2020 | Added Markdown | 30 mins |
 
 ## Tags
 
-| Unicode | Editor | Tools | Debugging | Visual studio | ReSharper |   |   |   |   |   |   |   |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-##
+| Unicode | Editor | Tools | Debugging | Visual studio | ReSharper | 
 
 ## Purpose
 
@@ -41,7 +31,7 @@ You might be just thinking that is the easiest thing to do and maybe the second 
 
 Please take a look at the following code and suggest if the test will pass or fail?
 
-`
+```
 [Fact]
 public void WhenStringContainsBackSlash\_ThenSplit()
 {
@@ -54,7 +44,8 @@ public void WhenStringContainsBackSlash\_ThenSplit()
     // Assert
     Assert.Equal(2, splittedArray.Length);
 }
-`
+```
+
 Seems easy.
 
 **If you expected the test to pass, then you have made the same mistake that I did. The above test fails.**
@@ -77,14 +68,13 @@ I am using Xunit and it provides a descriptive error message which eases further
 
 It means no exception was thrown, and the Split didn&#39;t work as expected.
 
-![](Images/01TestResults.jpg)
+![Test Results window](Images/01TestResults.jpg)
 
 2. Trusting my instincts I quickly scan the code and see if any mistakes in the code.
 
 The split symbol looks fine. But the test failed.
 
-
-1. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening.
+3. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening.
 
 First, we will look at the variable `givenString`, the debugger shows the value correctly.
 
@@ -92,28 +82,28 @@ Then I need to check the splittedArray. The split operation is not throwing an e
 
 Not working as expected.  This helps us to narrow down the problem, it seems the problem with the `Split` function. Bare eyes, the code looks fine and the split should have worked.
 
- ![](Images/02_DebugString.jpg)
+![String during debugging](Images/02_DebugString.jpg)
 
 
 In the string visualizer, the strange character is shown something. Something fishy. The `\v` is not appearing in a string visualizer and a box-like character is displayed instead.
 
 This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
 
- ![](Images/03_TextVisualizer.jpg)
+ ![Text Visualizer](Images/03_TextVisualizer.jpg)
 
 1. Focus the attention on the Strings.
 
-      What is the String `Split` operation doing?
+What is the String `Split` operation doing?
 
-      C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Split character in the string and then starts splitting.
+C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Spcharacter in the string and then starts splitting.
 
-      To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to the Immediate window in Visual Studio and check what actually
+To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually
 
-      Is the character representation of the String. I will use the ToCharArray method of the String class. Visual Studio debugger is extremely helpful and provides the Unicode values
+Is the character representation of the String. I will use the ToCharArray method of the String class. Visual Studio debuggerextremely helpful and provides the Unicode values
 
-      Along with the character representation.  The following screenshot provides the output of the `ToCharArray` function.
+Along with the character representation.  The following screenshot provides the output of the `ToCharArray` function.
 
- ![](Images/04_ImmediateWindow.jpg)
+ ![Immediate Window](Images/04_ImmediateWindow.jpg)
 
 Interesting to note that the 7th index of the array is the char &#39;\v` with a Unicode value of 11. We were expecting 7th char to be backslash, `\` and 8th char to be `v`. At this time
 
@@ -149,21 +139,21 @@ I will add the @symbol at the beginning of the string.
 
 This would make a verbatim string. A verbatim string provides a way to write a string representation in the code without adding any escape sequence inside the string itself. This maintains the readability of the code.
 
-`
+```
 [Fact]
 
-        public void WhenStringContainsBackSlash\_ThenSplit\_Working()
-        {
-            // Arrange
-            var givenString = @&quot;Company\vendorid&quot;;
+    public void WhenStringContainsBackSlash\_ThenSplit\_Working()
+    {
+        // Arrange
+        var givenString = @&quot;Company\vendorid&quot;;
 
-            // Act
-            var splittedArray = givenString.Split(@&quot;\&quot;);
+        // Act
+        var splittedArray = givenString.Split(@&quot;\&quot;);
 
-            // Assert
-            Assert.Equal(2, splittedArray.Length);
-        }
-'
+        // Assert
+        Assert.Equal(2, splittedArray.Length);
+    }
+```
 
 1. Escape Character
 
@@ -180,9 +170,7 @@ I have been using Resharper for a long time. Resharper has a feature where it Ca
 
 So, to summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
 
- ![](Images/05_Resharper.jpg)
-
-
+ ![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
 
 ## Philosophical Reflections
 
