@@ -63,15 +63,15 @@ When I saw the failing tests, I was in a surprise. Let&#39;s look at the steps I
 
 2\. Trusting my instincts I quickly scan the code and see if any mistakes in the code. The split symbol looks fine. But the test failed.
 
-3\. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening. 
+3\. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and helps find out what is happening. 
 
-First, we will look at the variable `givenString`, the debugger shows the value correctly.Then I need to check the splittedArray. The split operation is not throwing an exception, but the Split operatio n returns the original string. Wait, what happened, The Split function is
-
-Not working as expected.  This helps us to narrow down the problem, it seems the problem with the `Split` function. Bare eyes, the code looks fine and the split should have worked.
+First, we will look at the variable `givenString`, the debugger shows the value correctly as shown in below image.
 
 ![String during debugging](Images/02_DebugString.jpg)
 
-In the string visualizer, the strange character is shown something. Something fishy. The `\v` is not appearing in a string visualizer and a box-like character is displayed instead. This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
+Then I need to check the splittedArray. The split operation is not throwing an exception, but the Split operation returns the original string. Wait, what happened, The Split function is Not working as expected.  This helps us to narrow down the problem, it seems the problem with the `Split` function. Bare eyes, the code looks fine and the split should have worked.
+
+I will check the string value in the String Visualizer in the Visual Studio.The `\v` is not appearing in a string visualizer and a box-like character is displayed instead as shown in below image. This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
 
 ![Text Visualizer](Images/03_TextVisualizer.jpg)
 
@@ -79,16 +79,14 @@ In the string visualizer, the strange character is shown something. Something fi
 
 What is the String `Split` operation doing?
 
-C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Spcharacter in the string and then starts splitting.
+C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Split character in the string and then starts splitting.
 
-To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually
-
-Is the character representation of the String. I will use the ToCharArray method of the String class. Visual Studio debuggerextremely helpful and provides the Unicode values.
-Along with the character representation.  The following screenshot provides the output of the `ToCharArray` function.
+To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually is the character representation of the String. I will use the `ToCharArray` method of the `String` class. Visual Studio debugger is extremely helpful and provides the character values along with their Unicode values.
+The following screenshot provides the output of the `ToCharArray` function.
 
  ![Immediate Window](Images/04_ImmediateWindow.jpg)
 
-Interesting to note that the 7th index of the array is the char &#39;\v` with a Unicode value of 11. We were expecting 7th char to be backslash, `\` and 8th char to be `v`. At this time
+Interesting to note that the 7th index of the array is the char `\v` with a Unicode value of 11. We were expecting 7th char to be backslash, `\` and 8th char to be `v`. 
 
 Looking at the backslash, the escape bells start ringing in my head. Just kicking myself, why I didn&#39;t look at the escape character.
 
@@ -96,25 +94,23 @@ Looking at the backslash, the escape bells start ringing in my head. Just kickin
 
 Wohoo... We found the issue.
 
-6\. Let&#39;s check why is the `\v` is not represented as 2 characters and is recognized as a single character.Some searching and a few minutes later, I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.
+6\. Let&#39;s check why is the `\v` is not represented as 2 characters which we were expecting and is recognized as a single character. Some searching and a few minutes later, I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.
 
-I can find the documentation source for C# mentioning the escape sequence.  [https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
+I can find the documentation [source](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/) for C# mentioning the escape sequence.
 
-As earlier mentioned, I had been working with C# for more than a decade, but I must confess, I didn&#39;t have the slightest idea about the `\v`. I definitely would have read this in my younger years when I was learning C#, but after so many years, I didn&#39;t have any idea.
+I had been working with C# for more than a decade, but I must confess, I didn&#39;t have the slightest idea about the `\v`. I definitely would have read this in my younger years when I was learning C#, but after so many years, I didn&#39;t have any idea.
 
-The most satisfying &amp; time-consuming part of any problem is finding the root cause. The solutions/fix are always less time consuming and mostly straightforward. Let&#39;s look at the fix for the problem.
+Finding the root cause of a problem is the most satisfying experience. The investigation might take time, however the solution/fix is generally less time consuming. Let&#39;s look at the fix for the problem.
 
 ## Fix
 
-The `\v` was an escape sequence and is a special symbol that needs to be escaped.
-
-I will explain 2 possible fixes for the problem
+The `\v` was an escape sequence and is a special symbol that needs to be escaped.I will explain 2 possible fixes for the problem
 
 ### 1. Verbatim String
 
 I will add the @symbol at the beginning of the string.
 
-This would make a verbatim string. A verbatim string provides a way to write a string representation in the code without adding any escape sequence inside the string itself. This maintains the readability of the code.
+This would make a **verbatim** string. *A verbatim string provides a way to write a string representation in the code without adding any escape sequence inside the string itself. This maintains the readability of the code.*
 
 ```
 [Fact]
@@ -140,10 +136,10 @@ var givenString = &quot;Company\\vendorid&quot;;
 
 ## Tools
 
-Another significant thing I want to mention is the use of Development tools.
-I consider software development as a craft, similar to an artist. If a Craftsman has access to better tools, then they can build better things and do a better job. Similarly, as software craftsmen, we need to have good tools in our toolbox.
+Another significant thing I want to mention is the use of **Development tools**.
+I consider software development as a **craft**, similar to an artist. **If a Craftsman has access to better tools, then they can build better things and do a better job. Similarly, as software craftsmen, we need to have good tools in our toolbox.**
 
-I have been using Resharper for a long time. Resharper has a feature where it Can show the escape character/sequences with a different color code. This should have been my first hint and should have prompted me to think about handling the string.
+I have been using Resharper for a long time. Resharper has a feature where it can show the **escape character/sequences with a different color code**. This should have been my first hint and should have prompted me to think about handling the string.
 
 So, to summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
 
@@ -174,4 +170,4 @@ We need to be open to trying alternative solutions and leverage Tools to find ou
 ##### References
 
 [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
-Y[**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
+[**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
