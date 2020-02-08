@@ -97,7 +97,7 @@ Above Url's are having the **same Protocol** (https), **Host** (galodha.com), an
 
 Following are the example of Origins which are having different Origin than https://galodha.com. One of the Url's is having a different protocol and other belongs to a different Host.
 
-<https://galodha.com/image1.jpg>  (Different protocol)  
+<http://galodha.com/image1.jpg>  (Different protocol)  
 <https://github.com/image1.jpg>  (Different host)
 
 Now, after gaining the understanding of Origin, let look at what exactly is the Same-Origin Policy.
