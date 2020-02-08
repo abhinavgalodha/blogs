@@ -62,7 +62,7 @@ Let&#39;s look at the steps I followed to troubleshoot the problem. If you want 
 
 ## Steps to troubleshoot
 
-1. A well-Designed system provides clear instructions for unexpected behavior.
+1\. A well-Designed system provides clear instructions for unexpected behavior.
 
 I am using Xunit and it provides a descriptive error message which eases further troubleshooting. In the Failed test description, the actual value is 1. However, the expected value was 2.
 
@@ -70,11 +70,11 @@ It means no exception was thrown, and the Split didn&#39;t work as expected.
 
 ![Test Results window](Images/01TestResults.jpg)
 
-2. Trusting my instincts I quickly scan the code and see if any mistakes in the code.
+2\. Trusting my instincts I quickly scan the code and see if any mistakes in the code.
 
 The split symbol looks fine. But the test failed.
 
-3. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening.
+3\. No clue, Let&#39;s use  Visual studio to rescue and debug the code. Visual studio provides a smooth debugging experience and find out what is happening.
 
 First, we will look at the variable `givenString`, the debugger shows the value correctly.
 
@@ -91,7 +91,7 @@ This gives us a hint that the `\v` is not treated as literal characters `\` &amp
 
  ![Text Visualizer](Images/03_TextVisualizer.jpg)
 
-1. Focus the attention on the Strings.
+4\. Focus the attention on the Strings.
 
 What is the String `Split` operation doing?
 
@@ -109,23 +109,17 @@ Interesting to note that the 7th index of the array is the char &#39;\v` with a 
 
 Looking at the backslash, the escape bells start ringing in my head. Just kicking myself, why I didn&#39;t look at the escape character.
 
-1. From the above step, we can logically conclude what&#39;s going on. The Split function is not able to find the `\` in the string and hence the string split function is not working.
+5\. From the above step, we can logically conclude what&#39;s going on. The Split function is not able to find the `\` in the string and hence the string split function is not working.
 
 Wohoo... We found the issue.
 
-1. Let&#39;s check why is the `\v` is not represented as 2 characters and is recognized as a single character.
-
-Some searching and a few minutes later, I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.
+6\. Let&#39;s check why is the `\v` is not represented as 2 characters and is recognized as a single character.Some searching and a few minutes later, I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.
 
 I can find the documentation source for C# mentioning the escape sequence.  [https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
 
-As earlier mentioned, I had been working with C# for more than a decade, but I must confess, I didn&#39;t have the slightest idea about the `\v`.
+As earlier mentioned, I had been working with C# for more than a decade, but I must confess, I didn&#39;t have the slightest idea about the `\v`. I definitely would have read this in my younger years when I was learning C#, but after so many years, I didn&#39;t have any idea.
 
-I definitely would have read this in my younger years when I was learning C#, but after so many years, I didn&#39;t have any idea.
-
-The most satisfying &amp; time-consuming part of any problem is finding the root cause. The solutions/fix are always less time consuming and mostly straightforward.
-
-Let&#39;s look at the fix for the problem.
+The most satisfying &amp; time-consuming part of any problem is finding the root cause. The solutions/fix are always less time consuming and mostly straightforward. Let&#39;s look at the fix for the problem.
 
 ## Fix
 
@@ -133,7 +127,7 @@ The `\v` was an escape sequence and is a special symbol that needs to be escaped
 
 I will explain 2 possible fixes for the problem
 
-1. Verbatim String
+### 1. Verbatim String
 
 I will add the @symbol at the beginning of the string.
 
@@ -155,7 +149,7 @@ This would make a verbatim string. A verbatim string provides a way to write a s
     }
 ```
 
-1. Escape Character
+### 2. Escape Character
 
 Another solution is to add the escape character `\` at the beginning of the `\v`.
 
@@ -170,7 +164,7 @@ I have been using Resharper for a long time. Resharper has a feature where it Ca
 
 So, to summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
 
- ![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
+![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
 
 ## Philosophical Reflections
 
@@ -197,5 +191,4 @@ We need to be open to trying alternative solutions and leverage Tools to find ou
 ##### References
 
 [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
-
 [**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
