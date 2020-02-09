@@ -33,7 +33,7 @@ Please take a look at the following code and suggest if the test will pass or fa
 
 ```
 [Fact]
-public void WhenStringContainsBackSlash\_ThenSplit()
+public void WhenStringContainsBackSlash_ThenSplit()
 {
     // Arrange
     var givenString = "Company\vendorid";;
@@ -104,21 +104,21 @@ Finding the root cause of a problem is the most satisfying experience. The inves
 
 ## Fix
 
-The `\v` is an escape sequence and is a special symbol that needs to be escaped.I will explain 2 possible fixes for the problem
+The `\v` is an **escape sequence** and is a special symbol that needs to be escaped.I will explain 2 possible fixes for the problem
 
 ### 1. Verbatim String
 
-I will add the @symbol at the beginning of the string.
+I will add the **`@`** symbol at the beginning of the string.
 
-This would make a **verbatim** string. *A verbatim string provides a way to write a string representation in the code without adding any escape sequence inside the string itself. This maintains the readability of the code.*
+This would make a **verbatim** string. *A verbatim string provides a way to write a string representation in the code without adding any escape sequence inside the string itself. This maintains the readability of the code.* Following code example shows 
 
 ```
 [Fact]
 
-    public void WhenStringContainsBackSlash\_ThenSplit\_Working()
+    public void WhenStringContainsBackSlash_ThenSplit_Working()
     {
         // Arrange
-        var givenString = "Company\vendorid";;
+        var givenString = @"Company\vendorid";;
 
         // Act
         var splittedArray = givenString.Split("\");
