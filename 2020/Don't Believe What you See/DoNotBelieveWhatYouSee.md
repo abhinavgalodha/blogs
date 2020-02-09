@@ -132,7 +132,7 @@ This would make a **verbatim** string. *A verbatim string provides a way to writ
 
 Another solution is to add the escape character `\` at the beginning of the `\v`.
 
-var givenString = &quot;Company\\vendorid&quot;;
+`var givenString = "Company\\vendorid"`
 
 ## Tools
 
@@ -141,7 +141,7 @@ I consider software development as a **craft**, similar to an artist. **If a Cra
 
 I have been using Resharper for a long time. Resharper has a feature where it can show the **escape character/sequences with a different color code**. This should have been my first hint and should have prompted me to think about handling the string.
 
-So, to summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
+>To summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
 
 ![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
 
