@@ -147,17 +147,15 @@ I have been using Resharper for a long time. Resharper has a feature where it ca
 
 ## Philosophical Reflections
 
-Based on previous experience with similar kinds of problems and contemplation, I decided to Choose the Title as &quot;Don&#39;t believe what you see&quot;. I wanted to highlight the point that certain things that appear apparent at first sight might not work in an obvious way. Something which looks very easy, might not be that simple. Though, this kind of problem can be categorized as a corner case. However, as a software developer, we need to ensure our code works in all scenarios.
+Based on previous experience with similar kinds of problems and contemplation, I decided to Choose the Title as &quot;Don&#39;t believe what you see&quot;. **I wanted to highlight the point that certain things that appear apparent at first sight might not work in an obvious way. Something which looks very easy, might not be that simple.** Though, this kind of problem can be categorized as a corner case. However, as a software developer, we need to ensure our code works in all scenarios.
 
 I would also like to take another analogy of the Electromagnetic (EM) waves, The electromagnetic waves include the Radio waves, microwaves, infrared, Visible Light, X-Ray, &amp; Gamma rays. Human eyes can only perceive the Visible light waves, but it doesn&#39;t mean other EM waves don&#39;t exist. To detect an X-Rays, we have an X-Ray Detector. Similarly, in Software development,
 
-Our eyes can skim/scan the code for certain issues, but we might need to use other specialized tools to detect other problems. Better we aware of the tools and Sharpen your saw.
+>Our eyes can skim/scan the code for certain issues, but we might need to use other specialized tools to detect other problems. Better we aware of the tools and Sharpen your saw.
 
 ## Related Problems Category
 
-This article wouldn&#39;t be complete if I didn&#39;t mention some recent similar problems I have faced. The underlying cause of the problem are different, however they share the same
-
-Trait of seeming simple and easy but not simple. The code for these problems is also listed along with the other code in the Github repository.
+This article wouldn&#39;t be complete if I didn&#39;t mention some recent similar problems I have faced. The underlying cause of the problem are different, however they share the same trait of seeming simple and easy but not simple. The code for these problems is also listed along with the other code in the Github repository.
 
 * Another similar problem I have seen is Comparing 2 characters which appear same but aren&#39;t. Sometimes, you might get a content from another source and
 * `Assert.Equal(0.3, 0.1 + 0.1 + 0.1);`  The Assertion fails, I will let you explore the reason, but again seems obviously true, but isn&#39;t.
@@ -169,5 +167,5 @@ We need to be open to trying alternative solutions and leverage Tools to find ou
 
 ##### References
 
-[https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)
+[https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)  
 [**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
