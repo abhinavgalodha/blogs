@@ -36,10 +36,10 @@ Please take a look at the following code and suggest if the test will pass or fa
 public void WhenStringContainsBackSlash\_ThenSplit()
 {
     // Arrange
-    var givenString = &quot;Company\vendorid&quot;;
+    var givenString = "Company\vendorid";;
 
     // Act
-    var splittedArray = givenString.Split(@&quot;\&quot;);
+    var splittedArray = givenString.Split("\");
 
     // Assert
     Assert.Equal(2, splittedArray.Length);
@@ -104,7 +104,7 @@ Finding the root cause of a problem is the most satisfying experience. The inves
 
 ## Fix
 
-The `\v` was an escape sequence and is a special symbol that needs to be escaped.I will explain 2 possible fixes for the problem
+The `\v` is an escape sequence and is a special symbol that needs to be escaped.I will explain 2 possible fixes for the problem
 
 ### 1. Verbatim String
 
@@ -118,10 +118,10 @@ This would make a **verbatim** string. *A verbatim string provides a way to writ
     public void WhenStringContainsBackSlash\_ThenSplit\_Working()
     {
         // Arrange
-        var givenString = @&quot;Company\vendorid&quot;;
+        var givenString = "Company\vendorid";;
 
         // Act
-        var splittedArray = givenString.Split(@&quot;\&quot;);
+        var splittedArray = givenString.Split("\");
 
         // Assert
         Assert.Equal(2, splittedArray.Length);
