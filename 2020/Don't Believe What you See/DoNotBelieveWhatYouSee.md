@@ -23,6 +23,8 @@ However, if you understand the root cause, you will save yourself a lot of troub
 
 In the following article, I will describe the step-by-step instruction on how I troubleshoot the error, the root cause, and the tools helpful for debugging these issues.
 
+![Do Not Believe Gif](Images/DoNotBelieve.webp)
+
 ## Details
 
 The problem is a simple string manipulation example. We have an input string and we split it, and then verify if the string is split correctly or not.
@@ -138,6 +140,8 @@ Another solution is to add the escape character `\` at the beginning of the `\v`
 
 Another significant thing I want to mention is the use of **Development tools**.
 I consider software development as a **craft**, similar to an artist. **If a Craftsman has access to better tools, then they can build better things and do a better job. Similarly, as software craftsmen, we need to have good tools in our toolbox.**
+
+![Do Not Believe Gif](Images/ToolBox.jpg)
 
 I have been using Resharper for a long time. Resharper has a feature where it can show the **escape character/sequences with a different color code**. This should have been my first hint and should have prompted me to think about handling the string.
 
