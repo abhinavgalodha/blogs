@@ -19,7 +19,7 @@
 
 ## Purpose
 
-In this article, we will cover a problem that doesn&#39;t seem noticeable and is hard to trace.
+In this article, we will cover **a problem that doesn&#39;t seem noticeable and is hard to trace.**
 However, if you understand the root cause, you will save yourself a lot of trouble and will help you with similar issues.
 
 In the following article, I will describe the step-by-step instruction on how I troubleshoot the error, the root cause, and the tools helpful for debugging these issues.
@@ -28,7 +28,7 @@ In the following article, I will describe the step-by-step instruction on how I 
 
 ## Details
 
-The problem is a simple string manipulation example. We have an input string and we split it, and then verify if the string is split correctly or not.
+The problem is a simple **string manipulation example**. We have an input string and we split it, and then verify if the string is split correctly or not.
 
 You might be just thinking that is the easiest thing to do and maybe the second program you wrote after writing the hello world. Let&#39;s go through the details and uncover the mystery.
 
@@ -56,11 +56,11 @@ Seems easy.
 The above code was shared from another co-worker and the first time I saw, I thought this should be an easy fix. After all, the string manipulation shouldn&#39;t be difficult. 
 I have been working in C# for more than a decade, and at first sight, the code above looked obvious to me and should have worked.
 
-When I saw the failing tests, I was in a surprise. Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github [repository](https://github.com/abhinavgalodha/blogs/tree/master/2020/Don't%20Believe%20What%20you%20See/Code).
+**When I saw the failing tests**, I was in a surprise. Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github [repository](https://github.com/abhinavgalodha/blogs/tree/master/2020/Don't%20Believe%20What%20you%20See/Code).
 
 ## Steps to troubleshoot
 
-1\. A well-Designed system provides clear instructions for unexpected behavior. I am using Xunit and it provides a descriptive error message which eases further troubleshooting. In the Failed test description, the actual value is 1. However, the expected value was 2. It means no exception was thrown, and the Split didn&#39;t work as expected.
+1\. **A well-Designed system provides clear instructions for unexpected behavior.** I am using Xunit and it provides a descriptive error message which eases further troubleshooting. In the Failed test description, the actual value is 1. However, the expected value was 2. It means no exception was thrown, and the Split didn&#39;t work as expected.
 
 ![Test Results window](Images/01TestResults.jpg)
 
@@ -74,7 +74,7 @@ First, we will look at the variable `givenString`, the debugger shows the value 
 
 Then I need to check the splittedArray. The split operation is not throwing an exception, but the Split operation returns the original string. Wait, what happened, The Split function is Not working as expected.  This helps us to narrow down the problem, it seems the problem with the `Split` function. Bare eyes, the code looks fine and the split should have worked.
 
-I will check the string value in the String Visualizer in the Visual Studio.The `\v` is not appearing in a string visualizer and a box-like character is displayed instead as shown in below image. This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.
+I will check the string value in the String Visualizer in the Visual Studio.**The `\v` is not appearing in a string visualizer and a box-like character is displayed instead as shown in below image. This gives us a hint that the `\v` is not treated as literal characters `\` &amp; `v` but it is something different.**
 
 ![Text Visualizer](Images/03_TextVisualizer.jpg)
 
@@ -82,28 +82,28 @@ I will check the string value in the String Visualizer in the Visual Studio.The 
 
 What is the String `Split` operation doing?
 
-C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Split character in the string and then starts splitting.
+**C# strings are stored as UTF-16 and represented as Char array. The split function would scan the string until it finds the Split character in the string and then starts splitting.**
 
-To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually is the character representation of the String. I will use the `ToCharArray` method of the `String` class. Visual Studio debugger is extremely helpful and provides the character values along with their Unicode values.
+To further diagnose the Split problem, it is better to check the Character representation of the string. I will switch over to Immediate window in Visual Studio and check what actually is the character representation of the String. I will use the `ToCharArray` method of the `String` class. **Visual Studio debugger is extremely helpful and provides the character values along with their Unicode values.**
 The following screenshot provides the output of the `ToCharArray` function.
 
  ![Immediate Window](Images/04_ImmediateWindow.jpg)
 
-Interesting to note that the 7th index of the array is the char `\v` with a Unicode value of 11. We were expecting 7th char to be backslash, `\` and 8th char to be `v`. 
+**Interesting to note that the 7th index of the array is the char `\v` with a Unicode value of 11. We were expecting 7th char to be backslash, `\` and 8th char to be `v`.**
 
 Looking at the backslash, the escape bells start ringing in my head. Just kicking myself, why I didn&#39;t look at the escape character.
 
-5\. From the above step, we can logically conclude what&#39;s going on. The Split function is not able to find the `\` in the string and hence the string split function is not working.
+5\. From the above step, **we can logically conclude what&#39;s going on. The Split function is not able to find the `\` in the string and hence the string split function is not working.**
 
 Wohoo... We found the issue.
 
-6\. Let&#39;s check why is the `\v` is not represented as 2 characters which we were expecting and is recognized as a single character. Some searching and a few minutes later, I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.
+6\. Let&#39;s check why is the `\v` is not represented as 2 characters which we were expecting and is recognized as a single character. Some searching and a few minutes later, **I can see that `\v` is used to represent the vertical tab and was mostly used for the printers.**
 
 I can find the documentation [source](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/) for C# mentioning the escape sequence.
 
 I had been working with C# for more than a decade, but I must confess, I didn&#39;t have the slightest idea about the `\v`. I definitely would have read this in my younger years when I was learning C#, but after so many years, I didn&#39;t have any idea.
 
-Finding the root cause of a problem is the most satisfying experience. The investigation might take time, however the solution/fix is generally less time consuming. Let&#39;s look at the fix for the problem.
+>Finding the root cause of a problem is the most satisfying experience. The investigation might take time, however the solution/fix is generally less time consuming. Let&#39;s look at the fix for the problem.
 
 ## Fix
 
