@@ -168,7 +168,7 @@ This article wouldn&#39;t be complete if I didn&#39;t mention some recent simila
 
 ![Assertion Fails](Images/06_AssertionFails.jpg)
 
-* Followign examples shows another category of problem which is not related to strings. The Assertion fails, I will let you explore the reason, but again seems obviously true, but isn&#39;t.
+* Following examples shows another category of problem which is not related to strings. The Assertion fails, I will let you explore the reason, but again seems obviously true, but isn&#39;t.
 
 ![Assertion Fails](Images/07_AssertionFails2.jpg)
 
