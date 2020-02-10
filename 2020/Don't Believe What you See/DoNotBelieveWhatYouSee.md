@@ -182,4 +182,4 @@ We need to be open to trying alternative solutions and leverage Tools to find ou
 ##### References
 
 [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim)  
-[**https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/**](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
+[https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/](https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/)
