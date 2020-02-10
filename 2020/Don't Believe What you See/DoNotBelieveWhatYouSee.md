@@ -24,7 +24,7 @@ However, if you understand the root cause, you will save yourself a lot of troub
 
 In the following article, I will describe the step-by-step instruction on how I troubleshoot the error, the root cause, and the tools helpful for debugging these issues.
 
-![Do Not Believe Gif](Images/DoNotBelieve.webp)
+![Do Not Believe Gif](Images/DoNotBelieve.gif)
 
 ## Details
 
