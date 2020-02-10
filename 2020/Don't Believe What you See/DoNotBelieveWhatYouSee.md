@@ -56,7 +56,7 @@ Seems easy.
 The above code was shared from another co-worker and the first time I saw, I thought this should be an easy fix. After all, the string manipulation shouldn&#39;t be difficult. 
 I have been working in C# for more than a decade, and at first sight, the code above looked obvious to me and should have worked.
 
-When I saw the failing tests, I was in a surprise. Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github repository
+When I saw the failing tests, I was in a surprise. Let&#39;s look at the steps I followed to troubleshoot the problem. If you want to Follow along, please feel free to use the source code at the Github [repository](https://github.com/abhinavgalodha/blogs/tree/master/2020/Don't%20Believe%20What%20you%20See/Code).
 
 ## Steps to troubleshoot
 
