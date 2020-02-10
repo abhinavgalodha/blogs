@@ -139,16 +139,18 @@ Another solution is to add the escape character `\` at the beginning of the `\v`
 
 ## Tools
 
+![Do Not Believe Gif](Images/ToolBox.jpg)
+
 Another significant thing I want to mention is the use of **Development tools**.
 I consider software development as a **craft**, similar to an artist. **If a Craftsman has access to better tools, then they can build better things and do a better job. Similarly, as software craftsmen, we need to have good tools in our toolbox.**
 
-![Do Not Believe Gif](Images/ToolBox.jpg)
+I have been using Resharper for a long time. Resharper has a feature where it can show the **escape character/sequences with a different color code**. This should have been my first hint and should have prompted me to think about handling the string. The following image shows how Resharper shows `\v` in a pink color.
 
-I have been using Resharper for a long time. Resharper has a feature where it can show the **escape character/sequences with a different color code**. This should have been my first hint and should have prompted me to think about handling the string.
+![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
 
 >To summarize, the tools are also helpful in finding out the root cause and helps in troubleshooting. Always take care of your tools. And take time to learn how to use tools effectively.
 
-![Resharper Showing Escape Sequence](Images/05_Resharper.jpg)
+
 
 ## Philosophical Reflections
 
