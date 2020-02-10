@@ -10,11 +10,12 @@
 | 4 | 2/4/2020 | Added Fixes and Philosophical Reflections | 60 mins |
 | 5 | 2/6/2020 | Conclusion, Grammarly check, ProofReading | 150 mins |
 | 6 | 2/7/2020 | Added Code project | 30 mins |
-| 7 | 2/7/2020 | Added Markdown | 30 mins |
+| 7 | 2/8/2020 | Added Markdown, Proofread | 60 mins |
+| 8 | 2/8/2020 | Added Gif | 30 mins |
 
 ## Tags
 
-| Unicode | Editor | Tools | Debugging | Visual studio | ReSharper | 
+| #Unicode | #Editor | #Tools | #Debugging | #Visual studio | #ReSharper | 
 
 ## Purpose
 
