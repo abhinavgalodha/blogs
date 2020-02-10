@@ -20,9 +20,6 @@ namespace Unicode.Test
             // Assert
             Assert.Equal(2, splittedArray.Length);
 
-            //var firstStringWithSpaces = "  ";
-            //var secondStringWithSpaces = "  ";
-            //var resultSpaceComaprison = firstStringSpace === secondStringSpace;
         }
 
         [Fact]
@@ -52,11 +49,9 @@ namespace Unicode.Test
         }
 
         [Fact]
-        public void WhenStringContains_SpacesWithEmptyCUnEscapedBackSlash_ThenSplit()
+        public void WhenStringContains_SpecialCharacterSimilarToWhiteSpace_ThenCompare()
         {
-            var firstStringWithSpaces = "  ";
-            var secondStringWithSpaces = "  ";
-            Assert.Equal(firstStringWithSpaces, secondStringWithSpaces);
+            Assert.Equal("A  B","A  B");
         }
         
     }

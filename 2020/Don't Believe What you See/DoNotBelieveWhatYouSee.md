@@ -164,7 +164,10 @@ I would also like to take another analogy of the Electromagnetic (EM) waves, The
 
 This article wouldn&#39;t be complete if I didn&#39;t mention some recent similar problems I have faced. The underlying cause of the problem are different, however they share the same trait of seeming simple and easy but not simple. The code for these problems is also listed along with the other code in the Github repository.
 
-* Another similar problem I have seen is Comparing 2 characters which appear same but aren&#39;t. Sometimes, you might get a content from another source and
+* Another similar problem I have seen is Comparing 2 characters which appear same but aren&#39;t. Sometimes, you might get a content from internet and it has special characters which are not noticeable until you compare the Content. The following Assertion fails. 
+
+![Assertion Fails](Images/06_AssertionFails.jpg)
+
 * `Assert.Equal(0.3, 0.1 + 0.1 + 0.1);`  The Assertion fails, I will let you explore the reason, but again seems obviously true, but isn&#39;t.
 
 ## Conclusion
