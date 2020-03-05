@@ -3,51 +3,54 @@ Software Craftsman having a passion for Building the software in the *right way*
 
 ## Why I write Code
 
-* For making a living
 * Interested in building and creating new things.
+* For making a living
 
 ## What kind of things i am looking for?
 
+* Difficult
 * AI
 * Application Development
 * Machine Learning
 
 ## Programming methodologies
 
+* Object Oriented (OOPS)
 * Functional
 * Reactive
-* Object Oriented (OOPS)
 * Procedural
 * Aspect Oriented code
 
-# Programming Languages
+## Programming Languages
 
-* C#  
-* Javascript  
-* VB.Net  
-* C++  
-* C  
-* F#  
-* Python
+* C# (Advanced)
+* Javascript  (Advanced)
+* C++  (Beginner)
+* C  (Beginner)
+* F#  (Beginner)
+* Python (Beginner)
+* VB.Net  (Intermediate)
 
 ## Development Experience
 
-* Server Side Applications
-* Web API  
-* Desktop  
-* Frontend  
-* Database  
-* Web Services  
-* Window Services  
-* Window Device Drivers
+* Server Side Applications (Advanced)
+* Web API (Advanced)
+* Desktop  (Advanced) 
+* Frontend  (Advanced)
+* Database  (Advanced)
+* Web Services  (Advanced)
+* Window Services  (Intermediate)
+* Window Device Drivers (Beginner)
+* Cloud development (Advanced)
 
 # Server Side Development
 
-* Asp.net Core
-* ASP.Net MVC
-* ASP.Net Web API
-* ASP.Net Web Forms  
-* WCF  
+* Asp.net Core (Advanced)
+* ASP.Net MVC (Advanced)
+* ASP.Net Web API (Advanced)
+* ASP.Net Web Forms  (Advanced)
+* WCF  (Advanced)
+* Nodejs (Beginner)
 
 # FrontEnd Skills
 
@@ -58,11 +61,11 @@ Software Craftsman having a passion for Building the software in the *right way*
 
 ### Javascript Frameworks
 
-* KnockoutJS  
-* Angular  
-* React
-* JQuery
-* Blazor
+* Angular  (Intermediate)
+* KnockoutJS  (Intermediate)
+* React (Beginner)
+* JQuery (Intermediate)
+* Blazor (Beginner)
 
 ### FrontEnd Unit Testing
 
@@ -99,44 +102,51 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Webpack
 * LightHouse
 
-## ORM
+### ORM
 
-* Entity Framework
+* Entity Framework (Advanced)
+* NHibernate (Beginner)
 
-# Database
+## Database
 
 ## Relational
 
-* SQL Server  
-* PostGres  
-* Oracle  
+* SQL Server  (Advanced) | (Active)
+* PostGres  (Intermediate) | (NotRecently)
+* Oracle  (Intermediate) | (NotRecently)
 
 ## Non Relational (NO SQL)
 
-* CouchBase
-* MongoDB
+* CouchBase (Intermediate) | (Active)
+* MongoDB (Beginner) | (NotRecently)
+
+## Time Series
+
+## Graph Databases
 
 
 ## Performance Monitoring & Tuning
 
-* AppDynamics
-* Tealeaf  
-* Riverbed Opnet  
-* SQL Profiler  
-* Visual Studio Diagnostics
-* Application Insights
-* JetBrain dotTrace
+* AppDynamics (Advanced) | (Active)
+* Tealeaf  (Beginner) | (NotRecently)
+* Riverbed Opnet  (Intermediate) | (NotRecently)
+* SQL Profiler  (Intermediate) | (NotRecently)
+* Visual Studio Diagnostics (Advanced) | (Active)
+* Application Insights (Beginner) | (Active)
+* JetBrain dotTrace (Beginner) | (Active)
 
 ## Debugging
 
-* Windbg
-* Ntsd
-* Visual Studio
+* Visual Studio (Advanced) | (Active)
+* Windbg (Beginner) | (Not Recently)
+* Ntsd (Beginner) | (Not Recently)
+
 
 ## Operating System
 
-Windows Desktop and Server Editions
-
+* Windows Server (Advanced) | (Active)
+* Windows Desktop (Advanced) | (Active)
+* Linux (Beginner) | (Active)
 
 ### Windows
 Sysinternals (Process Explorer, Process Monitor, VMMap, )
