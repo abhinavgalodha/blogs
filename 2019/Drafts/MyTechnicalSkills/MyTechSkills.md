@@ -1,3 +1,5 @@
+# My Technical Skills
+
 ## About Me
 Software Craftsman having a passion for Building the software in the *right way*.
 
@@ -8,7 +10,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 
 ## What kind of things i am looking for?
 
-* Difficult
+* Difficult Problems to solve
 * AI
 * Application Development
 * Machine Learning
@@ -43,7 +45,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Window Device Drivers (Beginner)
 * Cloud development (Advanced)
 
-# Server Side Development
+## Server Side Development
 
 * Asp.net Core (Advanced)
 * ASP.Net MVC (Advanced)
@@ -52,9 +54,9 @@ Software Craftsman having a passion for Building the software in the *right way*
 * WCF  (Advanced)
 * Nodejs (Beginner)
 
-# FrontEnd Skills
+## FrontEnd Skills
 
-## Javascript
+### Javascript
 
 * ES6  
 * TypeScript
@@ -85,6 +87,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 
 ## CSS
 
+* Bootstrap
 * CSS3
 * Flexbox
 
@@ -138,6 +141,9 @@ Software Craftsman having a passion for Building the software in the *right way*
 ## Debugging
 
 * Visual Studio (Advanced) | (Active)
+* Process Explorer (Advanced) | (Active)
+* Process Monitor (Advanced) | (Active)
+* SysInternals Tools  (VMMap etc.) (Intermediate) | (Active)
 * Windbg (Beginner) | (Not Recently)
 * Ntsd (Beginner) | (Not Recently)
 
@@ -148,27 +154,23 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Windows Desktop (Advanced) | (Active)
 * Linux (Beginner) | (Active)
 
-### Windows
-Sysinternals (Process Explorer, Process Monitor, VMMap, )
-
-
 ## Command Line Tools
 
-* Powershell
-* Command Prompt
+* Powershell (Intermediate) | (Active)
+* Command Prompt (Intermediate) | (Active)
 
 ## Build Automation Tools
 
-* MSBuild  
-* TeamCity  
+* MSBuild  (Advanced) | (Active)
+* TeamCity  (Intermediate) | (Active)
 
 ## Static Code Analysis 
 
-* SonarQube  
-* Resharper  
-* CodeMaid  
-* ESLint
-* JSHint
+* Resharper  (Advanced) | (Active)
+* SonarQube  (Advanced) | (Active)
+* CodeMaid  (Intermediate) | (NotRecently)
+* ESLint (Intermediate) | (NotRecently)
+* JSHint (Intermediate) | (NotRecently)
 
 ## Data Interchange Formats
 
@@ -184,7 +186,7 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 * Hosts file
 * Switch
 * Router
-* 
+
 
 ## Reporting
 
@@ -220,11 +222,11 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 
 ## Web API/Services Simulation/Testing
 
-* SOAP UI  
 * PostMan
+* SOAP UI  
 * Fiddler
 
-## Editors 
+## Editors
 
 * Visual Studio
 * Visual Studio Code
@@ -245,10 +247,11 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 
 ## Release Management
 
-* RFC/CR
+* Service Now /RFC/CR
 
 ## New interests
 
+* AI
 * ML.net
 
 ## Azure Cloud
@@ -266,8 +269,9 @@ Sysinternals (Process Explorer, Process Monitor, VMMap, )
 
 * HTTPS
 * HP Fortify Scan
-
+* OWASP
 
 ## Messaging/Queue
 
 * TIbco EMS
+* Rabbit MQ
