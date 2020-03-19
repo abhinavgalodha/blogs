@@ -128,7 +128,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 ## Graph Databases
 
 
-## Performance Monitoring & Tuning
+## Application Performance Monitoring & Tuning
 
 * AppDynamics (Advanced) | (Active)
 * Tealeaf  (Beginner) | (NotRecently)
@@ -137,6 +137,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Visual Studio Diagnostics (Advanced) | (Active)
 * Application Insights (Beginner) | (Active)
 * JetBrain dotTrace (Beginner) | (Active)
+* ELK (Elastic, Logstash, Kibana) & Fluentd | (Active)
 
 ## Debugging
 
@@ -272,6 +273,11 @@ Software Craftsman having a passion for Building the software in the *right way*
 * OWASP
 
 ## Messaging/Queue
-
+* Kafka
 * TIbco EMS
 * Rabbit MQ
+
+## Logging
+* Splunk
+* Log4net
+* Serilog
