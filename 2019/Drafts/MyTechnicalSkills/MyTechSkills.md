@@ -296,3 +296,4 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Product Development
 * Image Processing
 * Business Process Management
+* Healthcare
