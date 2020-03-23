@@ -287,3 +287,12 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Virtual Machines (Intermediate) | (Active)
 * Docker (Intermediate) | (Active)
 * Kubernetes (Beginner) | (Active)
+
+## Industry Knowledge
+* Finance Domain
+* Banking Domain
+* Airline
+* E-Commerce
+* Product Development
+* Image Processing
+* Business Process Management
