@@ -1,4 +1,4 @@
-# My Technical Skills
+# Abhinav Galodha's Technical Skills
 
 ## About Me
 Software Craftsman having a passion for Building the software in the *right way*.
