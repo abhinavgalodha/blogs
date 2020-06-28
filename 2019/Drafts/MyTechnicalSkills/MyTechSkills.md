@@ -257,8 +257,35 @@ Software Craftsman having a passion for Building the software in the *right way*
 
 ## Azure Cloud
 
+* Azure Functions
+* App Service
 * Compute
-* Web App
+* Virtual Machine
+* Web Apps
+* Event Hubs
+* Event Grid
+* Notification Hubs
+* SignalR 
+* Logic Apps
+* API Management
+* Azure Cognitive Search
+* Computer Vision
+* Face Detection
+* Cognitive Services
+* Azure Kubernetes Service (AKS)
+* Service Fabric
+* Cosmos DB
+* Traffic Manager
+* Content Delivery Network
+* Application Gateway
+* Azure Active Directory
+* Azure SQL Database
+* Azure Devops
+* Azure Pipelines
+* Azure Boards
+
+## AWS
+* 
 
 ## Work Management
 
