@@ -285,13 +285,31 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Azure Boards
 
 ## AWS
-* 
+* Amazon Simple Notification Service (SNS)
+* Amazon Simple Queue Service (SQS)
+* AWS Lambda
+* AWS Dynamo DB
+* EKS (Elastic Kubernetes Service)
+* EC2
+* Elastic Load Balancing
+* API Gateway
+* Simple Storage Service (S3)
+* S3 Glacier
+* Route 53
+* Identity and Access management
+* Elastic Block Storage (EBS)
+* Code Deploy
+* Code Pipeline
+* Cloud Formation
+* EC2 Auto Scaling
+* ElasticSearch Service
 
 ## Work Management
 
 * TFS
 * Azure Dev ops
 * Trello
+* Microsoft Planner
 
 ## Security
 
