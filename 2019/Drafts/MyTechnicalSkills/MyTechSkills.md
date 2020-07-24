@@ -135,6 +135,7 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Riverbed Opnet  (Intermediate) | (NotRecently)
 * SQL Profiler  (Intermediate) | (NotRecently)
 * Visual Studio Diagnostics (Advanced) | (Active)
+* PerfView (Beginner) | (Active)
 * Application Insights (Beginner) | (Active)
 * JetBrain dotTrace (Beginner) | (Active)
 * ELK (Elastic, Logstash, Kibana) & Fluentd | (Active)
@@ -145,8 +146,10 @@ Software Craftsman having a passion for Building the software in the *right way*
 * Process Explorer (Advanced) | (Active)
 * Process Monitor (Advanced) | (Active)
 * SysInternals Tools  (VMMap etc.) (Intermediate) | (Active)
+* Debug Diagnostic Collection and Analysis
 * Windbg (Beginner) | (Not Recently)
 * Ntsd (Beginner) | (Not Recently)
+* Remote Debugging, VS Diagnostic (Intermediate) | (Active)
 
 
 ## Operating System
